@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A26261C-1531-4EAA-AF4C-3B12476FF9FA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Veterinaria</RootNamespace>
+    <AssemblyName>Veterinaria</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="conection\Conexao.cs" />
+    <Compile Include="control\C_Bairro.cs" />
+    <Compile Include="control\C_Raca.cs" />
+    <Compile Include="control\C_Sexo.cs" />
+    <Compile Include="control\C_TipoAnimal.cs" />
+    <Compile Include="control\I_Metodos_Comuns.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\Animal.cs" />
+    <Compile Include="model\M_Bairro.cs" />
+    <Compile Include="model\Cep.cs" />
+    <Compile Include="model\Cidade.cs" />
+    <Compile Include="model\Cliente.cs" />
+    <Compile Include="model\Clientetelefone.cs" />
+    <Compile Include="model\Estado.cs" />
+    <Compile Include="model\Funcionario.cs" />
+    <Compile Include="model\Funcionariotelefone.cs" />
+    <Compile Include="model\Loja.cs" />
+    <Compile Include="model\Marca.cs" />
+    <Compile Include="model\Pais.cs" />
+    <Compile Include="model\Raca.cs" />
+    <Compile Include="model\Rua.cs" />
+    <Compile Include="model\M_Sexo.cs" />
+    <Compile Include="model\Telefone.cs" />
+    <Compile Include="model\Telefoneloja.cs" />
+    <Compile Include="model\M_TipoAnimal.cs" />
+    <Compile Include="model\Tipofuncionario.cs" />
+    <Compile Include="model\Tipoproduto.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\FmTipoAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FmTipoAnimal.Designer.cs">
+      <DependentUpon>FmTipoAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmRaca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmRaca.Designer.cs">
+      <DependentUpon>FrmRaca.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="view\FmTipoAnimal.resx">
+      <DependentUpon>FmTipoAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmRaca.resx">
+      <DependentUpon>FrmRaca.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagens\botao-adicionar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagens\salvar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagens\cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagens\apagar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagens\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagens\primeiro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagens\seta-esquerda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagens\seta-direita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagens\ultimo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagens\ampliacao.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
