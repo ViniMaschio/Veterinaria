@@ -122,17 +122,82 @@ namespace Veterinaria.control
             try
             {
                 reader = cmd.ExecuteReader();
+                while(reader.Read())
+                {
+                    aux.codbairro = Int32.Parse(reader["codbairro"].ToString());
+                    aux.nomebairro = reader["nomebairro"].ToString();
+                }
+
+            } catch(Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            } finally
+            {
+                conn.Close();
             }
+
+            return aux;
         }
 
+        String SqlBuscaTodos = "SELECT * FROM bairro";
         public object Buscar_Todos()
         {
-            throw new NotImplementedException();
+            List<M_Bairro> listBairro = new List<M_Bairro>();
+
+            Conexao conexao = new Conexao();
+            conn = conexao.ConectarBanco();
+
+            cmd = new SqlCommand(SqlBuscaTodos, conn);
+
+            SqlDataReader reader;
+            conn.Open();
+
+            try
+            {
+                reader = cmd.ExecuteReader();
+                while(reader.Read())
+                {
+                    M_Bairro aux = new M_Bairro();
+                    aux.codbairro = Int32.Parse(reader["codbairro"].ToString());
+                    aux.nomebairro = reader["nomebairro"].ToString();
+
+                    listBairro.Add(aux);
+                }
+            } catch(Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            } finally
+            {
+                conn.Close();
+            }
+
+            return listBairro;
         }
 
+        String SqlInsere = "INSERT INTO bairro (nomebairro) VALUES (@pnomebairro)"; 
         public void Insere_Dados(object aux)
         {
-            throw new NotImplementedException();
+            M_Bairro m_Bairro = new M_Bairro();
+            m_Bairro = (M_Bairro)aux;
+
+            Conexao conexao = new Conexao();
+            conn = conexao.ConectarBanco();
+
+            cmd = new SqlCommand(SqlInsere, conn);
+            cmd.Parameters.AddWithValue("@pnomebiarro", m_Bairro.nomebairro);
+
+            conn.Open();
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            } catch(Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            } finally
+            {
+                conn.Close();
+            }
         }
     }
 }

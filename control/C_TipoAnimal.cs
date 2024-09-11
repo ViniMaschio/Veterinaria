@@ -173,6 +173,9 @@ namespace Veterinaria.control
             catch (SqlException ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
+            } finally
+            {
+                conn.Close();
             }
 
             return listTipoAnimal;

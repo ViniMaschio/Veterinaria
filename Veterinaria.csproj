@@ -52,11 +52,11 @@
     <Compile Include="control\C_Sexo.cs" />
     <Compile Include="control\C_TipoAnimal.cs" />
     <Compile Include="control\I_Metodos_Comuns.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="model\Animal.cs" />
     <Compile Include="model\M_Bairro.cs" />
@@ -80,11 +80,17 @@
     <Compile Include="model\Tipoproduto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="view\FmTipoAnimal.cs">
+    <Compile Include="view\FrmBairro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\FmTipoAnimal.Designer.cs">
-      <DependentUpon>FmTipoAnimal.cs</DependentUpon>
+    <Compile Include="view\FrmBairro.Designer.cs">
+      <DependentUpon>FrmBairro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmTipoAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmTipoAnimal.Designer.cs">
+      <DependentUpon>FrmTipoAnimal.cs</DependentUpon>
     </Compile>
     <Compile Include="view\FrmRaca.cs">
       <SubType>Form</SubType>
@@ -92,8 +98,8 @@
     <Compile Include="view\FrmRaca.Designer.cs">
       <DependentUpon>FrmRaca.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -105,8 +111,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="view\FmTipoAnimal.resx">
-      <DependentUpon>FmTipoAnimal.cs</DependentUpon>
+    <EmbeddedResource Include="view\FrmBairro.resx">
+      <DependentUpon>FrmBairro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmTipoAnimal.resx">
+      <DependentUpon>FrmTipoAnimal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\FrmRaca.resx">
       <DependentUpon>FrmRaca.cs</DependentUpon>

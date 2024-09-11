@@ -7,7 +7,7 @@ using Veterinaria.model;
 
 namespace Veterinaria.view
 {
-    public partial class FmTipoAnimal : Form
+    public partial class FrmTipoAnimal : Form
     {
 
         
@@ -15,7 +15,7 @@ namespace Veterinaria.view
         int posicao;
         List<M_TipoAnimal> listaTipoAnimal = new List<M_TipoAnimal>();
 
-        public FmTipoAnimal()
+        public FrmTipoAnimal()
         {
             InitializeComponent();
 
