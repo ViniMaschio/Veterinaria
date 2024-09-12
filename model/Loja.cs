@@ -15,7 +15,7 @@ namespace Veterinaria.model
         public M_Bairro bairro { get; set; }
         public M_Rua rua { get; set; }
         public Cep cep { get; set; }    
-        public Cidade cidade { get; set; }
+        public M_Cidade cidade { get; set; }
         public Estado estado { get; set; }
         public Pais pais { get; set; }
         public String numeroloja { get; set; }

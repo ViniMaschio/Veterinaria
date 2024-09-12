@@ -33,21 +33,21 @@ create table bairro{
 };
 
 -- TEM QUE FAZER O CONTROLE E MODEL E VIEW
--- rua = {codrua, nomerua} OK
+-- rua = {codrua, nomerua} feito
 create table rua(
     codrua integer identity primary key,
     nomerua varchar(80) not null unique
 );
 
 -- TEM QUE FAZER O CONTROLE E MODEL E VIEW
--- cep = {codcep, numerocep} OK
+-- cep = {codcep, numerocep} feito
 create table cep(
     codcep integer identity primary key,
     numerocep char(9) not null unique
 );
 
 -- TEM QUE FAZER O CONTROLE E MODEL
--- cidade = {codcidade, nomecidade} OK
+-- cidade = {codcidade, nomecidade} feito
 create table cidade (
     codcidade integer identity primary key,
     nomecidade varchar(80) not null unique

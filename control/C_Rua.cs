@@ -102,7 +102,7 @@ namespace Veterinaria.control
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Erro: " + ex.Message, "Busca dados");
+                MessageBox.Show("Erro: " + ex.Message, "Busca dados filtro");
             }
 
             return listRua;
@@ -135,7 +135,7 @@ namespace Veterinaria.control
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Erro: " + ex.Message);
+                MessageBox.Show("Erro: " + ex.Message, "Buscar Id");
             }
 
             conn.Close();

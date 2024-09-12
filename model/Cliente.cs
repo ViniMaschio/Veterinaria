@@ -18,7 +18,7 @@ namespace Veterinaria.model
         public M_Bairro bairro { get; set; }
         public M_Rua rua { get; set; }
         public Cep cep { get; set; }
-        public Cidade cidade { get; set; }
+        public M_Cidade cidade { get; set; }
         public Estado estado { get; set; }
         public Pais pais { get; set; }
         public String numeroca {  get; set; }   
@@ -26,7 +26,7 @@ namespace Veterinaria.model
 
         public Cliente() { }
 
-        public Cliente(int codcliente, string nomecliente, string cpf, M_Bairro bairro, M_Rua rua, Cep cep, Cidade cidade, Estado estado, Pais pais, string numeroca, byte[] fotocliente)
+        public Cliente(int codcliente, string nomecliente, string cpf, M_Bairro bairro, M_Rua rua, Cep cep, M_Cidade cidade, Estado estado, Pais pais, string numeroca, byte[] fotocliente)
         {
             this.codcliente = codcliente;
             this.nomecliente = nomecliente;

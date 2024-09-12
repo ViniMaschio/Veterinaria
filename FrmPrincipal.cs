@@ -37,5 +37,11 @@ namespace Veterinaria
             FrmBairro frmBairro = new FrmBairro();
             frmBairro.ShowDialog();
         }
+
+        private void ruaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRua frmRua = new FrmRua();
+            frmRua.ShowDialog();
+        }
     }
 }

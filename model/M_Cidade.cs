@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Veterinaria.model
 {
-    internal class Cidade
+    internal class M_Cidade
     {
         public int codcidade {  get; set; }
         public String nomecidade { get; set; }
-        public Cidade() { }
+        public M_Cidade() { }
     }
 }

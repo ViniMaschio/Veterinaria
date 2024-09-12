@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.endereçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bairroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.animalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.racaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoAnimalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.endereçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bairroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ruaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,22 +49,6 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // endereçoToolStripMenuItem
-            // 
-            this.endereçoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bairroToolStripMenuItem});
-            this.endereçoToolStripMenuItem.Name = "endereçoToolStripMenuItem";
-            this.endereçoToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.endereçoToolStripMenuItem.Text = "Endereço";
-            // 
-            // bairroToolStripMenuItem
-            // 
-            this.bairroToolStripMenuItem.Name = "bairroToolStripMenuItem";
-            this.bairroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.bairroToolStripMenuItem.Text = "Bairro";
-            this.bairroToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.bairroToolStripMenuItem.Click += new System.EventHandler(this.bairroToolStripMenuItem_Click);
-            // 
             // animalToolStripMenuItem
             // 
             this.animalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -76,16 +61,40 @@
             // racaToolStripMenuItem1
             // 
             this.racaToolStripMenuItem1.Name = "racaToolStripMenuItem1";
-            this.racaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.racaToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
             this.racaToolStripMenuItem1.Text = "Raca";
             this.racaToolStripMenuItem1.Click += new System.EventHandler(this.racaToolStripMenuItem1_Click);
             // 
             // tipoAnimalToolStripMenuItem1
             // 
             this.tipoAnimalToolStripMenuItem1.Name = "tipoAnimalToolStripMenuItem1";
-            this.tipoAnimalToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.tipoAnimalToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
             this.tipoAnimalToolStripMenuItem1.Text = "Tipo Animal";
             this.tipoAnimalToolStripMenuItem1.Click += new System.EventHandler(this.tipoAnimalToolStripMenuItem1_Click);
+            // 
+            // endereçoToolStripMenuItem
+            // 
+            this.endereçoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bairroToolStripMenuItem,
+            this.ruaToolStripMenuItem});
+            this.endereçoToolStripMenuItem.Name = "endereçoToolStripMenuItem";
+            this.endereçoToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.endereçoToolStripMenuItem.Text = "Endereço";
+            // 
+            // bairroToolStripMenuItem
+            // 
+            this.bairroToolStripMenuItem.Name = "bairroToolStripMenuItem";
+            this.bairroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bairroToolStripMenuItem.Text = "Bairro";
+            this.bairroToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.bairroToolStripMenuItem.Click += new System.EventHandler(this.bairroToolStripMenuItem_Click);
+            // 
+            // ruaToolStripMenuItem
+            // 
+            this.ruaToolStripMenuItem.Name = "ruaToolStripMenuItem";
+            this.ruaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ruaToolStripMenuItem.Text = "Rua";
+            this.ruaToolStripMenuItem.Click += new System.EventHandler(this.ruaToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -112,6 +121,7 @@
         private System.Windows.Forms.ToolStripMenuItem tipoAnimalToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem endereçoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bairroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ruaToolStripMenuItem;
     }
 }
 

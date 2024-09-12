@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="conection\Conexao.cs" />
     <Compile Include="control\C_Bairro.cs" />
+    <Compile Include="control\C_Cidade.cs" />
     <Compile Include="control\C_Raca.cs" />
     <Compile Include="control\C_Rua.cs" />
     <Compile Include="control\C_Sexo.cs" />
@@ -62,7 +63,7 @@
     <Compile Include="model\Animal.cs" />
     <Compile Include="model\M_Bairro.cs" />
     <Compile Include="model\Cep.cs" />
-    <Compile Include="model\Cidade.cs" />
+    <Compile Include="model\M_Cidade.cs" />
     <Compile Include="model\Cliente.cs" />
     <Compile Include="model\Clientetelefone.cs" />
     <Compile Include="model\Estado.cs" />
