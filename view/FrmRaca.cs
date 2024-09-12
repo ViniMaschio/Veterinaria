@@ -245,5 +245,10 @@ namespace Veterinaria.view
             CarregarTabelaFiltro();
 
         }// arrumar
+
+        private void FrmRaca_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

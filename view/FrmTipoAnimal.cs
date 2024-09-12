@@ -9,8 +9,6 @@ namespace Veterinaria.view
 {
     public partial class FrmTipoAnimal : Form
     {
-
-        
         Boolean novo = true;
         int posicao;
         List<M_TipoAnimal> listaTipoAnimal = new List<M_TipoAnimal>();
@@ -20,7 +18,6 @@ namespace Veterinaria.view
             InitializeComponent();
 
             CarregarTabelaTodos();
-
         }
 
         public void CarregarTabelaTodos()
@@ -135,7 +132,7 @@ namespace Veterinaria.view
 
             C_TipoAnimal c_TipoAnimal = new C_TipoAnimal();
 
-            if (novo == true)
+            if (novo)
             {
                 c_TipoAnimal.Insere_Dados(m_TipoAnimal);
             }
@@ -167,8 +164,7 @@ namespace Veterinaria.view
             {
                 C_TipoAnimal c_TipoAnimal = new C_TipoAnimal();
 
-                int codigo = int.Parse(txtCodigo.Text);
-                c_TipoAnimal.Apaga_Dados(codigo);
+                c_TipoAnimal.Apaga_Dados(Convert.ToInt32(txtCodigo.Text));
 
                 CarregarTabelaTodos();
             }
@@ -184,10 +180,13 @@ namespace Veterinaria.view
 
         private void btnPrimeiro_Click(object sender, EventArgs e)
         {
-            dGView.Rows[posicao].Selected = false;
-            posicao = 0;
-            AtualizarCampos();
-            dGView.Rows[posicao].Selected = true;
+            if(listaTipoAnimal.Count > 0)
+            {
+                dGView.Rows[posicao].Selected = false;
+                posicao = 0;
+                AtualizarCampos();
+                dGView.Rows[posicao].Selected = true;
+            }
         }
 
         private void btnAnterior_Click(object sender, EventArgs e)
@@ -203,8 +202,7 @@ namespace Veterinaria.view
 
         private void btnProximo_Click(object sender, EventArgs e)
         {
-            int total = listaTipoAnimal.Count - 1;
-            if (total > posicao)
+            if (listaTipoAnimal.Count - 1 > posicao)
             {
                 dGView.Rows[posicao].Selected = false;
                 posicao++;
@@ -215,10 +213,13 @@ namespace Veterinaria.view
 
         private void btnUltimo_Click(object sender, EventArgs e)
         {
-            dGView.Rows[posicao].Selected = false;
-            posicao = listaTipoAnimal.Count - 1;
-            AtualizarCampos();
-            dGView.Rows[posicao].Selected = true;
+            if(listaTipoAnimal.Count > 0)
+            {
+                dGView.Rows[posicao].Selected = false;
+                posicao = listaTipoAnimal.Count - 1;
+                AtualizarCampos();
+                dGView.Rows[posicao].Selected = true;
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -226,5 +227,9 @@ namespace Veterinaria.view
             CarregarTabelaFiltro();
         }
 
+        private void FrmTipoAnimal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

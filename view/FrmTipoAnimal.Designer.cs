@@ -284,7 +284,7 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Cadastro Tipo Animal";
             // 
-            // FmTipoAnimal
+            // FrmTipoAnimal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -296,9 +296,10 @@
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dGView);
-            this.Name = "FmTipoAnimal";
+            this.Name = "FrmTipoAnimal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Tipo Animal";
+            this.Load += new System.EventHandler(this.FrmTipoAnimal_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGView)).EndInit();

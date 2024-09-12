@@ -184,7 +184,7 @@ namespace Veterinaria.control
             conn = conexao.ConectarBanco();
 
             cmd = new SqlCommand(SqlInsere, conn);
-            cmd.Parameters.AddWithValue("@pnomebiarro", m_Bairro.nomebairro);
+            cmd.Parameters.AddWithValue("@pnomebairro", m_Bairro.nomebairro);
 
             conn.Open();
 

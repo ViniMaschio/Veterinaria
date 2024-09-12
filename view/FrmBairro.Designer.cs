@@ -32,46 +32,46 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.lblBuscar = new System.Windows.Forms.ToolStripLabel();
-            this.txtBuscar = new System.Windows.Forms.ToolStripTextBox();
-            this.txtRaca = new System.Windows.Forms.TextBox();
+            this.TxtBuscar = new System.Windows.Forms.ToolStripTextBox();
+            this.TxtBairro = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.TxtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnNovo = new System.Windows.Forms.ToolStripButton();
-            this.btnSalvar = new System.Windows.Forms.ToolStripButton();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
-            this.btnApagar = new System.Windows.Forms.ToolStripButton();
-            this.btnEditar = new System.Windows.Forms.ToolStripButton();
-            this.btnPrimeiro = new System.Windows.Forms.ToolStripButton();
-            this.btnAnterior = new System.Windows.Forms.ToolStripButton();
-            this.btnProximo = new System.Windows.Forms.ToolStripButton();
-            this.btnUltimo = new System.Windows.Forms.ToolStripButton();
-            this.btnBuscar = new System.Windows.Forms.ToolStripButton();
+            this.DataGridBairro = new System.Windows.Forms.DataGridView();
+            this.BtnNovo = new System.Windows.Forms.ToolStripButton();
+            this.BtnSalvar = new System.Windows.Forms.ToolStripButton();
+            this.BtnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.BtnApagar = new System.Windows.Forms.ToolStripButton();
+            this.BtnEditar = new System.Windows.Forms.ToolStripButton();
+            this.BtnPrimeiro = new System.Windows.Forms.ToolStripButton();
+            this.BtnAnterior = new System.Windows.Forms.ToolStripButton();
+            this.BtnProximo = new System.Windows.Forms.ToolStripButton();
+            this.BtnUltimo = new System.Windows.Forms.ToolStripButton();
+            this.BtnBuscar = new System.Windows.Forms.ToolStripButton();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeBairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridBairro)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnNovo,
-            this.btnSalvar,
-            this.btnCancelar,
-            this.btnApagar,
-            this.btnEditar,
+            this.BtnNovo,
+            this.BtnSalvar,
+            this.BtnCancelar,
+            this.BtnApagar,
+            this.BtnEditar,
             this.toolStripSeparator1,
-            this.btnPrimeiro,
-            this.btnAnterior,
-            this.btnProximo,
-            this.btnUltimo,
+            this.BtnPrimeiro,
+            this.BtnAnterior,
+            this.BtnProximo,
+            this.BtnUltimo,
             this.toolStripSeparator2,
             this.lblBuscar,
-            this.txtBuscar,
-            this.btnBuscar});
+            this.TxtBuscar,
+            this.BtnBuscar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(605, 39);
@@ -94,19 +94,19 @@
             this.lblBuscar.Size = new System.Drawing.Size(42, 36);
             this.lblBuscar.Text = "Buscar";
             // 
-            // txtBuscar
+            // TxtBuscar
             // 
-            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(140, 39);
+            this.TxtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtBuscar.Name = "TxtBuscar";
+            this.TxtBuscar.Size = new System.Drawing.Size(140, 39);
             // 
-            // txtRaca
+            // TxtBairro
             // 
-            this.txtRaca.Enabled = false;
-            this.txtRaca.Location = new System.Drawing.Point(56, 86);
-            this.txtRaca.Name = "txtRaca";
-            this.txtRaca.Size = new System.Drawing.Size(430, 20);
-            this.txtRaca.TabIndex = 10;
+            this.TxtBairro.Enabled = false;
+            this.TxtBairro.Location = new System.Drawing.Point(56, 86);
+            this.TxtBairro.Name = "TxtBairro";
+            this.TxtBairro.Size = new System.Drawing.Size(430, 20);
+            this.TxtBairro.TabIndex = 10;
             // 
             // label2
             // 
@@ -117,13 +117,13 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Bairro:";
             // 
-            // txtCodigo
+            // TxtCodigo
             // 
-            this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(56, 60);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(86, 20);
-            this.txtCodigo.TabIndex = 8;
+            this.TxtCodigo.Enabled = false;
+            this.TxtCodigo.Location = new System.Drawing.Point(56, 60);
+            this.TxtCodigo.Name = "TxtCodigo";
+            this.TxtCodigo.Size = new System.Drawing.Size(86, 20);
+            this.TxtCodigo.TabIndex = 8;
             // 
             // label1
             // 
@@ -134,111 +134,122 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Código:";
             // 
-            // dataGridView1
+            // DataGridBairro
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DataGridBairro.AllowUserToAddRows = false;
+            this.DataGridBairro.AllowUserToDeleteRows = false;
+            this.DataGridBairro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridBairro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.NomeBairro});
-            this.dataGridView1.Location = new System.Drawing.Point(18, 129);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(468, 223);
-            this.dataGridView1.TabIndex = 6;
+            this.DataGridBairro.Location = new System.Drawing.Point(18, 129);
+            this.DataGridBairro.Name = "DataGridBairro";
+            this.DataGridBairro.ReadOnly = true;
+            this.DataGridBairro.Size = new System.Drawing.Size(468, 223);
+            this.DataGridBairro.TabIndex = 6;
+            this.DataGridBairro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridBairro_CellClick);
             // 
-            // btnNovo
+            // BtnNovo
             // 
-            this.btnNovo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnNovo.Image = global::Veterinaria.Properties.Resources.botao_adicionar;
-            this.btnNovo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(36, 36);
-            this.btnNovo.Text = "toolStripButton1";
+            this.BtnNovo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnNovo.Image = global::Veterinaria.Properties.Resources.botao_adicionar;
+            this.BtnNovo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnNovo.Name = "BtnNovo";
+            this.BtnNovo.Size = new System.Drawing.Size(36, 36);
+            this.BtnNovo.Text = "Novo";
+            this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
-            // btnSalvar
+            // BtnSalvar
             // 
-            this.btnSalvar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnSalvar.Enabled = false;
-            this.btnSalvar.Image = global::Veterinaria.Properties.Resources.salvar;
-            this.btnSalvar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(36, 36);
-            this.btnSalvar.Text = "toolStripButton2";
+            this.BtnSalvar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnSalvar.Enabled = false;
+            this.BtnSalvar.Image = global::Veterinaria.Properties.Resources.salvar;
+            this.BtnSalvar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnSalvar.Name = "BtnSalvar";
+            this.BtnSalvar.Size = new System.Drawing.Size(36, 36);
+            this.BtnSalvar.Text = "Salvar";
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
-            // btnCancelar
+            // BtnCancelar
             // 
-            this.btnCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnCancelar.Enabled = false;
-            this.btnCancelar.Image = global::Veterinaria.Properties.Resources.cancelar;
-            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(36, 36);
-            this.btnCancelar.Text = "toolStripButton3";
+            this.BtnCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnCancelar.Enabled = false;
+            this.BtnCancelar.Image = global::Veterinaria.Properties.Resources.cancelar;
+            this.BtnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(36, 36);
+            this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
-            // btnApagar
+            // BtnApagar
             // 
-            this.btnApagar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnApagar.Image = global::Veterinaria.Properties.Resources.apagar;
-            this.btnApagar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnApagar.Name = "btnApagar";
-            this.btnApagar.Size = new System.Drawing.Size(36, 36);
-            this.btnApagar.Text = "toolStripButton4";
+            this.BtnApagar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnApagar.Image = global::Veterinaria.Properties.Resources.apagar;
+            this.BtnApagar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnApagar.Name = "BtnApagar";
+            this.BtnApagar.Size = new System.Drawing.Size(36, 36);
+            this.BtnApagar.Text = "Apagar";
+            this.BtnApagar.Click += new System.EventHandler(this.BtnApagar_Click);
             // 
-            // btnEditar
+            // BtnEditar
             // 
-            this.btnEditar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnEditar.Image = global::Veterinaria.Properties.Resources.editar;
-            this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(36, 36);
-            this.btnEditar.Text = "toolStripButton5";
+            this.BtnEditar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnEditar.Image = global::Veterinaria.Properties.Resources.editar;
+            this.BtnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnEditar.Name = "BtnEditar";
+            this.BtnEditar.Size = new System.Drawing.Size(36, 36);
+            this.BtnEditar.Text = "Editar";
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
-            // btnPrimeiro
+            // BtnPrimeiro
             // 
-            this.btnPrimeiro.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnPrimeiro.Image = global::Veterinaria.Properties.Resources.primeiro;
-            this.btnPrimeiro.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnPrimeiro.Name = "btnPrimeiro";
-            this.btnPrimeiro.Size = new System.Drawing.Size(36, 36);
-            this.btnPrimeiro.Text = "toolStripButton1";
+            this.BtnPrimeiro.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnPrimeiro.Image = global::Veterinaria.Properties.Resources.primeiro;
+            this.BtnPrimeiro.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnPrimeiro.Name = "BtnPrimeiro";
+            this.BtnPrimeiro.Size = new System.Drawing.Size(36, 36);
+            this.BtnPrimeiro.Text = "Primeiro";
+            this.BtnPrimeiro.Click += new System.EventHandler(this.BtnPrimeiro_Click);
             // 
-            // btnAnterior
+            // BtnAnterior
             // 
-            this.btnAnterior.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnAnterior.Image = global::Veterinaria.Properties.Resources.seta_esquerda;
-            this.btnAnterior.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(36, 36);
-            this.btnAnterior.Text = "toolStripButton2";
+            this.BtnAnterior.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnAnterior.Image = global::Veterinaria.Properties.Resources.seta_esquerda;
+            this.BtnAnterior.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnAnterior.Name = "BtnAnterior";
+            this.BtnAnterior.Size = new System.Drawing.Size(36, 36);
+            this.BtnAnterior.Text = "Anterior";
+            this.BtnAnterior.Click += new System.EventHandler(this.BtnAnterior_Click);
             // 
-            // btnProximo
+            // BtnProximo
             // 
-            this.btnProximo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnProximo.Image = global::Veterinaria.Properties.Resources.seta_direita;
-            this.btnProximo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnProximo.Name = "btnProximo";
-            this.btnProximo.Size = new System.Drawing.Size(36, 36);
-            this.btnProximo.Text = "toolStripButton3";
+            this.BtnProximo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnProximo.Image = global::Veterinaria.Properties.Resources.seta_direita;
+            this.BtnProximo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnProximo.Name = "BtnProximo";
+            this.BtnProximo.Size = new System.Drawing.Size(36, 36);
+            this.BtnProximo.Text = "Proximo";
+            this.BtnProximo.Click += new System.EventHandler(this.BtnProximo_Click);
             // 
-            // btnUltimo
+            // BtnUltimo
             // 
-            this.btnUltimo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnUltimo.Image = global::Veterinaria.Properties.Resources.ultimo;
-            this.btnUltimo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnUltimo.Name = "btnUltimo";
-            this.btnUltimo.Size = new System.Drawing.Size(36, 36);
-            this.btnUltimo.Text = "toolStripButton4";
+            this.BtnUltimo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnUltimo.Image = global::Veterinaria.Properties.Resources.ultimo;
+            this.BtnUltimo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnUltimo.Name = "BtnUltimo";
+            this.BtnUltimo.Size = new System.Drawing.Size(36, 36);
+            this.BtnUltimo.Text = "Ultimo";
+            this.BtnUltimo.Click += new System.EventHandler(this.BtnUltimo_Click);
             // 
-            // btnBuscar
+            // BtnBuscar
             // 
-            this.btnBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnBuscar.Image = global::Veterinaria.Properties.Resources.ampliacao;
-            this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(36, 36);
-            this.btnBuscar.Text = "toolStripButton1";
+            this.BtnBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnBuscar.Image = global::Veterinaria.Properties.Resources.ampliacao;
+            this.BtnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(36, 36);
+            this.BtnBuscar.Text = "toolStripButton1";
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // ID
             // 
@@ -260,17 +271,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 393);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.txtRaca);
+            this.Controls.Add(this.TxtBairro);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.TxtCodigo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DataGridBairro);
             this.Name = "FrmBairro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBairro";
-            this.Load += new System.EventHandler(this.FrmBairro_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridBairro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,25 +290,25 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton btnNovo;
-        private System.Windows.Forms.ToolStripButton btnSalvar;
-        private System.Windows.Forms.ToolStripButton btnCancelar;
-        private System.Windows.Forms.ToolStripButton btnApagar;
-        private System.Windows.Forms.ToolStripButton btnEditar;
+        private System.Windows.Forms.ToolStripButton BtnNovo;
+        private System.Windows.Forms.ToolStripButton BtnSalvar;
+        private System.Windows.Forms.ToolStripButton BtnCancelar;
+        private System.Windows.Forms.ToolStripButton BtnApagar;
+        private System.Windows.Forms.ToolStripButton BtnEditar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton btnPrimeiro;
-        private System.Windows.Forms.ToolStripButton btnAnterior;
-        private System.Windows.Forms.ToolStripButton btnProximo;
-        private System.Windows.Forms.ToolStripButton btnUltimo;
+        private System.Windows.Forms.ToolStripButton BtnPrimeiro;
+        private System.Windows.Forms.ToolStripButton BtnAnterior;
+        private System.Windows.Forms.ToolStripButton BtnProximo;
+        private System.Windows.Forms.ToolStripButton BtnUltimo;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripLabel lblBuscar;
-        private System.Windows.Forms.ToolStripTextBox txtBuscar;
-        private System.Windows.Forms.ToolStripButton btnBuscar;
-        private System.Windows.Forms.TextBox txtRaca;
+        private System.Windows.Forms.ToolStripTextBox TxtBuscar;
+        private System.Windows.Forms.ToolStripButton BtnBuscar;
+        private System.Windows.Forms.TextBox TxtBairro;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.TextBox TxtCodigo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DataGridBairro;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomeBairro;
     }
