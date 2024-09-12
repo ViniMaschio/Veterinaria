@@ -13,7 +13,7 @@ namespace Veterinaria.model
         public int codloja {  get; set; }
         public String nomeloja { get; set; }
         public M_Bairro bairro { get; set; }
-        public Rua rua { get; set; }
+        public M_Rua rua { get; set; }
         public Cep cep { get; set; }    
         public Cidade cidade { get; set; }
         public Estado estado { get; set; }

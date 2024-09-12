@@ -49,6 +49,7 @@
     <Compile Include="conection\Conexao.cs" />
     <Compile Include="control\C_Bairro.cs" />
     <Compile Include="control\C_Raca.cs" />
+    <Compile Include="control\C_Rua.cs" />
     <Compile Include="control\C_Sexo.cs" />
     <Compile Include="control\C_TipoAnimal.cs" />
     <Compile Include="control\I_Metodos_Comuns.cs" />
@@ -71,7 +72,7 @@
     <Compile Include="model\Marca.cs" />
     <Compile Include="model\Pais.cs" />
     <Compile Include="model\Raca.cs" />
-    <Compile Include="model\Rua.cs" />
+    <Compile Include="model\M_Rua.cs" />
     <Compile Include="model\M_Sexo.cs" />
     <Compile Include="model\Telefone.cs" />
     <Compile Include="model\Telefoneloja.cs" />

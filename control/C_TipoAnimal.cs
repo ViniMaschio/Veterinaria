@@ -34,7 +34,7 @@ namespace Veterinaria.control
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Erro: " + ex.Message);
+                MessageBox.Show("Erro: " + ex.Message, "Apaga Dados");
             }
             finally
             {
@@ -66,7 +66,7 @@ namespace Veterinaria.control
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Erro: " + ex.Message);
+                MessageBox.Show("Erro: " + ex.Message, "Atualiza Dados");
             }
             finally
             {
