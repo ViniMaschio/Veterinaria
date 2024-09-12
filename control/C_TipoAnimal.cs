@@ -12,8 +12,6 @@ namespace Veterinaria.control
     {
         SqlConnection conn;
         SqlCommand cmd;
-        DataTable dt_TipoAnimal;
-        SqlDataAdapter da_TipoAnimal;
 
         String sqlApaga = "delete from tipoanimal where codtipoanimal = @pcodtipoanimal";
         public void Apaga_Dados(int aux)
@@ -180,7 +178,6 @@ namespace Veterinaria.control
 
             return listTipoAnimal;
         }
-
 
         String sqlInsere = "insert into tipoanimal(nometipoanimal) values (@pnometipoanimal)";
         public void Insere_Dados(object aux)

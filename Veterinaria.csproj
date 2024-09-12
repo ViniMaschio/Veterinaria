@@ -87,6 +87,12 @@
     <Compile Include="view\FrmBairro.Designer.cs">
       <DependentUpon>FrmBairro.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\FrmRua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmRua.Designer.cs">
+      <DependentUpon>FrmRua.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\FrmTipoAnimal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </Compile>
     <EmbeddedResource Include="view\FrmBairro.resx">
       <DependentUpon>FrmBairro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmRua.resx">
+      <DependentUpon>FrmRua.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\FrmTipoAnimal.resx">
       <DependentUpon>FrmTipoAnimal.cs</DependentUpon>
