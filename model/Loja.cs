@@ -16,7 +16,7 @@ namespace Veterinaria.model
         public M_Rua rua { get; set; }
         public Cep cep { get; set; }    
         public M_Cidade cidade { get; set; }
-        public Estado estado { get; set; }
+        public M_Estado estado { get; set; }
         public Pais pais { get; set; }
         public String numeroloja { get; set; }
         public String cnpj { get; set; }    

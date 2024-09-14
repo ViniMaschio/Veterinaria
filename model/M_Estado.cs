@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Veterinaria.model
 {
-    internal class Estado
+    internal class M_Estado
     {
         public int codestado {  get; set; }
         public String nomeestado { get; set; }
         public String sigla { get; set; }
-        public Estado()
+        public M_Estado()
         {
 
         }

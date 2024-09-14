@@ -54,7 +54,7 @@ create table cidade (
 );
 
 -- TEM QUE FAZER O CONTROLE 
--- estado = {codestado, nomeestado, sigla} OK
+-- estado = {codestado, nomeestado, sigla} Feito
 create table estado(
     codestado integer identity primary key,
     nomeestado varchar(80) not null unique,

@@ -169,7 +169,7 @@ namespace Veterinaria.control
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Erro: " + ex.Message);
+                MessageBox.Show("Erro: " + ex.Message, "Erro Buscar Todos");
             }
             finally
             {
