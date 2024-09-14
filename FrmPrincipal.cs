@@ -43,5 +43,11 @@ namespace Veterinaria
             FrmRua frmRua = new FrmRua();
             frmRua.ShowDialog();
         }
+
+        private void paisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPais frmPais = new FrmPais();
+            frmPais.ShowDialog();
+        }
     }
 }

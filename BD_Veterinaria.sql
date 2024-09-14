@@ -62,14 +62,14 @@ create table estado(
 );
 
 -- TEM QUE FAZER O CONTROLE, MODEL E VIEW
--- pais = {codpais, nomepais, bandeira} OK
+-- pais = {codpais, nomepais, bandeira} feito
 create table pais(
     codpais integer identity primary key,
     nomepais varchar(80) not null unique,
     bandeira varbinary(max) not null
 );
 -- cliente = {codcliente, nomecliente, cpf, codbairrofk, codruafk, 
---codcepfk, codcidadefk, codestadofk, codpaisfk, numerocasa, fotocliente} OK
+--codcepfk, codcidadefk, codestadofk, codpaisfk, numerocasa, fotocliente} ok
 create table cliente(
     codcliente integer identity primary key,
     nomecliente varchar(80) not null,

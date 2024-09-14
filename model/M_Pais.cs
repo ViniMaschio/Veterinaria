@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Veterinaria.model
 {
-    internal class Pais
+    internal class M_Pais
     {
         public int codpais {  get; set; }
         public String nomepais { get; set; }
         public Byte[] bandeira { get; set; }
 
-        public Pais() { } //Construtor padrão da classe Pais
-        public Pais(int codpais, string nomepais, byte[] bandeira)
+        public M_Pais() { } //Construtor padrão da classe Pais
+        public M_Pais(int codpais, string nomepais, byte[] bandeira)
         {
             this.codpais = codpais;
             this.nomepais = nomepais;

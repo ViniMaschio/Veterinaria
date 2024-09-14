@@ -50,6 +50,7 @@
     <Compile Include="control\C_Bairro.cs" />
     <Compile Include="control\C_Cidade.cs" />
     <Compile Include="control\C_Estado.cs" />
+    <Compile Include="control\C_Pais.cs" />
     <Compile Include="control\C_Raca.cs" />
     <Compile Include="control\C_Rua.cs" />
     <Compile Include="control\C_Sexo.cs" />
@@ -72,7 +73,7 @@
     <Compile Include="model\Funcionariotelefone.cs" />
     <Compile Include="model\Loja.cs" />
     <Compile Include="model\Marca.cs" />
-    <Compile Include="model\Pais.cs" />
+    <Compile Include="model\M_Pais.cs" />
     <Compile Include="model\Raca.cs" />
     <Compile Include="model\M_Rua.cs" />
     <Compile Include="model\M_Sexo.cs" />
@@ -88,6 +89,12 @@
     </Compile>
     <Compile Include="view\FrmBairro.Designer.cs">
       <DependentUpon>FrmBairro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmPais.Designer.cs">
+      <DependentUpon>FrmPais.cs</DependentUpon>
     </Compile>
     <Compile Include="view\FrmRua.cs">
       <SubType>Form</SubType>
@@ -122,6 +129,9 @@
     </Compile>
     <EmbeddedResource Include="view\FrmBairro.resx">
       <DependentUpon>FrmBairro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmPais.resx">
+      <DependentUpon>FrmPais.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\FrmRua.resx">
       <DependentUpon>FrmRua.cs</DependentUpon>
