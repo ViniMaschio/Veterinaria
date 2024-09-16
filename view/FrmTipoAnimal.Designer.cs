@@ -299,7 +299,6 @@
             this.Name = "FrmTipoAnimal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Tipo Animal";
-            this.Load += new System.EventHandler(this.FrmTipoAnimal_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGView)).EndInit();

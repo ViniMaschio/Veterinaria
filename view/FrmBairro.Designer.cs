@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.lblBuscar = new System.Windows.Forms.ToolStripLabel();
-            this.TxtBuscar = new System.Windows.Forms.ToolStripTextBox();
-            this.TxtBairro = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.TxtCodigo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.DataGridBairro = new System.Windows.Forms.DataGridView();
             this.BtnNovo = new System.Windows.Forms.ToolStripButton();
             this.BtnSalvar = new System.Windows.Forms.ToolStripButton();
             this.BtnCancelar = new System.Windows.Forms.ToolStripButton();
             this.BtnApagar = new System.Windows.Forms.ToolStripButton();
             this.BtnEditar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.BtnPrimeiro = new System.Windows.Forms.ToolStripButton();
             this.BtnAnterior = new System.Windows.Forms.ToolStripButton();
             this.BtnProximo = new System.Windows.Forms.ToolStripButton();
             this.BtnUltimo = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.lblBuscar = new System.Windows.Forms.ToolStripLabel();
+            this.TxtBuscar = new System.Windows.Forms.ToolStripTextBox();
             this.BtnBuscar = new System.Windows.Forms.ToolStripButton();
+            this.TxtBairro = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TxtCodigo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.DataGridBairro = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeBairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
@@ -74,80 +74,9 @@
             this.BtnBuscar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(605, 39);
+            this.toolStrip1.Size = new System.Drawing.Size(580, 39);
             this.toolStrip1.TabIndex = 11;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
-            // 
-            // lblBuscar
-            // 
-            this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(42, 36);
-            this.lblBuscar.Text = "Buscar";
-            // 
-            // TxtBuscar
-            // 
-            this.TxtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Size = new System.Drawing.Size(140, 39);
-            // 
-            // TxtBairro
-            // 
-            this.TxtBairro.Enabled = false;
-            this.TxtBairro.Location = new System.Drawing.Point(56, 86);
-            this.TxtBairro.Name = "TxtBairro";
-            this.TxtBairro.Size = new System.Drawing.Size(430, 20);
-            this.TxtBairro.TabIndex = 10;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 89);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Bairro:";
-            // 
-            // TxtCodigo
-            // 
-            this.TxtCodigo.Enabled = false;
-            this.TxtCodigo.Location = new System.Drawing.Point(56, 60);
-            this.TxtCodigo.Name = "TxtCodigo";
-            this.TxtCodigo.Size = new System.Drawing.Size(86, 20);
-            this.TxtCodigo.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Código:";
-            // 
-            // DataGridBairro
-            // 
-            this.DataGridBairro.AllowUserToAddRows = false;
-            this.DataGridBairro.AllowUserToDeleteRows = false;
-            this.DataGridBairro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridBairro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.NomeBairro});
-            this.DataGridBairro.Location = new System.Drawing.Point(18, 129);
-            this.DataGridBairro.Name = "DataGridBairro";
-            this.DataGridBairro.ReadOnly = true;
-            this.DataGridBairro.Size = new System.Drawing.Size(468, 223);
-            this.DataGridBairro.TabIndex = 6;
-            this.DataGridBairro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridBairro_CellClick);
             // 
             // BtnNovo
             // 
@@ -201,6 +130,11 @@
             this.BtnEditar.Text = "Editar";
             this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
+            // 
             // BtnPrimeiro
             // 
             this.BtnPrimeiro.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -241,6 +175,23 @@
             this.BtnUltimo.Text = "Ultimo";
             this.BtnUltimo.Click += new System.EventHandler(this.BtnUltimo_Click);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
+            // 
+            // lblBuscar
+            // 
+            this.lblBuscar.Name = "lblBuscar";
+            this.lblBuscar.Size = new System.Drawing.Size(42, 36);
+            this.lblBuscar.Text = "Buscar";
+            // 
+            // TxtBuscar
+            // 
+            this.TxtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtBuscar.Name = "TxtBuscar";
+            this.TxtBuscar.Size = new System.Drawing.Size(140, 39);
+            // 
             // BtnBuscar
             // 
             this.BtnBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -250,6 +201,55 @@
             this.BtnBuscar.Size = new System.Drawing.Size(36, 36);
             this.BtnBuscar.Text = "toolStripButton1";
             this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
+            // TxtBairro
+            // 
+            this.TxtBairro.Enabled = false;
+            this.TxtBairro.Location = new System.Drawing.Point(56, 86);
+            this.TxtBairro.Name = "TxtBairro";
+            this.TxtBairro.Size = new System.Drawing.Size(503, 20);
+            this.TxtBairro.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 89);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Bairro:";
+            // 
+            // TxtCodigo
+            // 
+            this.TxtCodigo.Enabled = false;
+            this.TxtCodigo.Location = new System.Drawing.Point(56, 60);
+            this.TxtCodigo.Name = "TxtCodigo";
+            this.TxtCodigo.Size = new System.Drawing.Size(86, 20);
+            this.TxtCodigo.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Código:";
+            // 
+            // DataGridBairro
+            // 
+            this.DataGridBairro.AllowUserToAddRows = false;
+            this.DataGridBairro.AllowUserToDeleteRows = false;
+            this.DataGridBairro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridBairro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.NomeBairro});
+            this.DataGridBairro.Location = new System.Drawing.Point(18, 129);
+            this.DataGridBairro.Name = "DataGridBairro";
+            this.DataGridBairro.ReadOnly = true;
+            this.DataGridBairro.Size = new System.Drawing.Size(541, 223);
+            this.DataGridBairro.TabIndex = 6;
+            this.DataGridBairro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridBairro_CellClick);
             // 
             // ID
             // 
@@ -269,7 +269,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 393);
+            this.ClientSize = new System.Drawing.Size(580, 393);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.TxtBairro);
             this.Controls.Add(this.label2);

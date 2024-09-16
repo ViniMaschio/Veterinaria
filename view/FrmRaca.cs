@@ -83,11 +83,8 @@ namespace Veterinaria.view
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // atuliza a linha clicada do datagrid 020..
-            int index = e.RowIndex;
-            DataGridViewRow dr = dataGridView1.Rows[index];
-            txtCodigo.Text = dr.Cells[0].Value.ToString();
-            txtRaca.Text = dr.Cells[1].Value.ToString();
+            posicao = e.RowIndex;
+            atualizaCampos();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

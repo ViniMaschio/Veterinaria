@@ -112,10 +112,8 @@ namespace Veterinaria.view
 
         private void dGView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int index = e.RowIndex;
-            DataGridViewRow dr = dGView.Rows[index];
-            txtCodigo.Text = dr.Cells[0].Value.ToString();
-            txtRua.Text = dr.Cells[1].Value.ToString();
+            posicao = e.RowIndex;
+            AtualizarCampos();
         }
 
         private void btnNovo_Click(object sender, EventArgs e)

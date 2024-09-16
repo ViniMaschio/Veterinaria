@@ -214,12 +214,8 @@ namespace Veterinaria.view
 
         private void DataGridBairro_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int index = e.RowIndex;
-            
-            DataGridViewRow dr = DataGridBairro.Rows[index];
-
-            TxtCodigo.Text = dr.Cells[0].Value.ToString();
-            TxtBairro.Text = dr.Cells[1].Value.ToString();
+            posicao = e.RowIndex;
+            AtualizarCampos();
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)
