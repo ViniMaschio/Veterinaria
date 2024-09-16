@@ -260,5 +260,13 @@ namespace Veterinaria.view
                 NovaFotoPais = ImageParaByte();
             }
         }
+
+        private void dGView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow dr = dGView.Rows[index];
+            txtCodigo.Text = dr.Cells[0].Value.ToString();
+            txtPais.Text = dr.Cells[1].Value.ToString();
+        }
     }
 }

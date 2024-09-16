@@ -254,6 +254,7 @@
             this.dGView.ReadOnly = true;
             this.dGView.Size = new System.Drawing.Size(562, 223);
             this.dGView.TabIndex = 6;
+            this.dGView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGView_CellClick);
             // 
             // ID
             // 
