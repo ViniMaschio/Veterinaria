@@ -14,7 +14,6 @@ namespace Veterinaria.view
 {
     public partial class FrmTelefone : Form
     {
-        DataTable Tabela_racas;
         Boolean novo = true;
         int posicao;
         List<M_Telefone> listTelefone = new List<M_Telefone>();

@@ -20,7 +20,6 @@ namespace Veterinaria.view
             CarregarTabelaTodos();
         }
 
-        DataTable Tabela_racas;
         Boolean novo = true;
         int posicao;
         List<M_Tipofuncionario> listTipoFuncionario =  new List<M_Tipofuncionario> ();
