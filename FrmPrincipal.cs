@@ -55,5 +55,11 @@ namespace Veterinaria
             FrmTelefone frmTelefone = new FrmTelefone();
             frmTelefone.ShowDialog();
         }
+
+        private void tipoFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTipoFuncionario frmTipoFuncionario = new FrmTipoFuncionario();
+            frmTipoFuncionario.ShowDialog();
+        }
     }
 }

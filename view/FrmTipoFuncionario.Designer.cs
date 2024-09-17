@@ -1,6 +1,6 @@
 ﻿namespace Veterinaria.view
 {
-    partial class FrmTelefone
+    partial class FrmTipoFuncionario
     {
         /// <summary>
         /// Required designer variable.
@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.lblBuscar = new System.Windows.Forms.ToolStripLabel();
+            this.txtBuscar = new System.Windows.Forms.ToolStripTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dGViews = new System.Windows.Forms.DataGridView();
             this.btnNovo = new System.Windows.Forms.ToolStripButton();
             this.btnSalvar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnApagar = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnPrimeiro = new System.Windows.Forms.ToolStripButton();
             this.btnAnterior = new System.Windows.Forms.ToolStripButton();
             this.btnProximo = new System.Windows.Forms.ToolStripButton();
             this.btnUltimo = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.lblBuscar = new System.Windows.Forms.ToolStripLabel();
-            this.txtBuscar = new System.Windows.Forms.ToolStripTextBox();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dGViews = new System.Windows.Forms.DataGridView();
-            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtTipoFuncionario = new System.Windows.Forms.TextBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumeroTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeTipoFuncionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGViews)).BeginInit();
             this.SuspendLayout();
@@ -74,9 +74,72 @@
             this.btnBuscar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(586, 39);
-            this.toolStrip1.TabIndex = 11;
+            this.toolStrip1.Size = new System.Drawing.Size(589, 39);
+            this.toolStrip1.TabIndex = 17;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
+            // 
+            // lblBuscar
+            // 
+            this.lblBuscar.Name = "lblBuscar";
+            this.lblBuscar.Size = new System.Drawing.Size(42, 36);
+            this.lblBuscar.Text = "Buscar";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(140, 39);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Tipo Funcionario:";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Enabled = false;
+            this.txtCodigo.Location = new System.Drawing.Point(57, 52);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(86, 20);
+            this.txtCodigo.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Código:";
+            // 
+            // dGViews
+            // 
+            this.dGViews.AllowUserToAddRows = false;
+            this.dGViews.AllowUserToDeleteRows = false;
+            this.dGViews.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGViews.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.NomeTipoFuncionario});
+            this.dGViews.Location = new System.Drawing.Point(12, 113);
+            this.dGViews.Name = "dGViews";
+            this.dGViews.ReadOnly = true;
+            this.dGViews.Size = new System.Drawing.Size(562, 223);
+            this.dGViews.TabIndex = 13;
+            this.dGViews.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGViews_CellClick);
             // 
             // btnNovo
             // 
@@ -130,11 +193,6 @@
             this.btnEditar.Text = "Alterar";
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
-            // 
             // btnPrimeiro
             // 
             this.btnPrimeiro.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -175,23 +233,6 @@
             this.btnUltimo.Text = "Ultimo";
             this.btnUltimo.Click += new System.EventHandler(this.btnUltimo_Click);
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
-            // 
-            // lblBuscar
-            // 
-            this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(42, 36);
-            this.lblBuscar.Text = "Buscar";
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(140, 39);
-            // 
             // btnBuscar
             // 
             this.btnBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -202,56 +243,13 @@
             this.btnBuscar.Text = "Pesquisar";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // label2
+            // txtTipoFuncionario
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Telefone:";
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(57, 49);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(86, 20);
-            this.txtCodigo.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Código:";
-            // 
-            // dGViews
-            // 
-            this.dGViews.AllowUserToAddRows = false;
-            this.dGViews.AllowUserToDeleteRows = false;
-            this.dGViews.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGViews.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.NumeroTelefone});
-            this.dGViews.Location = new System.Drawing.Point(12, 110);
-            this.dGViews.Name = "dGViews";
-            this.dGViews.ReadOnly = true;
-            this.dGViews.Size = new System.Drawing.Size(553, 223);
-            this.dGViews.TabIndex = 6;
-            this.dGViews.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGViews_CellClick);
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Enabled = false;
-            this.txtTelefone.Location = new System.Drawing.Point(74, 79);
-            this.txtTelefone.Mask = "(00) 00000-0000";
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(91, 20);
-            this.txtTelefone.TabIndex = 12;
-            this.txtTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
+            this.txtTipoFuncionario.Enabled = false;
+            this.txtTipoFuncionario.Location = new System.Drawing.Point(111, 82);
+            this.txtTipoFuncionario.Name = "txtTipoFuncionario";
+            this.txtTipoFuncionario.Size = new System.Drawing.Size(463, 20);
+            this.txtTipoFuncionario.TabIndex = 18;
             // 
             // ID
             // 
@@ -260,27 +258,26 @@
             this.ID.ReadOnly = true;
             this.ID.Width = 50;
             // 
-            // NumeroTelefone
+            // NomeTipoFuncionario
             // 
-            this.NumeroTelefone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NumeroTelefone.HeaderText = "Telefone";
-            this.NumeroTelefone.Name = "NumeroTelefone";
-            this.NumeroTelefone.ReadOnly = true;
+            this.NomeTipoFuncionario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NomeTipoFuncionario.HeaderText = "Tipo Funcionario";
+            this.NomeTipoFuncionario.Name = "NomeTipoFuncionario";
+            this.NomeTipoFuncionario.ReadOnly = true;
             // 
-            // FrmTelefone
+            // FrmTipoFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 358);
-            this.Controls.Add(this.txtTelefone);
+            this.ClientSize = new System.Drawing.Size(589, 360);
+            this.Controls.Add(this.txtTipoFuncionario);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dGViews);
-            this.Name = "FrmTelefone";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmTelefone";
+            this.Name = "FrmTipoFuncionario";
+            this.Text = "FrmTipoFuncionario";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGViews)).EndInit();
@@ -290,7 +287,6 @@
         }
 
         #endregion
-
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnNovo;
         private System.Windows.Forms.ToolStripButton btnSalvar;
@@ -310,8 +306,8 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dGViews;
-        private System.Windows.Forms.MaskedTextBox txtTelefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumeroTelefone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomeTipoFuncionario;
+        private System.Windows.Forms.TextBox txtTipoFuncionario;
     }
 }

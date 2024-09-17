@@ -2,28 +2,25 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Veterinaria.conection;
 using Veterinaria.model;
 
 namespace Veterinaria.control
 {
-    internal class C_Telefone : I_Metodos_Comuns
+    internal class C_TipoFuncionario : I_Metodos_Comuns
     {
         SqlConnection conn;
         SqlCommand cmd;
 
-        String sqlApaga = "delete from telefone where codtelefone = @pcodtelefone";
+        String sqlApaga = "delete from tipofuncionario where codtipofuncionario = @pcodtipofuncionario";
         public void Apaga_Dados(int aux)
         {
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
 
             cmd = new SqlCommand(sqlApaga, conn);
-            cmd.Parameters.AddWithValue("@pcodtelefone", aux);
+            cmd.Parameters.AddWithValue("@pcodtipofuncionario", aux);
 
             cmd.CommandType = CommandType.Text;
             conn.Open();
@@ -43,18 +40,18 @@ namespace Veterinaria.control
             }
         }
 
-        String sqlAtualiza = "update telefone set numerotelefone = @pnumerotelefone where codtelefone = @pcodtelefone";
+        String sqlAtualiza = "update tipofuncionario set nometipofuncionario = @pnometipofuncionario where codtipofuncionario = @pcodtipofuncionario";
         public void Atualizar_Dados(object aux)
         {
-            M_Telefone m_Telefone = new M_Telefone();
-            m_Telefone = (M_Telefone)aux;
+            M_Tipofuncionario m_Tipofuncionario = new M_Tipofuncionario();
+            m_Tipofuncionario = (M_Tipofuncionario)aux;
 
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
 
             cmd = new SqlCommand(sqlAtualiza, conn);
-            cmd.Parameters.AddWithValue("@pcodtelefone", m_Telefone.codtelefone);
-            cmd.Parameters.AddWithValue("@pnumerotelefone", m_Telefone.numerotelefone);
+            cmd.Parameters.AddWithValue("@pcodtipofuncionario", m_Tipofuncionario.codtipofuncionario);
+            cmd.Parameters.AddWithValue("@pnometipofuncionario", m_Tipofuncionario.nometipofuncionario);
 
             // cmd.CommandType = CommandType.Text;
             conn.Open();
@@ -74,10 +71,10 @@ namespace Veterinaria.control
             }
         }
 
-        String sqlFiltro = "select * from telefone where numerotelefone like @pnumerotelefone";
+        String sqlFiltro = "select * from tipofuncionario where nometipofuncionario like @pnometipofuncionario";
         public object Buscar_Filtro(string dados)
         {
-            List<M_Telefone> listTelefone = new List<M_Telefone>();
+            List<M_Tipofuncionario> listTipoFuncionario = new List<M_Tipofuncionario>();
 
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
@@ -85,7 +82,7 @@ namespace Veterinaria.control
             cmd = new SqlCommand(sqlFiltro, conn);
 
             //Adiciona o valor a ser pesquisado no parâmetro
-            cmd.Parameters.AddWithValue("@pnumerotelefone", "%" + dados + "%");
+            cmd.Parameters.AddWithValue("@pnometipofuncionario", dados + "%");
 
             SqlDataReader reader;
             conn.Open();
@@ -95,11 +92,11 @@ namespace Veterinaria.control
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    M_Telefone aux = new M_Telefone();
-                    aux.codtelefone = Int32.Parse(reader["codtelefone"].ToString());
-                    aux.numerotelefone = reader["numerotelefone"].ToString();
+                    M_Tipofuncionario aux = new M_Tipofuncionario();
+                    aux.codtipofuncionario = Int32.Parse(reader["codtipofuncionario"].ToString());
+                    aux.nometipofuncionario = reader["nometipofuncionario"].ToString();
 
-                    listTelefone.Add(aux);
+                    listTipoFuncionario.Add(aux);
                 }
             }
             catch (SqlException ex)
@@ -107,13 +104,14 @@ namespace Veterinaria.control
                 MessageBox.Show("Erro: " + ex.Message);
             }
 
-            return listTelefone;
+            return listTipoFuncionario;
         }
 
-        String sqlBuscaId = "select * from telefone where codtelefone = @pcodtelefone";
+        String sqlBuscaId = "select * from tipofuncionario where codtipofuncionario = @codtipofuncionario";
         public object Buscar_Id(int valor)
         {
-            M_Telefone aux = new M_Telefone();
+
+            M_Tipofuncionario aux = new M_Tipofuncionario();
 
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
@@ -121,7 +119,7 @@ namespace Veterinaria.control
             cmd = new SqlCommand(sqlBuscaId, conn);
 
             //Adiciona o valor a ser pesquisado no parâmetro
-            cmd.Parameters.AddWithValue("@pcodtelefone", valor);
+            cmd.Parameters.AddWithValue("@codtipofuncionario", valor);
 
             SqlDataReader reader;
             conn.Open();
@@ -131,8 +129,8 @@ namespace Veterinaria.control
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    aux.codtelefone = Int32.Parse(reader["codtelefone"].ToString());
-                    aux.numerotelefone = reader["numerotelefone"].ToString();
+                    aux.codtipofuncionario = Int32.Parse(reader["codtipofuncionario"].ToString());
+                    aux.nometipofuncionario = reader["nometipofuncionario"].ToString();
                 }
             }
             catch (SqlException ex)
@@ -145,10 +143,10 @@ namespace Veterinaria.control
             return aux;
         }
 
-        String sqlTodos = "select * from telefone";
+        String sqlTodos = "select * from tipofuncionario";
         public object Buscar_Todos()
         {
-            List<M_Telefone> listTelefone = new List<M_Telefone>();
+            List<M_Tipofuncionario> listTipoFuncionario = new List<M_Tipofuncionario>();
 
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
@@ -162,11 +160,11 @@ namespace Veterinaria.control
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    M_Telefone aux = new M_Telefone();
-                    aux.codtelefone = Int32.Parse(reader["codtelefone"].ToString());
-                    aux.numerotelefone = reader["numerotelefone"].ToString();
+                    M_Tipofuncionario aux = new M_Tipofuncionario();
+                    aux.codtipofuncionario = Int32.Parse(reader["codtipofuncionario"].ToString());
+                    aux.nometipofuncionario = reader["nometipofuncionario"].ToString();
 
-                    listTelefone.Add(aux);
+                    listTipoFuncionario.Add(aux);
                 }
             }
             catch (SqlException ex)
@@ -178,19 +176,19 @@ namespace Veterinaria.control
                 conn.Close();
             }
 
-            return listTelefone;
+            return listTipoFuncionario;
         }
 
-        String sqlInsere = "insert into telefone(numerotelefone) values (@pnumerotelefone)";
+        String sqlInsere = "insert into tipofuncionario(nometipofuncionario) values (@nometipofuncionario)";
         public void Insere_Dados(object aux)
         {
-            M_Telefone m_Telefone = new M_Telefone();
-            m_Telefone = (M_Telefone)aux;
+            M_Tipofuncionario m_TipoFuncionario = new M_Tipofuncionario();
+            m_TipoFuncionario = (M_Tipofuncionario)aux;
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
 
             cmd = new SqlCommand(sqlInsere, conn);
-            cmd.Parameters.AddWithValue("@pnumerotelefone", m_Telefone.numerotelefone);
+            cmd.Parameters.AddWithValue("@nometipofuncionario", m_TipoFuncionario.nometipofuncionario);
 
             cmd.CommandType = CommandType.Text;
             conn.Open();
@@ -201,7 +199,7 @@ namespace Veterinaria.control
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Erro: " + ex.Message,"Insere Dados");
+                MessageBox.Show("Erro: " + ex.Message, "Insere Dados");
             }
             finally
             {

@@ -56,6 +56,7 @@
     <Compile Include="control\C_Sexo.cs" />
     <Compile Include="control\C_Telefone.cs" />
     <Compile Include="control\C_TipoAnimal.cs" />
+    <Compile Include="control\C_TipoFuncionario.cs" />
     <Compile Include="control\I_Metodos_Comuns.cs" />
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
@@ -81,7 +82,7 @@
     <Compile Include="model\M_Telefone.cs" />
     <Compile Include="model\Telefoneloja.cs" />
     <Compile Include="model\M_TipoAnimal.cs" />
-    <Compile Include="model\Tipofuncionario.cs" />
+    <Compile Include="model\M_Tipofuncionario.cs" />
     <Compile Include="model\Tipoproduto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,6 +122,12 @@
     <Compile Include="view\FrmRaca.Designer.cs">
       <DependentUpon>FrmRaca.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\FrmTipoFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmTipoFuncionario.Designer.cs">
+      <DependentUpon>FrmTipoFuncionario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\FrmRaca.resx">
       <DependentUpon>FrmRaca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmTipoFuncionario.resx">
+      <DependentUpon>FrmTipoFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
