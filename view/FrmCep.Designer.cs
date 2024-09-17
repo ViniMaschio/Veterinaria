@@ -1,6 +1,6 @@
 ﻿namespace Veterinaria.view
 {
-    partial class FrmRua
+    partial class FrmCep
     {
         /// <summary>
         /// Required designer variable.
@@ -33,13 +33,11 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.lblBuscar = new System.Windows.Forms.ToolStripLabel();
             this.txtBuscar = new System.Windows.Forms.ToolStripTextBox();
-            this.txtRua = new System.Windows.Forms.TextBox();
+            this.TxtCep = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dGView = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeRua = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNovo = new System.Windows.Forms.ToolStripButton();
             this.btnSalvar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
@@ -50,6 +48,8 @@
             this.btnProximo = new System.Windows.Forms.ToolStripButton();
             this.btnUltimo = new System.Windows.Forms.ToolStripButton();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeCep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGView)).BeginInit();
             this.SuspendLayout();
@@ -74,8 +74,8 @@
             this.btnBuscar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(590, 39);
-            this.toolStrip1.TabIndex = 18;
+            this.toolStrip1.Size = new System.Drawing.Size(592, 39);
+            this.toolStrip1.TabIndex = 24;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripSeparator1
@@ -100,38 +100,38 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(140, 39);
             // 
-            // txtRua
+            // TxtCep
             // 
-            this.txtRua.Enabled = false;
-            this.txtRua.Location = new System.Drawing.Point(48, 94);
-            this.txtRua.Name = "txtRua";
-            this.txtRua.Size = new System.Drawing.Size(526, 20);
-            this.txtRua.TabIndex = 17;
+            this.TxtCep.Enabled = false;
+            this.TxtCep.Location = new System.Drawing.Point(48, 138);
+            this.TxtCep.Name = "TxtCep";
+            this.TxtCep.Size = new System.Drawing.Size(526, 20);
+            this.TxtCep.TabIndex = 23;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 97);
+            this.label2.Location = new System.Drawing.Point(9, 141);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Rua :";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "CEP :";
             // 
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(50, 64);
+            this.txtCodigo.Location = new System.Drawing.Point(50, 108);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(86, 20);
-            this.txtCodigo.TabIndex = 15;
+            this.txtCodigo.TabIndex = 21;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 71);
+            this.label1.Location = new System.Drawing.Point(9, 115);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 14;
+            this.label1.TabIndex = 20;
             this.label1.Text = "Código:";
             // 
             // dGView
@@ -142,27 +142,13 @@
             this.dGView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.NomeRua});
-            this.dGView.Location = new System.Drawing.Point(12, 139);
+            this.NomeCep});
+            this.dGView.Location = new System.Drawing.Point(12, 183);
             this.dGView.Name = "dGView";
             this.dGView.ReadOnly = true;
             this.dGView.Size = new System.Drawing.Size(562, 223);
-            this.dGView.TabIndex = 13;
+            this.dGView.TabIndex = 19;
             this.dGView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGView_CellClick);
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 50;
-            // 
-            // NomeRua
-            // 
-            this.NomeRua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NomeRua.HeaderText = "Rua";
-            this.NomeRua.Name = "NomeRua";
-            this.NomeRua.ReadOnly = true;
             // 
             // btnNovo
             // 
@@ -172,6 +158,7 @@
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(36, 36);
             this.btnNovo.Text = "Novo";
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnSalvar
             // 
@@ -273,20 +260,33 @@
             this.btnBuscar.ToolTipText = "Pesquisar";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // FrmRua
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 50;
+            // 
+            // NomeCep
+            // 
+            this.NomeCep.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NomeCep.HeaderText = "CEP";
+            this.NomeCep.Name = "NomeCep";
+            this.NomeCep.ReadOnly = true;
+            // 
+            // FrmCep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 377);
+            this.ClientSize = new System.Drawing.Size(592, 450);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.txtRua);
+            this.Controls.Add(this.TxtCep);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dGView);
-            this.Name = "FrmRua";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro Rua";
+            this.Name = "FrmCep";
+            this.Text = "FrmCep";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGView)).EndInit();
@@ -296,6 +296,7 @@
         }
 
         #endregion
+
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnNovo;
         private System.Windows.Forms.ToolStripButton btnSalvar;
@@ -311,12 +312,12 @@
         private System.Windows.Forms.ToolStripLabel lblBuscar;
         private System.Windows.Forms.ToolStripTextBox txtBuscar;
         private System.Windows.Forms.ToolStripButton btnBuscar;
-        private System.Windows.Forms.TextBox txtRua;
+        private System.Windows.Forms.TextBox TxtCep;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dGView;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomeRua;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomeCep;
     }
 }

@@ -61,5 +61,11 @@ namespace Veterinaria
             FrmTipoFuncionario frmTipoFuncionario = new FrmTipoFuncionario();
             frmTipoFuncionario.ShowDialog();
         }
+
+        private void cEPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCep frmCep = new FrmCep();
+            frmCep.ShowDialog();
+        }
     }
 }

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Veterinaria.model
 {
-    internal class Cep
+    internal class M_Cep
     {
         public int codcep {  get; set; }
         public String numerocep {  get; set; }
-        public Cep() { }
+        public M_Cep() { }
 
     }
 }
