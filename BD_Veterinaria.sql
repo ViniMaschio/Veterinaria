@@ -129,7 +129,7 @@ create table telefoneloja(
 );
 
 -- TEM QUE FAZER O CONTROLE, MODEL E VIEW
--- TipoFuncionario = {codtipoFuncionario, nomeTipoFuncionario} OK
+-- TipoFuncionario = {codtipoFuncionario, nomeTipoFuncionario} feito
 create table tipofuncionario(
     codtipofuncionario integer identity primary key,
     nometipofuncionario varchar(80) not null unique
@@ -150,7 +150,7 @@ create table funcionariotelefone(
 );
 
 -- TEM QUE FAZER O CONTROLE, MODEL E VIEW
--- marca = {codmarca, nomemarca} OK
+-- marca = {codmarca, nomemarca} feito
 create table marca(
     codmarca integer identity primary key,
     nomemarca varchar(80) not null unique

@@ -61,5 +61,11 @@ namespace Veterinaria
             FrmTipoFuncionario frmTipoFuncionario = new FrmTipoFuncionario();
             frmTipoFuncionario.ShowDialog();
         }
+
+        private void marcaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmMarca frmMarca = new FrmMarca();
+            frmMarca.ShowDialog();
+        }
     }
 }

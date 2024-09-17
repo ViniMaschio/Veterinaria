@@ -40,6 +40,8 @@
             this.telefoneToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoFuncionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.produtoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +51,8 @@
             this.animalToolStripMenuItem,
             this.endereçoToolStripMenuItem,
             this.telefoneToolStripMenuItem,
-            this.funcionarioToolStripMenuItem});
+            this.funcionarioToolStripMenuItem,
+            this.produtoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -137,9 +140,24 @@
             // tipoFuncionarioToolStripMenuItem
             // 
             this.tipoFuncionarioToolStripMenuItem.Name = "tipoFuncionarioToolStripMenuItem";
-            this.tipoFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tipoFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.tipoFuncionarioToolStripMenuItem.Text = "Tipo Funcionario";
             this.tipoFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.tipoFuncionarioToolStripMenuItem_Click);
+            // 
+            // produtoToolStripMenuItem
+            // 
+            this.produtoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.marcaToolStripMenuItem});
+            this.produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
+            this.produtoToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.produtoToolStripMenuItem.Text = "Produto";
+            // 
+            // marcaToolStripMenuItem
+            // 
+            this.marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
+            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.marcaToolStripMenuItem.Text = "Marca";
+            this.marcaToolStripMenuItem.Click += new System.EventHandler(this.marcaToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -172,6 +190,8 @@
         private System.Windows.Forms.ToolStripMenuItem telefoneToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoFuncionarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem produtoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem marcaToolStripMenuItem;
     }
 }
 
