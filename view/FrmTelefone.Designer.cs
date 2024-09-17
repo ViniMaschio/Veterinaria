@@ -1,6 +1,6 @@
 ﻿namespace Veterinaria.view
 {
-    partial class FrmTipoAnimal
+    partial class FrmTelefone
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnNovo = new System.Windows.Forms.ToolStripButton();
             this.btnSalvar = new System.Windows.Forms.ToolStripButton();
@@ -43,16 +44,15 @@
             this.lblBuscar = new System.Windows.Forms.ToolStripLabel();
             this.txtBuscar = new System.Windows.Forms.ToolStripTextBox();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
-            this.txtTipoAnimal = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dGView = new System.Windows.Forms.DataGridView();
+            this.dGViews = new System.Windows.Forms.DataGridView();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeTipoAnimal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
+            this.NumeroTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGViews)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -75,7 +75,7 @@
             this.btnBuscar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(588, 39);
+            this.toolStrip1.Size = new System.Drawing.Size(586, 39);
             this.toolStrip1.TabIndex = 11;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -109,7 +109,6 @@
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(36, 36);
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.ToolTipText = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnApagar
@@ -120,7 +119,6 @@
             this.btnApagar.Name = "btnApagar";
             this.btnApagar.Size = new System.Drawing.Size(36, 36);
             this.btnApagar.Text = "Apagar";
-            this.btnApagar.ToolTipText = "Apagar";
             this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
             // btnEditar
@@ -130,8 +128,7 @@
             this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(36, 36);
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.ToolTipText = "Editar";
+            this.btnEditar.Text = "Alterar";
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // toolStripSeparator1
@@ -147,7 +144,6 @@
             this.btnPrimeiro.Name = "btnPrimeiro";
             this.btnPrimeiro.Size = new System.Drawing.Size(36, 36);
             this.btnPrimeiro.Text = "Primeiro";
-            this.btnPrimeiro.ToolTipText = "Primeiro";
             this.btnPrimeiro.Click += new System.EventHandler(this.btnPrimeiro_Click);
             // 
             // btnAnterior
@@ -158,7 +154,6 @@
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(36, 36);
             this.btnAnterior.Text = "Anterior";
-            this.btnAnterior.ToolTipText = "Anterior";
             this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // btnProximo
@@ -169,7 +164,6 @@
             this.btnProximo.Name = "btnProximo";
             this.btnProximo.Size = new System.Drawing.Size(36, 36);
             this.btnProximo.Text = "Proximo";
-            this.btnProximo.ToolTipText = "Proximo";
             this.btnProximo.Click += new System.EventHandler(this.btnProximo_Click);
             // 
             // btnUltimo
@@ -180,7 +174,6 @@
             this.btnUltimo.Name = "btnUltimo";
             this.btnUltimo.Size = new System.Drawing.Size(36, 36);
             this.btnUltimo.Text = "Ultimo";
-            this.btnUltimo.ToolTipText = "Ultimo";
             this.btnUltimo.Click += new System.EventHandler(this.btnUltimo_Click);
             // 
             // toolStripSeparator2
@@ -208,30 +201,21 @@
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(36, 36);
             this.btnBuscar.Text = "Pesquisar";
-            this.btnBuscar.ToolTipText = "Pesquisar";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // txtTipoAnimal
-            // 
-            this.txtTipoAnimal.Enabled = false;
-            this.txtTipoAnimal.Location = new System.Drawing.Point(72, 119);
-            this.txtTipoAnimal.Name = "txtTipoAnimal";
-            this.txtTipoAnimal.Size = new System.Drawing.Size(495, 20);
-            this.txtTipoAnimal.TabIndex = 10;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 126);
+            this.label2.Location = new System.Drawing.Point(16, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Tipo Animal:";
+            this.label2.Text = "Telefone:";
             // 
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(50, 93);
+            this.txtCodigo.Location = new System.Drawing.Point(57, 49);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(86, 20);
             this.txtCodigo.TabIndex = 8;
@@ -239,27 +223,36 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 100);
+            this.label1.Location = new System.Drawing.Point(16, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "Código:";
             // 
-            // dGView
+            // dGViews
             // 
-            this.dGView.AllowUserToAddRows = false;
-            this.dGView.AllowUserToDeleteRows = false;
-            this.dGView.AllowUserToOrderColumns = true;
-            this.dGView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dGViews.AllowUserToAddRows = false;
+            this.dGViews.AllowUserToDeleteRows = false;
+            this.dGViews.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGViews.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.NomeTipoAnimal});
-            this.dGView.Location = new System.Drawing.Point(12, 168);
-            this.dGView.Name = "dGView";
-            this.dGView.ReadOnly = true;
-            this.dGView.Size = new System.Drawing.Size(562, 223);
-            this.dGView.TabIndex = 6;
-            this.dGView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGView_CellClick);
+            this.NumeroTelefone});
+            this.dGViews.Location = new System.Drawing.Point(12, 110);
+            this.dGViews.Name = "dGViews";
+            this.dGViews.ReadOnly = true;
+            this.dGViews.Size = new System.Drawing.Size(553, 223);
+            this.dGViews.TabIndex = 6;
+            this.dGViews.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGViews_CellClick);
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Enabled = false;
+            this.txtTelefone.Location = new System.Drawing.Point(74, 79);
+            this.txtTelefone.Mask = "(00) 00000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(91, 20);
+            this.txtTelefone.TabIndex = 12;
+            this.txtTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
             // ID
             // 
@@ -268,40 +261,32 @@
             this.ID.ReadOnly = true;
             this.ID.Width = 50;
             // 
-            // NomeTipoAnimal
+            // NumeroTelefone
             // 
-            this.NomeTipoAnimal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NomeTipoAnimal.HeaderText = "Nome Tipo Animal";
-            this.NomeTipoAnimal.Name = "NomeTipoAnimal";
-            this.NomeTipoAnimal.ReadOnly = true;
+            this.NumeroTelefone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.Format = "(##) #####-####";
+            this.NumeroTelefone.DefaultCellStyle = dataGridViewCellStyle1;
+            this.NumeroTelefone.HeaderText = "Telefone";
+            this.NumeroTelefone.Name = "NumeroTelefone";
+            this.NumeroTelefone.ReadOnly = true;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(215, 53);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 13);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Cadastro Tipo Animal";
-            // 
-            // FrmTipoAnimal
+            // FrmTelefone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 411);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(586, 418);
+            this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.txtTipoAnimal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dGView);
-            this.Name = "FrmTipoAnimal";
+            this.Controls.Add(this.dGViews);
+            this.Name = "FrmTelefone";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro Tipo Animal";
+            this.Text = "FrmTelefone";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGViews)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,13 +309,12 @@
         private System.Windows.Forms.ToolStripLabel lblBuscar;
         private System.Windows.Forms.ToolStripTextBox txtBuscar;
         private System.Windows.Forms.ToolStripButton btnBuscar;
-        private System.Windows.Forms.TextBox txtTipoAnimal;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dGView;
+        private System.Windows.Forms.DataGridView dGViews;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomeTipoAnimal;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NumeroTelefone;
     }
 }

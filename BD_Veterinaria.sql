@@ -85,7 +85,7 @@ create table cliente(
 );
 
 -- TEM QUE FAZER O CONTROLE, MODEL E VIEW
--- telefone = {codtelefone, numerotelefone} OK
+-- telefone = {codtelefone, numerotelefone} Feito
 create table telefone(
     codtelefone integer identity primary key,
     numerotelefone varchar(20) not null unique

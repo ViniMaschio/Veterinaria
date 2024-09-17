@@ -113,7 +113,7 @@ namespace Veterinaria.view
         private void dGView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             posicao = e.RowIndex;
-            AtualizarCampos();
+            if (posicao >= 0) { AtualizarCampos(); }
         }
 
         private void btnNovo_Click(object sender, EventArgs e)

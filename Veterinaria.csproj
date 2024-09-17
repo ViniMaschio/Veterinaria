@@ -54,6 +54,7 @@
     <Compile Include="control\C_Raca.cs" />
     <Compile Include="control\C_Rua.cs" />
     <Compile Include="control\C_Sexo.cs" />
+    <Compile Include="control\C_Telefone.cs" />
     <Compile Include="control\C_TipoAnimal.cs" />
     <Compile Include="control\I_Metodos_Comuns.cs" />
     <Compile Include="FrmPrincipal.cs">
@@ -77,7 +78,7 @@
     <Compile Include="model\Raca.cs" />
     <Compile Include="model\M_Rua.cs" />
     <Compile Include="model\M_Sexo.cs" />
-    <Compile Include="model\Telefone.cs" />
+    <Compile Include="model\M_Telefone.cs" />
     <Compile Include="model\Telefoneloja.cs" />
     <Compile Include="model\M_TipoAnimal.cs" />
     <Compile Include="model\Tipofuncionario.cs" />
@@ -101,6 +102,12 @@
     </Compile>
     <Compile Include="view\FrmRua.Designer.cs">
       <DependentUpon>FrmRua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmTelefone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmTelefone.Designer.cs">
+      <DependentUpon>FrmTelefone.cs</DependentUpon>
     </Compile>
     <Compile Include="view\FrmTipoAnimal.cs">
       <SubType>Form</SubType>
@@ -135,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\FrmRua.resx">
       <DependentUpon>FrmRua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmTelefone.resx">
+      <DependentUpon>FrmTelefone.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\FrmTipoAnimal.resx">
       <DependentUpon>FrmTipoAnimal.cs</DependentUpon>

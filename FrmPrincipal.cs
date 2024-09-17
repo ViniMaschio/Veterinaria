@@ -49,5 +49,11 @@ namespace Veterinaria
             FrmPais frmPais = new FrmPais();
             frmPais.ShowDialog();
         }
+
+        private void telefoneToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmTelefone frmTelefone = new FrmTelefone();
+            frmTelefone.ShowDialog();
+        }
     }
 }

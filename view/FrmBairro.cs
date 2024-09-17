@@ -215,7 +215,7 @@ namespace Veterinaria.view
         private void DataGridBairro_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             posicao = e.RowIndex;
-            AtualizarCampos();
+            if (posicao >= 0) { AtualizarCampos(); }
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)

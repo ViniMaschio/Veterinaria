@@ -84,7 +84,7 @@ namespace Veterinaria.view
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             posicao = e.RowIndex;
-            atualizaCampos();
+            if (posicao >= 0) { atualizaCampos(); }
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

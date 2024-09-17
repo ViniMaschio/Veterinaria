@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace Veterinaria.model
 {
     /*telefone = {codtelefone, numerotelefone} OK */
-    internal class Telefone
+    internal class M_Telefone
     {
-        public Telefone() { }
+        public M_Telefone() { }
         public int codtelefone {  get; set; }
         public String numerotelefone { get; set; }
 
