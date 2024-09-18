@@ -62,6 +62,12 @@ namespace Veterinaria
             frmTipoFuncionario.ShowDialog();
         }
 
+        private void cEPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCep frmCep = new FrmCep();
+            frmCep.ShowDialog();
+        }
+
         private void marcaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmMarca frmMarca = new FrmMarca();

@@ -40,6 +40,7 @@
             this.telefoneToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoFuncionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cEPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,22 +76,23 @@
             // racaToolStripMenuItem1
             // 
             this.racaToolStripMenuItem1.Name = "racaToolStripMenuItem1";
-            this.racaToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
+            this.racaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.racaToolStripMenuItem1.Text = "Raca";
             this.racaToolStripMenuItem1.Click += new System.EventHandler(this.racaToolStripMenuItem1_Click);
             // 
             // tipoAnimalToolStripMenuItem1
             // 
             this.tipoAnimalToolStripMenuItem1.Name = "tipoAnimalToolStripMenuItem1";
-            this.tipoAnimalToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
+            this.tipoAnimalToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.tipoAnimalToolStripMenuItem1.Text = "Tipo Animal";
             this.tipoAnimalToolStripMenuItem1.Click += new System.EventHandler(this.tipoAnimalToolStripMenuItem1_Click);
             // 
             // endereçoToolStripMenuItem
             // 
             this.endereçoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bairroToolStripMenuItem,
             this.ruaToolStripMenuItem,
+            this.bairroToolStripMenuItem,
+            this.cEPToolStripMenuItem,
             this.paisToolStripMenuItem});
             this.endereçoToolStripMenuItem.Name = "endereçoToolStripMenuItem";
             this.endereçoToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
@@ -99,7 +101,7 @@
             // bairroToolStripMenuItem
             // 
             this.bairroToolStripMenuItem.Name = "bairroToolStripMenuItem";
-            this.bairroToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.bairroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bairroToolStripMenuItem.Text = "Bairro";
             this.bairroToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bairroToolStripMenuItem.Click += new System.EventHandler(this.bairroToolStripMenuItem_Click);
@@ -107,14 +109,14 @@
             // ruaToolStripMenuItem
             // 
             this.ruaToolStripMenuItem.Name = "ruaToolStripMenuItem";
-            this.ruaToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.ruaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ruaToolStripMenuItem.Text = "Rua";
             this.ruaToolStripMenuItem.Click += new System.EventHandler(this.ruaToolStripMenuItem_Click);
             // 
             // paisToolStripMenuItem
             // 
             this.paisToolStripMenuItem.Name = "paisToolStripMenuItem";
-            this.paisToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.paisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.paisToolStripMenuItem.Text = "Pais";
             this.paisToolStripMenuItem.Click += new System.EventHandler(this.paisToolStripMenuItem_Click);
             // 
@@ -129,7 +131,7 @@
             // telefoneToolStripMenuItem1
             // 
             this.telefoneToolStripMenuItem1.Name = "telefoneToolStripMenuItem1";
-            this.telefoneToolStripMenuItem1.Size = new System.Drawing.Size(118, 22);
+            this.telefoneToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.telefoneToolStripMenuItem1.Text = "Telefone";
             this.telefoneToolStripMenuItem1.Click += new System.EventHandler(this.telefoneToolStripMenuItem1_Click);
             // 
@@ -147,6 +149,13 @@
             this.tipoFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.tipoFuncionarioToolStripMenuItem.Text = "Tipo Funcionario";
             this.tipoFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.tipoFuncionarioToolStripMenuItem_Click);
+            // 
+            // cEPToolStripMenuItem
+            // 
+            this.cEPToolStripMenuItem.Name = "cEPToolStripMenuItem";
+            this.cEPToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cEPToolStripMenuItem.Text = "CEP";
+            this.cEPToolStripMenuItem.Click += new System.EventHandler(this.cEPToolStripMenuItem_Click);
             // 
             // produtoToolStripMenuItem
             // 
@@ -217,6 +226,7 @@
         private System.Windows.Forms.ToolStripMenuItem telefoneToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoFuncionarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cEPToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem produtoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem marcaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoProdutoToolStripMenuItem;

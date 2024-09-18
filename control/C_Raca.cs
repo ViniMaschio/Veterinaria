@@ -13,10 +13,6 @@ namespace Veterinaria.control
         //Variáveis Globais da Classe
         SqlConnection conn;
         SqlCommand cmd;
-        DataTable dt_racas;
-        SqlDataAdapter da_raca;
-
-
 
         public List<Raca> DadosRaca()
         {

@@ -113,7 +113,7 @@ namespace Veterinaria.control
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
 
-            cmd = new SqlCommand(SqlFiltro, conn);
+            cmd = new SqlCommand(SqlBuscaId, conn);
             cmd.Parameters.AddWithValue("pcodbairro", valor);
 
             SqlDataReader reader;

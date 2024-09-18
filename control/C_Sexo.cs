@@ -36,7 +36,7 @@ namespace Veterinaria.control
             M_Sexo m_Sexo = new M_Sexo();
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
-            cmd = new SqlCommand(sqlTodos, conn);
+            cmd = new SqlCommand(sqlBuscarId, conn);
             cmd.Parameters.AddWithValue("@pcodsexo", valor);
 
             conn.Open();

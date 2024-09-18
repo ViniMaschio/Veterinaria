@@ -9,7 +9,6 @@ namespace Veterinaria.view
 {
     public partial class FrmRaca : Form
     {
-        DataTable Tabela_racas;
         Boolean novo = true;
         int posicao;
         List<Raca> lista_raca = new List<Raca>();
@@ -28,9 +27,6 @@ namespace Veterinaria.view
             txtCodigo.Text = lista_raca[posicao].codraca.ToString();
             txtRaca.Text = lista_raca[posicao].nomeraca.ToString();
         }
-
-
-
         List<Raca> carregaListaRacaFiltro()
         {
 
