@@ -85,5 +85,11 @@ namespace Veterinaria
             FrmTipoServico frmTipoServico = new FrmTipoServico();
             frmTipoServico.ShowDialog();
         }
+
+        private void cidAnimalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCidAnimal frmCidAnimal = new FrmCidAnimal();
+            frmCidAnimal.ShowDialog();
+        }
     }
 }

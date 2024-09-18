@@ -33,19 +33,20 @@
             this.racaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoAnimalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.endereçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bairroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ruaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bairroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cEPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.telefoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.telefoneToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoFuncionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cEPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.servicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoServicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cidAnimalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +69,8 @@
             // 
             this.animalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.racaToolStripMenuItem1,
-            this.tipoAnimalToolStripMenuItem1});
+            this.tipoAnimalToolStripMenuItem1,
+            this.cidAnimalToolStripMenuItem});
             this.animalToolStripMenuItem.Name = "animalToolStripMenuItem";
             this.animalToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.animalToolStripMenuItem.Text = "Animal";
@@ -98,25 +100,32 @@
             this.endereçoToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.endereçoToolStripMenuItem.Text = "Endereço";
             // 
+            // ruaToolStripMenuItem
+            // 
+            this.ruaToolStripMenuItem.Name = "ruaToolStripMenuItem";
+            this.ruaToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.ruaToolStripMenuItem.Text = "Rua";
+            this.ruaToolStripMenuItem.Click += new System.EventHandler(this.ruaToolStripMenuItem_Click);
+            // 
             // bairroToolStripMenuItem
             // 
             this.bairroToolStripMenuItem.Name = "bairroToolStripMenuItem";
-            this.bairroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bairroToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.bairroToolStripMenuItem.Text = "Bairro";
             this.bairroToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bairroToolStripMenuItem.Click += new System.EventHandler(this.bairroToolStripMenuItem_Click);
             // 
-            // ruaToolStripMenuItem
+            // cEPToolStripMenuItem
             // 
-            this.ruaToolStripMenuItem.Name = "ruaToolStripMenuItem";
-            this.ruaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ruaToolStripMenuItem.Text = "Rua";
-            this.ruaToolStripMenuItem.Click += new System.EventHandler(this.ruaToolStripMenuItem_Click);
+            this.cEPToolStripMenuItem.Name = "cEPToolStripMenuItem";
+            this.cEPToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.cEPToolStripMenuItem.Text = "CEP";
+            this.cEPToolStripMenuItem.Click += new System.EventHandler(this.cEPToolStripMenuItem_Click);
             // 
             // paisToolStripMenuItem
             // 
             this.paisToolStripMenuItem.Name = "paisToolStripMenuItem";
-            this.paisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.paisToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.paisToolStripMenuItem.Text = "Pais";
             this.paisToolStripMenuItem.Click += new System.EventHandler(this.paisToolStripMenuItem_Click);
             // 
@@ -131,7 +140,7 @@
             // telefoneToolStripMenuItem1
             // 
             this.telefoneToolStripMenuItem1.Name = "telefoneToolStripMenuItem1";
-            this.telefoneToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.telefoneToolStripMenuItem1.Size = new System.Drawing.Size(118, 22);
             this.telefoneToolStripMenuItem1.Text = "Telefone";
             this.telefoneToolStripMenuItem1.Click += new System.EventHandler(this.telefoneToolStripMenuItem1_Click);
             // 
@@ -149,13 +158,6 @@
             this.tipoFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.tipoFuncionarioToolStripMenuItem.Text = "Tipo Funcionario";
             this.tipoFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.tipoFuncionarioToolStripMenuItem_Click);
-            // 
-            // cEPToolStripMenuItem
-            // 
-            this.cEPToolStripMenuItem.Name = "cEPToolStripMenuItem";
-            this.cEPToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cEPToolStripMenuItem.Text = "CEP";
-            this.cEPToolStripMenuItem.Click += new System.EventHandler(this.cEPToolStripMenuItem_Click);
             // 
             // produtoToolStripMenuItem
             // 
@@ -191,9 +193,16 @@
             // tipoServicoToolStripMenuItem
             // 
             this.tipoServicoToolStripMenuItem.Name = "tipoServicoToolStripMenuItem";
-            this.tipoServicoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tipoServicoToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.tipoServicoToolStripMenuItem.Text = "Tipo Servico";
             this.tipoServicoToolStripMenuItem.Click += new System.EventHandler(this.tipoServicoToolStripMenuItem_Click);
+            // 
+            // cidAnimalToolStripMenuItem
+            // 
+            this.cidAnimalToolStripMenuItem.Name = "cidAnimalToolStripMenuItem";
+            this.cidAnimalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cidAnimalToolStripMenuItem.Text = "Cid Animal";
+            this.cidAnimalToolStripMenuItem.Click += new System.EventHandler(this.cidAnimalToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -232,6 +241,7 @@
         private System.Windows.Forms.ToolStripMenuItem tipoProdutoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem servicoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoServicoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cidAnimalToolStripMenuItem;
     }
 }
 
