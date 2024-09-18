@@ -11,19 +11,19 @@ using Veterinaria.model;
 
 namespace Veterinaria.control
 {
-    internal class C_Marca : I_Metodos_Comuns
+    internal class C_TipoServico : I_Metodos_Comuns
     {
         SqlConnection conn;
         SqlCommand cmd;
 
-        String SqlApaga = "DELETE FROM marca WHERE codmarca = @codmarca";
+        String SqlApaga = "DELETE FROM tiposervico WHERE codtiposervico = @pcodtiposervico";
         public void Apaga_Dados(int aux)
         {
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
 
             cmd = new SqlCommand(SqlApaga, conn);
-            cmd.Parameters.AddWithValue("@codmarca", aux);
+            cmd.Parameters.AddWithValue("@pcodtiposervico", aux);
 
             cmd.CommandType = CommandType.Text;
             conn.Open();
@@ -42,18 +42,19 @@ namespace Veterinaria.control
             }
         }
 
-        String SqlAtualiza = "UPDATE marca SET nomemarca = @pnomecarma WHERE codmarca = @pcodmarca";
+        String SqlAtualiza = "UPDATE tiposervico SET nometiposervico = @pnometiposervico, valortiposervico = @pvalortiposervico WHERE codtiposervico = @pcodtiposervico";
         public void Atualizar_Dados(object aux)
         {
-            M_Marca m_Marca = new M_Marca();
-            m_Marca = (M_Marca)aux;
+            M_TipoServico m_TipoServico = new M_TipoServico();
+            m_TipoServico = (M_TipoServico)aux;
 
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
 
             cmd = new SqlCommand(SqlAtualiza, conn);
-            cmd.Parameters.AddWithValue("@pcodmarca", m_Marca.codmarca);
-            cmd.Parameters.AddWithValue("@pnomecarma", m_Marca.nomemarca);
+            cmd.Parameters.AddWithValue("@pcodtiposervico", m_TipoServico.codtiposervico);
+            cmd.Parameters.AddWithValue("@pnometiposervico", m_TipoServico.nometiposervico);
+            cmd.Parameters.AddWithValue("@pvalortiposervico", m_TipoServico.valortiposervico);
 
             conn.Open();
 
@@ -63,7 +64,7 @@ namespace Veterinaria.control
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Atualiza dados");
+                MessageBox.Show(ex.Message, "Atualiza dados");
             }
             finally
             {
@@ -71,16 +72,16 @@ namespace Veterinaria.control
             }
         }
 
-        String SqlFiltro = "SELECT * FROM marca WHERE nomemarca LIKE @pnomemarca";
+        String SqlFiltro = "SELECT * FROM tiposervico WHERE nometiposervico LIKE @pnometiposervico";
         public object Buscar_Filtro(string dados)
         {
-            List<M_Marca> listMarca = new List<M_Marca>();
+            List<M_TipoServico> listTipoServico = new List<M_TipoServico>();
 
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
 
             cmd = new SqlCommand(SqlFiltro, conn);
-            cmd.Parameters.AddWithValue("@pnomemarca", dados + "%");
+            cmd.Parameters.AddWithValue("@pnometiposervico", dados + "%");
 
             SqlDataReader reader;
             conn.Open();
@@ -91,11 +92,12 @@ namespace Veterinaria.control
 
                 while (reader.Read())
                 {
-                    M_Marca aux = new M_Marca();
-                    aux.codmarca = Int32.Parse(reader["codmarca"].ToString());
-                    aux.nomemarca = reader["nomemarca"].ToString();
+                    M_TipoServico aux = new M_TipoServico();
+                    aux.codtiposervico = Int32.Parse(reader["codtiposervico"].ToString());
+                    aux.nometiposervico = reader["nometiposervico"].ToString();
+                    aux.valortiposervico = Double.Parse(reader["valortiposervico"].ToString());
 
-                    listMarca.Add(aux);
+                    listTipoServico.Add(aux);
                 }
             }
             catch (Exception ex)
@@ -107,19 +109,19 @@ namespace Veterinaria.control
                 conn.Close();
             }
 
-            return listMarca;
+            return listTipoServico;
         }
 
-        String SqlBuscaId = "SELECT * FROM marca WHERE codmarca = @pcodmarca";
+        String SqlBuscaId = "SELECT * FROM tiposervico WHERE codtiposervico = @pcodtiposervico";
         public object Buscar_Id(int valor)
         {
-            M_Marca aux = new M_Marca();
+            M_TipoServico aux = new M_TipoServico();
 
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
 
             cmd = new SqlCommand(SqlFiltro, conn);
-            cmd.Parameters.AddWithValue("@pcodmarca", valor);
+            cmd.Parameters.AddWithValue("@pcodtiposervico", valor);
 
             SqlDataReader reader;
             conn.Open();
@@ -129,14 +131,15 @@ namespace Veterinaria.control
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    aux.codmarca = Int32.Parse(reader["codmarca"].ToString());
-                    aux.nomemarca = reader["nomemarca"].ToString();
+                    aux.codtiposervico = Int32.Parse(reader["codtiposervico"].ToString());
+                    aux.nometiposervico = reader["nometiposervico"].ToString();
+                    aux.valortiposervico = Double.Parse(reader["valortiposervico"].ToString());
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro: " + ex.Message,"Buscar ID");
+                MessageBox.Show("Erro: " + ex.Message, "Buscar ID");
             }
             finally
             {
@@ -146,10 +149,10 @@ namespace Veterinaria.control
             return aux;
         }
 
-        String SqlBuscaTodos = "SELECT * FROM marca";
+        String SqlBuscaTodos = "SELECT * FROM tiposervico";
         public object Buscar_Todos()
         {
-            List<M_Marca> listMarca = new List<M_Marca>();
+            List<M_TipoServico> listTipoServico = new List<M_TipoServico>();
 
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
@@ -164,36 +167,39 @@ namespace Veterinaria.control
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    M_Marca aux = new M_Marca();
-                    aux.codmarca = Int32.Parse(reader["codmarca"].ToString());
-                    aux.nomemarca = reader["nomemarca"].ToString();
+                    M_TipoServico aux = new M_TipoServico();
 
-                    listMarca.Add(aux);
+                    aux.codtiposervico = Int32.Parse(reader["codtiposervico"].ToString());
+                    aux.nometiposervico = reader["nometiposervico"].ToString();
+                    aux.valortiposervico = Double.Parse(reader["valortiposervico"].ToString());
+
+                    listTipoServico.Add(aux);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro: " + ex.Message,"Buscar Todos");
+                MessageBox.Show("Erro: " + ex.Message, "Buscar Todos");
             }
             finally
             {
                 conn.Close();
             }
 
-            return listMarca;
+            return listTipoServico;
         }
 
-        String SqlInsere = "INSERT INTO marca (nomemarca) VALUES (@pnomemarca)";
+        String SqlInsere = "INSERT INTO tiposervico (nometiposervico,valortiposervico) VALUES (@nometiposervico,@pvalortiposervico)";
         public void Insere_Dados(object aux)
         {
-            M_Marca m_Marca = new M_Marca();
-            m_Marca = (M_Marca)aux;
+            M_TipoServico m_TipoServico = new M_TipoServico();
+            m_TipoServico = (M_TipoServico)aux;
 
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
 
             cmd = new SqlCommand(SqlInsere, conn);
-            cmd.Parameters.AddWithValue("@pnomemarca", m_Marca.nomemarca);
+            cmd.Parameters.AddWithValue("@nometiposervico", m_TipoServico.nometiposervico);
+            cmd.Parameters.AddWithValue("@pvalortiposervico", m_TipoServico.valortiposervico);
 
             conn.Open();
 
@@ -203,7 +209,7 @@ namespace Veterinaria.control
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro: " + ex.Message,"Insere Dados");
+                MessageBox.Show("Erro: " + ex.Message, "Insere Dados");
             }
             finally
             {

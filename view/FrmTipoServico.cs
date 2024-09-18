@@ -1,51 +1,74 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Veterinaria.control;
 using Veterinaria.model;
 
 namespace Veterinaria.view
 {
-    public partial class FrmTipoFuncionario : Form
+    public partial class FrmTipoServico : Form
     {
-        public FrmTipoFuncionario()
+        public FrmTipoServico()
         {
             InitializeComponent();
+
             CarregarTabelaTodos();
         }
 
-        DataTable Tabela_racas;
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar))
+            {
+                return;
+            }
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ',' && (sender as TextBox).Text.Contains(","))
+            {
+                e.Handled = true;
+            }
+
+        }
         Boolean novo = true;
         int posicao;
-        List<M_Tipofuncionario> listTipoFuncionario = new List<M_Tipofuncionario>();
+        List<M_TipoServico> listTipoServico = new List<M_TipoServico>();
 
         public void LimparCampos()
         {
             txtCodigo.Text = "";
-            txtTipoFuncionario.Text = "";
+            txtTipoServico.Text = "";
+            txtValorServico.Text = "";
         }
 
         public void CarregarDataGrid()
         {
             dGViews.Rows.Clear();
 
-            for (int i = 0; i < listTipoFuncionario.Count; i++)
+            for (int i = 0; i < listTipoServico.Count; i++)
             {
 
                 DataGridViewRow row = new DataGridViewRow();
 
                 row.CreateCells(dGViews);
-                row.Cells[0].Value = listTipoFuncionario[i].codtipofuncionario;
-                row.Cells[1].Value = listTipoFuncionario[i].nometipofuncionario;
+                row.Cells[0].Value = listTipoServico[i].codtiposervico;
+                row.Cells[1].Value = listTipoServico[i].nometiposervico;
+                row.Cells[2].Value = listTipoServico[i].valortiposervico;
                 dGViews.Rows.Add(row);
             }
         }
 
         public void CarregarTabelaTodos()
         {
-            C_TipoFuncionario c_TipoFuncionario = new C_TipoFuncionario();
-            listTipoFuncionario = (List<M_Tipofuncionario>)c_TipoFuncionario.Buscar_Todos();
+            C_TipoServico c_TipoServico = new C_TipoServico();
+            listTipoServico = (List<M_TipoServico>)c_TipoServico.Buscar_Todos();
 
             LimparCampos();
 
@@ -54,9 +77,9 @@ namespace Veterinaria.view
 
         public void CarregarTabelaFiltro()
         {
-            C_TipoFuncionario c_TipoFuncionario = new C_TipoFuncionario();
-            listTipoFuncionario = new List<M_Tipofuncionario>();
-            listTipoFuncionario = (List<M_Tipofuncionario>)c_TipoFuncionario.Buscar_Filtro(txtBuscar.Text.ToString());
+            C_TipoServico c_TipoServico = new C_TipoServico();
+            listTipoServico = new List<M_TipoServico>();
+            listTipoServico = (List<M_TipoServico>)c_TipoServico.Buscar_Filtro(txtBuscar.Text.ToString());
 
             LimparCampos();
 
@@ -65,8 +88,9 @@ namespace Veterinaria.view
 
         public void AtualizarCampos()
         {
-            txtCodigo.Text = listTipoFuncionario[posicao].codtipofuncionario.ToString();
-            txtTipoFuncionario.Text = listTipoFuncionario[posicao].nometipofuncionario;
+            txtCodigo.Text = listTipoServico[posicao].codtiposervico.ToString();
+            txtTipoServico.Text = listTipoServico[posicao].nometiposervico;
+            txtValorServico.Text = listTipoServico[posicao].valortiposervico.ToString();
         }
 
         public void AtivarBotoes()
@@ -81,7 +105,8 @@ namespace Veterinaria.view
 
         public void AtivarCampos()
         {
-            txtTipoFuncionario.Enabled = true;
+            txtTipoServico.Enabled = true;
+            txtValorServico.Enabled = true;
         }
 
         public void DesativarBotoes()
@@ -96,7 +121,8 @@ namespace Veterinaria.view
 
         public void DesativarCampos()
         {
-            txtTipoFuncionario.Enabled = false;
+            txtTipoServico.Enabled = false;
+            txtValorServico.Enabled = false;
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
@@ -112,19 +138,20 @@ namespace Veterinaria.view
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            M_Tipofuncionario m_TipoFuncionario = new M_Tipofuncionario();
-            m_TipoFuncionario.nometipofuncionario = txtTipoFuncionario.Text;
+            M_TipoServico m_TipoServico = new M_TipoServico();
+            m_TipoServico.nometiposervico = txtTipoServico.Text;
+            m_TipoServico.valortiposervico = Double.Parse(txtValorServico.Text);
 
-            C_TipoFuncionario c_TipoFuncionario = new C_TipoFuncionario();
+            C_TipoServico c_TipoServico = new C_TipoServico();
 
             if (novo)
             {
-                c_TipoFuncionario.Insere_Dados(m_TipoFuncionario);
+                c_TipoServico.Insere_Dados(m_TipoServico);
             }
             else
             {
-                m_TipoFuncionario.codtipofuncionario = Convert.ToInt32(txtCodigo.Text);
-                c_TipoFuncionario.Atualizar_Dados(m_TipoFuncionario);
+                m_TipoServico.codtiposervico = Convert.ToInt32(txtCodigo.Text);
+                c_TipoServico.Atualizar_Dados(m_TipoServico);
             }
 
             CarregarTabelaTodos();
@@ -147,15 +174,19 @@ namespace Veterinaria.view
         {
             if (txtCodigo.Text != "")
             {
-                C_TipoFuncionario c_TipoFuncionario = new C_TipoFuncionario();
-                c_TipoFuncionario.Apaga_Dados(Convert.ToInt32(txtCodigo.Text));
+                C_TipoServico c_TipoServico = new C_TipoServico();
+                c_TipoServico.Apaga_Dados(Convert.ToInt32(txtCodigo.Text));
 
                 CarregarTabelaTodos();
+                posicao = 0;
+                if(listTipoServico.Count > 0) { AtualizarCampos(); }
+                
             }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+
             AtivarBotoes();
             AtivarCampos();
 
@@ -164,7 +195,7 @@ namespace Veterinaria.view
 
         private void btnPrimeiro_Click(object sender, EventArgs e)
         {
-            if (listTipoFuncionario.Count > 0)
+            if (listTipoServico.Count > 0)
             {
                 dGViews.Rows[posicao].Selected = false;
                 posicao = 0;
@@ -190,7 +221,7 @@ namespace Veterinaria.view
 
         private void btnProximo_Click(object sender, EventArgs e)
         {
-            if (posicao < listTipoFuncionario.Count - 1)
+            if (posicao < listTipoServico.Count - 1)
             {
                 dGViews.Rows[posicao].Selected = false;
                 posicao++;
@@ -203,10 +234,10 @@ namespace Veterinaria.view
 
         private void btnUltimo_Click(object sender, EventArgs e)
         {
-            if (listTipoFuncionario.Count > 0)
+            if (listTipoServico.Count > 0)
             {
                 dGViews.Rows[posicao].Selected = false;
-                posicao = listTipoFuncionario.Count - 1;
+                posicao = listTipoServico.Count - 1;
 
                 AtualizarCampos();
 

@@ -42,6 +42,9 @@
             this.tipoFuncionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.servicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoServicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +55,8 @@
             this.endereçoToolStripMenuItem,
             this.telefoneToolStripMenuItem,
             this.funcionarioToolStripMenuItem,
-            this.produtoToolStripMenuItem});
+            this.produtoToolStripMenuItem,
+            this.servicoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -147,7 +151,8 @@
             // produtoToolStripMenuItem
             // 
             this.produtoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.marcaToolStripMenuItem});
+            this.marcaToolStripMenuItem,
+            this.tipoProdutoToolStripMenuItem});
             this.produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
             this.produtoToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.produtoToolStripMenuItem.Text = "Produto";
@@ -155,9 +160,31 @@
             // marcaToolStripMenuItem
             // 
             this.marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
-            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.marcaToolStripMenuItem.Text = "Marca";
             this.marcaToolStripMenuItem.Click += new System.EventHandler(this.marcaToolStripMenuItem_Click);
+            // 
+            // tipoProdutoToolStripMenuItem
+            // 
+            this.tipoProdutoToolStripMenuItem.Name = "tipoProdutoToolStripMenuItem";
+            this.tipoProdutoToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.tipoProdutoToolStripMenuItem.Text = "Tipo Produto";
+            this.tipoProdutoToolStripMenuItem.Click += new System.EventHandler(this.tipoProdutoToolStripMenuItem_Click);
+            // 
+            // servicoToolStripMenuItem
+            // 
+            this.servicoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tipoServicoToolStripMenuItem});
+            this.servicoToolStripMenuItem.Name = "servicoToolStripMenuItem";
+            this.servicoToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.servicoToolStripMenuItem.Text = "Servico";
+            // 
+            // tipoServicoToolStripMenuItem
+            // 
+            this.tipoServicoToolStripMenuItem.Name = "tipoServicoToolStripMenuItem";
+            this.tipoServicoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tipoServicoToolStripMenuItem.Text = "Tipo Servico";
+            this.tipoServicoToolStripMenuItem.Click += new System.EventHandler(this.tipoServicoToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -192,6 +219,9 @@
         private System.Windows.Forms.ToolStripMenuItem tipoFuncionarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem produtoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem marcaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoProdutoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem servicoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoServicoToolStripMenuItem;
     }
 }
 

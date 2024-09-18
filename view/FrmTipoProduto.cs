@@ -1,51 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Windows.Forms;
 using Veterinaria.control;
 using Veterinaria.model;
 
 namespace Veterinaria.view
 {
-    public partial class FrmTipoFuncionario : Form
+    public partial class FrmTipoProduto : Form
     {
-        public FrmTipoFuncionario()
+        public FrmTipoProduto()
         {
             InitializeComponent();
             CarregarTabelaTodos();
         }
 
-        DataTable Tabela_racas;
+
         Boolean novo = true;
         int posicao;
-        List<M_Tipofuncionario> listTipoFuncionario = new List<M_Tipofuncionario>();
+        List<M_TipoProduto> listTipoProduto = new List<M_TipoProduto>();
 
         public void LimparCampos()
         {
             txtCodigo.Text = "";
-            txtTipoFuncionario.Text = "";
+            txtTipoProduto.Text = "";
         }
 
         public void CarregarDataGrid()
         {
             dGViews.Rows.Clear();
 
-            for (int i = 0; i < listTipoFuncionario.Count; i++)
+            for (int i = 0; i < listTipoProduto.Count; i++)
             {
 
                 DataGridViewRow row = new DataGridViewRow();
 
                 row.CreateCells(dGViews);
-                row.Cells[0].Value = listTipoFuncionario[i].codtipofuncionario;
-                row.Cells[1].Value = listTipoFuncionario[i].nometipofuncionario;
+                row.Cells[0].Value = listTipoProduto[i].codtipoproduto;
+                row.Cells[1].Value = listTipoProduto[i].nometipoproduto;
                 dGViews.Rows.Add(row);
             }
         }
 
         public void CarregarTabelaTodos()
         {
-            C_TipoFuncionario c_TipoFuncionario = new C_TipoFuncionario();
-            listTipoFuncionario = (List<M_Tipofuncionario>)c_TipoFuncionario.Buscar_Todos();
+            C_TipoProduto c_TipoProduto = new C_TipoProduto();
+            listTipoProduto = (List<M_TipoProduto>)c_TipoProduto.Buscar_Todos();
 
             LimparCampos();
 
@@ -54,9 +53,9 @@ namespace Veterinaria.view
 
         public void CarregarTabelaFiltro()
         {
-            C_TipoFuncionario c_TipoFuncionario = new C_TipoFuncionario();
-            listTipoFuncionario = new List<M_Tipofuncionario>();
-            listTipoFuncionario = (List<M_Tipofuncionario>)c_TipoFuncionario.Buscar_Filtro(txtBuscar.Text.ToString());
+            C_TipoProduto c_TipoProduto = new C_TipoProduto();
+            listTipoProduto = new List<M_TipoProduto>();
+            listTipoProduto = (List<M_TipoProduto>)c_TipoProduto.Buscar_Filtro(txtBuscar.Text.ToString());
 
             LimparCampos();
 
@@ -65,8 +64,8 @@ namespace Veterinaria.view
 
         public void AtualizarCampos()
         {
-            txtCodigo.Text = listTipoFuncionario[posicao].codtipofuncionario.ToString();
-            txtTipoFuncionario.Text = listTipoFuncionario[posicao].nometipofuncionario;
+            txtCodigo.Text = listTipoProduto[posicao].codtipoproduto.ToString();
+            txtTipoProduto.Text = listTipoProduto[posicao].nometipoproduto;
         }
 
         public void AtivarBotoes()
@@ -81,7 +80,7 @@ namespace Veterinaria.view
 
         public void AtivarCampos()
         {
-            txtTipoFuncionario.Enabled = true;
+            txtTipoProduto.Enabled = true;
         }
 
         public void DesativarBotoes()
@@ -96,7 +95,7 @@ namespace Veterinaria.view
 
         public void DesativarCampos()
         {
-            txtTipoFuncionario.Enabled = false;
+            txtTipoProduto.Enabled = false;
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
@@ -112,19 +111,19 @@ namespace Veterinaria.view
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            M_Tipofuncionario m_TipoFuncionario = new M_Tipofuncionario();
-            m_TipoFuncionario.nometipofuncionario = txtTipoFuncionario.Text;
+            M_TipoProduto m_TipoProduto = new M_TipoProduto();
+            m_TipoProduto.nometipoproduto = txtTipoProduto.Text;
 
-            C_TipoFuncionario c_TipoFuncionario = new C_TipoFuncionario();
+            C_TipoProduto c_TipoProduto = new C_TipoProduto();
 
             if (novo)
             {
-                c_TipoFuncionario.Insere_Dados(m_TipoFuncionario);
+                c_TipoProduto.Insere_Dados(m_TipoProduto);
             }
             else
             {
-                m_TipoFuncionario.codtipofuncionario = Convert.ToInt32(txtCodigo.Text);
-                c_TipoFuncionario.Atualizar_Dados(m_TipoFuncionario);
+                m_TipoProduto.codtipoproduto = Convert.ToInt32(txtCodigo.Text);
+                c_TipoProduto.Atualizar_Dados(m_TipoProduto);
             }
 
             CarregarTabelaTodos();
@@ -147,15 +146,18 @@ namespace Veterinaria.view
         {
             if (txtCodigo.Text != "")
             {
-                C_TipoFuncionario c_TipoFuncionario = new C_TipoFuncionario();
-                c_TipoFuncionario.Apaga_Dados(Convert.ToInt32(txtCodigo.Text));
+                C_TipoProduto c_TipoProduto = new C_TipoProduto();
+                c_TipoProduto.Apaga_Dados(Convert.ToInt32(txtCodigo.Text));
 
                 CarregarTabelaTodos();
+                posicao = 0;
+                AtualizarCampos();
             }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+
             AtivarBotoes();
             AtivarCampos();
 
@@ -164,7 +166,7 @@ namespace Veterinaria.view
 
         private void btnPrimeiro_Click(object sender, EventArgs e)
         {
-            if (listTipoFuncionario.Count > 0)
+            if (listTipoProduto.Count > 0)
             {
                 dGViews.Rows[posicao].Selected = false;
                 posicao = 0;
@@ -190,7 +192,7 @@ namespace Veterinaria.view
 
         private void btnProximo_Click(object sender, EventArgs e)
         {
-            if (posicao < listTipoFuncionario.Count - 1)
+            if (posicao < listTipoProduto.Count - 1)
             {
                 dGViews.Rows[posicao].Selected = false;
                 posicao++;
@@ -203,10 +205,10 @@ namespace Veterinaria.view
 
         private void btnUltimo_Click(object sender, EventArgs e)
         {
-            if (listTipoFuncionario.Count > 0)
+            if (listTipoProduto.Count > 0)
             {
                 dGViews.Rows[posicao].Selected = false;
-                posicao = listTipoFuncionario.Count - 1;
+                posicao = listTipoProduto.Count - 1;
 
                 AtualizarCampos();
 

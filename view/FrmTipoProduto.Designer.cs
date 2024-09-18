@@ -1,6 +1,6 @@
 ﻿namespace Veterinaria.view
 {
-    partial class FrmMarca
+    partial class FrmTipoProduto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.txtTipoProduto = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -49,18 +49,18 @@
             this.btnUltimo = new System.Windows.Forms.ToolStripButton();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeTipoProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGViews)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtMarca
+            // txtTipoProduto
             // 
-            this.txtMarca.Enabled = false;
-            this.txtMarca.Location = new System.Drawing.Point(65, 85);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(509, 20);
-            this.txtMarca.TabIndex = 24;
+            this.txtTipoProduto.Enabled = false;
+            this.txtTipoProduto.Location = new System.Drawing.Point(93, 78);
+            this.txtTipoProduto.Name = "txtTipoProduto";
+            this.txtTipoProduto.Size = new System.Drawing.Size(481, 20);
+            this.txtTipoProduto.TabIndex = 30;
             // 
             // toolStrip1
             // 
@@ -82,8 +82,8 @@
             this.btnBuscar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(589, 39);
-            this.toolStrip1.TabIndex = 23;
+            this.toolStrip1.Size = new System.Drawing.Size(588, 39);
+            this.toolStrip1.TabIndex = 29;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripSeparator1
@@ -111,27 +111,27 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 88);
+            this.label2.Location = new System.Drawing.Point(16, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Marca :";
+            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Tipo Produto:";
             // 
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(57, 55);
+            this.txtCodigo.Location = new System.Drawing.Point(57, 48);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(86, 20);
-            this.txtCodigo.TabIndex = 21;
+            this.txtCodigo.TabIndex = 27;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 62);
+            this.label1.Location = new System.Drawing.Point(16, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 20;
+            this.label1.TabIndex = 26;
             this.label1.Text = "Código:";
             // 
             // dGViews
@@ -141,12 +141,12 @@
             this.dGViews.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGViews.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.NomeMarca});
-            this.dGViews.Location = new System.Drawing.Point(12, 116);
+            this.NomeTipoProduto});
+            this.dGViews.Location = new System.Drawing.Point(12, 109);
             this.dGViews.Name = "dGViews";
             this.dGViews.ReadOnly = true;
             this.dGViews.Size = new System.Drawing.Size(562, 223);
-            this.dGViews.TabIndex = 19;
+            this.dGViews.TabIndex = 25;
             this.dGViews.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGViews_CellClick);
             // 
             // btnNovo
@@ -258,27 +258,27 @@
             this.ID.ReadOnly = true;
             this.ID.Width = 50;
             // 
-            // NomeMarca
+            // NomeTipoProduto
             // 
-            this.NomeMarca.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NomeMarca.HeaderText = "Marca";
-            this.NomeMarca.Name = "NomeMarca";
-            this.NomeMarca.ReadOnly = true;
+            this.NomeTipoProduto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NomeTipoProduto.HeaderText = "Tipo Produto";
+            this.NomeTipoProduto.Name = "NomeTipoProduto";
+            this.NomeTipoProduto.ReadOnly = true;
             // 
-            // FrmMarca
+            // FrmTipoProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 357);
-            this.Controls.Add(this.txtMarca);
+            this.ClientSize = new System.Drawing.Size(588, 368);
+            this.Controls.Add(this.txtTipoProduto);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dGViews);
-            this.Name = "FrmMarca";
+            this.Name = "FrmTipoProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmMarca";
+            this.Text = "FrmTipoProduto";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGViews)).EndInit();
@@ -289,7 +289,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.TextBox txtTipoProduto;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnNovo;
         private System.Windows.Forms.ToolStripButton btnSalvar;
@@ -310,6 +310,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dGViews;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomeMarca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomeTipoProduto;
     }
 }

@@ -157,7 +157,7 @@ create table marca(
 );
 
 -- TEM QUE FAZER O CONTROLE, MODEL E VIEW
--- tipoproduto = {codtipoproduto, nometipoproduto}
+-- tipoproduto = {codtipoproduto, nometipoproduto} feito
 create table tipoproduto(
     codtipoproduto integer identity primary key,
     nometipoproduto varchar(80) not null unique
@@ -168,8 +168,8 @@ create table produto(
     codproduto integer identity primary key,
     nomeproduto varchar(80) not null unique,
     codmarcafk integer references marca(codmarca) on delete cascade on update cascade,
-    quantidade numeric(10,2) not null check (quantidade < 0),
-    valor numeric(10,2) not null check (valor < 0),
+    quantidade numeric(10,2) not null check (quantidade > 0),
+    valor numeric(10,2) not null check (valor > 0),
     codtipoprodutofk integer references tipoproduto(codtipoproduto) on delete cascade on update cascade
 );
 -- imagens = {codimagens, descricao, foto, codprodutofk} OK
@@ -193,16 +193,16 @@ create table vendas(
 create table vendasprodutos(
     codvendafk integer references vendas(codvenda) on delete cascade on update cascade,
     codprodutofk integer references produto(codproduto) on delete cascade on update cascade,
-    quantv numeric(10,2) not null check (quantv < 0),
-    valorv numeric(10,2) not null check (valorv < 0)
+    quantv numeric(10,2) not null check (quantv > 0),
+    valorv numeric(10,2) not null check (valorv > 0)
 );
 
 -- TEM QUE FAZER O CONTROLE, MODEL E VIEW
--- tiposervico = {codtiposervico, nometiposervico, valortiposervico } OK
+-- tiposervico = {codtiposervico, nometiposervico, valortiposervico } feito
 create table tiposervico(
     codtiposervico integer identity primary key,
     nometiposervico varchar(80) not null unique,
-    valortiposervico numeric(10,2) not null check (valortiposervico < 0)
+    valortiposervico numeric(10,2) not null check (valortiposervico > 0)
 );
 -- vendaservico = {codvendaservico, codfuncionariofk, datavs, codclientefk, codanimalfk} OK
 create table vendaservico(
@@ -213,7 +213,7 @@ create table vendaservico(
 	codanimalfk integer references animal(codanimal)
 );
 -- TEM QUE FAZER O CONTROLE, MODEL E VIEW
--- cidanimal = {codcidanimal, nomecidanimal, descricao} OK
+-- cidanimal = {codcidanimal, nomecidanimal, descricao} feito
 create table cidanimal(
     codcidanimal integer identity primary key,
     nomecidanimal varchar(80) not null unique,

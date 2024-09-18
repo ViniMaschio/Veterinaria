@@ -67,5 +67,17 @@ namespace Veterinaria
             FrmMarca frmMarca = new FrmMarca();
             frmMarca.ShowDialog();
         }
+
+        private void tipoProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTipoProduto frmTipoProduto = new FrmTipoProduto();
+            frmTipoProduto.ShowDialog();
+        }
+
+        private void tipoServicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTipoServico frmTipoServico = new FrmTipoServico();
+            frmTipoServico.ShowDialog();
+        }
     }
 }

@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Veterinaria.control;
 using Veterinaria.model;
@@ -20,7 +15,7 @@ namespace Veterinaria.view
 
             CarregarTabelaTodos();
         }
-        DataTable Tabela_racas;
+        
         Boolean novo = true;
         int posicao;
         List<M_Marca> listMarca = new List<M_Marca>();

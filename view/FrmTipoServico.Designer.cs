@@ -1,6 +1,6 @@
 ﻿namespace Veterinaria.view
 {
-    partial class FrmMarca
+    partial class FrmTipoServico
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.txtTipoServico = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -48,19 +48,22 @@
             this.btnProximo = new System.Windows.Forms.ToolStripButton();
             this.btnUltimo = new System.Windows.Forms.ToolStripButton();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
+            this.txtValorServico = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoServico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValorServico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGViews)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtMarca
+            // txtTipoServico
             // 
-            this.txtMarca.Enabled = false;
-            this.txtMarca.Location = new System.Drawing.Point(65, 85);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(509, 20);
-            this.txtMarca.TabIndex = 24;
+            this.txtTipoServico.Enabled = false;
+            this.txtTipoServico.Location = new System.Drawing.Point(95, 112);
+            this.txtTipoServico.Name = "txtTipoServico";
+            this.txtTipoServico.Size = new System.Drawing.Size(479, 20);
+            this.txtTipoServico.TabIndex = 30;
             // 
             // toolStrip1
             // 
@@ -82,8 +85,8 @@
             this.btnBuscar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(589, 39);
-            this.toolStrip1.TabIndex = 23;
+            this.toolStrip1.Size = new System.Drawing.Size(590, 39);
+            this.toolStrip1.TabIndex = 29;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripSeparator1
@@ -111,27 +114,27 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 88);
+            this.label2.Location = new System.Drawing.Point(12, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Marca :";
+            this.label2.Size = new System.Drawing.Size(77, 13);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Nome Servico:";
             // 
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(57, 55);
+            this.txtCodigo.Location = new System.Drawing.Point(53, 82);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(86, 20);
-            this.txtCodigo.TabIndex = 21;
+            this.txtCodigo.TabIndex = 27;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 62);
+            this.label1.Location = new System.Drawing.Point(12, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 20;
+            this.label1.TabIndex = 26;
             this.label1.Text = "Código:";
             // 
             // dGViews
@@ -141,12 +144,13 @@
             this.dGViews.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGViews.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.NomeMarca});
-            this.dGViews.Location = new System.Drawing.Point(12, 116);
+            this.TipoServico,
+            this.ValorServico});
+            this.dGViews.Location = new System.Drawing.Point(12, 172);
             this.dGViews.Name = "dGViews";
             this.dGViews.ReadOnly = true;
             this.dGViews.Size = new System.Drawing.Size(562, 223);
-            this.dGViews.TabIndex = 19;
+            this.dGViews.TabIndex = 25;
             this.dGViews.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGViews_CellClick);
             // 
             // btnNovo
@@ -251,6 +255,24 @@
             this.btnBuscar.Text = "Pesquisar";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // txtValorServico
+            // 
+            this.txtValorServico.Enabled = false;
+            this.txtValorServico.Location = new System.Drawing.Point(91, 138);
+            this.txtValorServico.Name = "txtValorServico";
+            this.txtValorServico.Size = new System.Drawing.Size(98, 20);
+            this.txtValorServico.TabIndex = 32;
+            this.txtValorServico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 141);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 13);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Valor Servico:";
+            // 
             // ID
             // 
             this.ID.HeaderText = "ID";
@@ -258,27 +280,34 @@
             this.ID.ReadOnly = true;
             this.ID.Width = 50;
             // 
-            // NomeMarca
+            // TipoServico
             // 
-            this.NomeMarca.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NomeMarca.HeaderText = "Marca";
-            this.NomeMarca.Name = "NomeMarca";
-            this.NomeMarca.ReadOnly = true;
+            this.TipoServico.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TipoServico.HeaderText = "Nome Servico";
+            this.TipoServico.Name = "TipoServico";
+            this.TipoServico.ReadOnly = true;
             // 
-            // FrmMarca
+            // ValorServico
+            // 
+            this.ValorServico.HeaderText = "Valor Servico";
+            this.ValorServico.Name = "ValorServico";
+            this.ValorServico.ReadOnly = true;
+            // 
+            // FrmTipoServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 357);
-            this.Controls.Add(this.txtMarca);
+            this.ClientSize = new System.Drawing.Size(590, 450);
+            this.Controls.Add(this.txtValorServico);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtTipoServico);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dGViews);
-            this.Name = "FrmMarca";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmMarca";
+            this.Name = "FrmTipoServico";
+            this.Text = "FrmTipoServico";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGViews)).EndInit();
@@ -289,7 +318,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.TextBox txtTipoServico;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnNovo;
         private System.Windows.Forms.ToolStripButton btnSalvar;
@@ -309,7 +338,10 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dGViews;
+        private System.Windows.Forms.TextBox txtValorServico;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomeMarca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoServico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValorServico;
     }
 }

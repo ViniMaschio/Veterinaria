@@ -1,29 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using Veterinaria.conection;
 using Veterinaria.model;
 
 namespace Veterinaria.control
 {
-    internal class C_Marca : I_Metodos_Comuns
+    internal class C_TipoProduto : I_Metodos_Comuns
     {
         SqlConnection conn;
         SqlCommand cmd;
 
-        String SqlApaga = "DELETE FROM marca WHERE codmarca = @codmarca";
+        String SqlApaga = "DELETE FROM tipoproduto WHERE codtipoproduto = @pcodtipoproduto";
         public void Apaga_Dados(int aux)
         {
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
 
             cmd = new SqlCommand(SqlApaga, conn);
-            cmd.Parameters.AddWithValue("@codmarca", aux);
+            cmd.Parameters.AddWithValue("@pcodtipoproduto", aux);
 
             cmd.CommandType = CommandType.Text;
             conn.Open();
@@ -42,18 +39,18 @@ namespace Veterinaria.control
             }
         }
 
-        String SqlAtualiza = "UPDATE marca SET nomemarca = @pnomecarma WHERE codmarca = @pcodmarca";
+        String SqlAtualiza = "UPDATE tipoproduto SET nometipoproduto = @pnometipoproduto WHERE codtipoproduto = @pcodtipoproduto";
         public void Atualizar_Dados(object aux)
         {
-            M_Marca m_Marca = new M_Marca();
-            m_Marca = (M_Marca)aux;
+            M_TipoProduto m_TipoProduto = new M_TipoProduto();
+            m_TipoProduto = (M_TipoProduto)aux;
 
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
 
             cmd = new SqlCommand(SqlAtualiza, conn);
-            cmd.Parameters.AddWithValue("@pcodmarca", m_Marca.codmarca);
-            cmd.Parameters.AddWithValue("@pnomecarma", m_Marca.nomemarca);
+            cmd.Parameters.AddWithValue("@pcodtipoproduto", m_TipoProduto.codtipoproduto);
+            cmd.Parameters.AddWithValue("@pnometipoproduto", m_TipoProduto.nometipoproduto);
 
             conn.Open();
 
@@ -63,7 +60,7 @@ namespace Veterinaria.control
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Atualiza dados");
+                MessageBox.Show(ex.Message, "Atualiza dados");
             }
             finally
             {
@@ -71,16 +68,16 @@ namespace Veterinaria.control
             }
         }
 
-        String SqlFiltro = "SELECT * FROM marca WHERE nomemarca LIKE @pnomemarca";
+        String SqlFiltro = "SELECT * FROM tipoproduto WHERE nometipoproduto LIKE @pnometipoproduto";
         public object Buscar_Filtro(string dados)
         {
-            List<M_Marca> listMarca = new List<M_Marca>();
+            List<M_TipoProduto> listTipoProduto = new List<M_TipoProduto>();
 
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
 
             cmd = new SqlCommand(SqlFiltro, conn);
-            cmd.Parameters.AddWithValue("@pnomemarca", dados + "%");
+            cmd.Parameters.AddWithValue("@pnometipoproduto", dados + "%");
 
             SqlDataReader reader;
             conn.Open();
@@ -91,11 +88,11 @@ namespace Veterinaria.control
 
                 while (reader.Read())
                 {
-                    M_Marca aux = new M_Marca();
-                    aux.codmarca = Int32.Parse(reader["codmarca"].ToString());
-                    aux.nomemarca = reader["nomemarca"].ToString();
+                    M_TipoProduto aux = new M_TipoProduto();
+                    aux.codtipoproduto = Int32.Parse(reader["codtipoproduto"].ToString());
+                    aux.nometipoproduto = reader["nometipoproduto"].ToString();
 
-                    listMarca.Add(aux);
+                    listTipoProduto.Add(aux);
                 }
             }
             catch (Exception ex)
@@ -107,19 +104,19 @@ namespace Veterinaria.control
                 conn.Close();
             }
 
-            return listMarca;
+            return listTipoProduto;
         }
 
-        String SqlBuscaId = "SELECT * FROM marca WHERE codmarca = @pcodmarca";
+        String SqlBuscaId = "SELECT * FROM tipoproduto WHERE codtipoproduto = @pcodtipoproduto";
         public object Buscar_Id(int valor)
         {
-            M_Marca aux = new M_Marca();
+            M_TipoProduto aux = new M_TipoProduto();
 
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
 
             cmd = new SqlCommand(SqlFiltro, conn);
-            cmd.Parameters.AddWithValue("@pcodmarca", valor);
+            cmd.Parameters.AddWithValue("@pcodtipoproduto", valor);
 
             SqlDataReader reader;
             conn.Open();
@@ -129,14 +126,14 @@ namespace Veterinaria.control
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    aux.codmarca = Int32.Parse(reader["codmarca"].ToString());
-                    aux.nomemarca = reader["nomemarca"].ToString();
+                    aux.codtipoproduto = Int32.Parse(reader["codtipoproduto"].ToString());
+                    aux.nometipoproduto = reader["nometipoproduto"].ToString();
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro: " + ex.Message,"Buscar ID");
+                MessageBox.Show("Erro: " + ex.Message, "Buscar ID");
             }
             finally
             {
@@ -146,10 +143,10 @@ namespace Veterinaria.control
             return aux;
         }
 
-        String SqlBuscaTodos = "SELECT * FROM marca";
+        String SqlBuscaTodos = "SELECT * FROM tipoproduto";
         public object Buscar_Todos()
         {
-            List<M_Marca> listMarca = new List<M_Marca>();
+            List<M_TipoProduto> listTipoProduto = new List<M_TipoProduto>();
 
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
@@ -164,36 +161,36 @@ namespace Veterinaria.control
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    M_Marca aux = new M_Marca();
-                    aux.codmarca = Int32.Parse(reader["codmarca"].ToString());
-                    aux.nomemarca = reader["nomemarca"].ToString();
+                    M_TipoProduto aux = new M_TipoProduto();
+                    aux.codtipoproduto = Int32.Parse(reader["codtipoproduto"].ToString());
+                    aux.nometipoproduto = reader["nometipoproduto"].ToString();
 
-                    listMarca.Add(aux);
+                    listTipoProduto.Add(aux);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro: " + ex.Message,"Buscar Todos");
+                MessageBox.Show("Erro: " + ex.Message, "Buscar Todos");
             }
             finally
             {
                 conn.Close();
             }
 
-            return listMarca;
+            return listTipoProduto;
         }
 
-        String SqlInsere = "INSERT INTO marca (nomemarca) VALUES (@pnomemarca)";
+        String SqlInsere = "INSERT INTO tipoproduto (nometipoproduto) VALUES (@pnometipoproduto)";
         public void Insere_Dados(object aux)
         {
-            M_Marca m_Marca = new M_Marca();
-            m_Marca = (M_Marca)aux;
+            M_TipoProduto m_TipoProduto = new M_TipoProduto();
+            m_TipoProduto = (M_TipoProduto)aux;
 
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
 
             cmd = new SqlCommand(SqlInsere, conn);
-            cmd.Parameters.AddWithValue("@pnomemarca", m_Marca.nomemarca);
+            cmd.Parameters.AddWithValue("@pnometipoproduto", m_TipoProduto.nometipoproduto);
 
             conn.Open();
 
@@ -203,7 +200,7 @@ namespace Veterinaria.control
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro: " + ex.Message,"Insere Dados");
+                MessageBox.Show("Erro: " + ex.Message, "Insere Dados");
             }
             finally
             {

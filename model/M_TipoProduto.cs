@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Veterinaria.model
 {
     /* -- tipoproduto = {codtipoproduto, nometipoproduto} */
-    internal class Tipoproduto
+    internal class M_TipoProduto
     {
         public int codtipoproduto {  get; set; }
         public String nometipoproduto { get; set; }
