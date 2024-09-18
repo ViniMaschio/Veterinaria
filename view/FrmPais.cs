@@ -111,6 +111,7 @@ namespace Veterinaria.view
             btnCancelar.Enabled = false;
             BntNovaFoto.Enabled = false;
         }
+
         private byte[] ImageParaByte()
         {
             using (MemoryStream ms = new MemoryStream())
@@ -171,6 +172,12 @@ namespace Veterinaria.view
             DesativarBotoes();
 
             DesativarCampos();
+
+            if (listaPais.Count > 0)
+            {
+                AtualizarCampos();
+                dGView.Rows[posicao].Selected = true;
+            }
         }
 
         private void btnApagar_Click(object sender, EventArgs e)

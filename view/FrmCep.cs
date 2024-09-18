@@ -57,6 +57,13 @@ namespace Veterinaria.view
                 row.Cells[1].Value = listaCep[i].numerocep;
                 dGView.Rows.Add(row);
             }
+            
+            if (listaCep.Count > 0)
+            {
+                posicao = 0;
+                AtualizarCampos();
+                dGView.Rows[posicao].Selected = true;
+            }
         }
 
         public void LimparCampos()
@@ -145,6 +152,12 @@ namespace Veterinaria.view
             DesativarBotoes();
 
             DesativarCampos();
+
+            if (listaCep.Count > 0)
+            {
+                AtualizarCampos();
+                dGView.Rows[posicao].Selected = true;
+            }
         }
 
         private void btnApagar_Click(object sender, EventArgs e)

@@ -48,11 +48,11 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dGViews = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CidAnimal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGViews)).BeginInit();
             this.SuspendLayout();
@@ -255,24 +255,6 @@
             this.dGViews.TabIndex = 25;
             this.dGViews.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGViews_CellClick);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 114);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Descricao:";
-            // 
-            // txtDescricao
-            // 
-            this.txtDescricao.Enabled = false;
-            this.txtDescricao.Location = new System.Drawing.Point(81, 111);
-            this.txtDescricao.Multiline = true;
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(493, 45);
-            this.txtDescricao.TabIndex = 32;
-            // 
             // ID
             // 
             this.ID.HeaderText = "ID";
@@ -294,6 +276,24 @@
             this.Descricao.ReadOnly = true;
             this.Descricao.Width = 400;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 114);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Descricao:";
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Enabled = false;
+            this.txtDescricao.Location = new System.Drawing.Point(81, 111);
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(493, 45);
+            this.txtDescricao.TabIndex = 32;
+            // 
             // FrmCidAnimal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,6 +308,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dGViews);
             this.Name = "FrmCidAnimal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCidAnimal";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

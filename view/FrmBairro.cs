@@ -39,6 +39,14 @@ namespace Veterinaria.view
                 row.Cells[1].Value = listaBairro[i].nomebairro;
                 DataGridBairro.Rows.Add(row);
             }
+
+            
+            if (listaBairro.Count > 0)
+            {
+                posicao = 0;
+                AtualizarCampos();
+                DataGridBairro.Rows[posicao].Selected = true;
+            }
         }
 
         public void CarregarTabelaTodos()
@@ -125,6 +133,7 @@ namespace Veterinaria.view
                 c_Bairro.Atualizar_Dados(m_Bairro);
             }
 
+
             CarregarTabelaTodos();
 
             DesativarBotoes();
@@ -139,6 +148,11 @@ namespace Veterinaria.view
             DesativarBotoes();
 
             DesativarCampos();
+            if (listaBairro.Count > 0)
+            {
+                AtualizarCampos();
+                DataGridBairro.Rows[posicao].Selected = true;
+            }
         }
 
         private void BtnApagar_Click(object sender, EventArgs e)

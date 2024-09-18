@@ -158,6 +158,12 @@ namespace Veterinaria.view
             DesativarBotoes();
 
             DesativarCampos();
+
+            if (listaRua.Count > 0)
+            {
+                AtualizarCampos();
+                dGView.Rows[posicao].Selected = true;
+            }
         }
 
         private void btnApagar_Click(object sender, EventArgs e)

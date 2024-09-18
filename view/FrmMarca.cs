@@ -40,6 +40,12 @@ namespace Veterinaria.view
                 row.Cells[1].Value = listMarca[i].nomemarca;
                 dGViews.Rows.Add(row);
             }
+            if (listMarca.Count > 0)
+            {
+                posicao = 0;
+                AtualizarCampos();
+                dGViews.Rows[posicao].Selected = true;
+            }
         }
 
         public void CarregarTabelaTodos()
@@ -141,6 +147,12 @@ namespace Veterinaria.view
             DesativarBotoes();
 
             DesativarCampos();
+
+            if (listMarca.Count > 0)
+            {
+                AtualizarCampos();
+                dGViews.Rows[posicao].Selected = true;
+            }
         }
 
         private void btnApagar_Click(object sender, EventArgs e)
@@ -151,8 +163,7 @@ namespace Veterinaria.view
                 c_Marca.Apaga_Dados(Convert.ToInt32(txtCodigo.Text));
 
                 CarregarTabelaTodos();
-                posicao = 0;
-                AtualizarCampos();
+                
             }
         }
 

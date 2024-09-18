@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.lblBuscar = new System.Windows.Forms.ToolStripLabel();
-            this.txtBuscar = new System.Windows.Forms.ToolStripTextBox();
-            this.TxtCep = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dGView = new System.Windows.Forms.DataGridView();
             this.btnNovo = new System.Windows.Forms.ToolStripButton();
             this.btnSalvar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnApagar = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnPrimeiro = new System.Windows.Forms.ToolStripButton();
             this.btnAnterior = new System.Windows.Forms.ToolStripButton();
             this.btnProximo = new System.Windows.Forms.ToolStripButton();
             this.btnUltimo = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.lblBuscar = new System.Windows.Forms.ToolStripLabel();
+            this.txtBuscar = new System.Windows.Forms.ToolStripTextBox();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
+            this.TxtCep = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dGView = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeCep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
@@ -77,78 +77,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(592, 39);
             this.toolStrip1.TabIndex = 24;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
-            // 
-            // lblBuscar
-            // 
-            this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(42, 36);
-            this.lblBuscar.Text = "Buscar";
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(140, 39);
-            // 
-            // TxtCep
-            // 
-            this.TxtCep.Enabled = false;
-            this.TxtCep.Location = new System.Drawing.Point(48, 138);
-            this.TxtCep.Name = "TxtCep";
-            this.TxtCep.Size = new System.Drawing.Size(526, 20);
-            this.TxtCep.TabIndex = 23;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 141);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "CEP :";
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(50, 108);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(86, 20);
-            this.txtCodigo.TabIndex = 21;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 115);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Código:";
-            // 
-            // dGView
-            // 
-            this.dGView.AllowUserToAddRows = false;
-            this.dGView.AllowUserToDeleteRows = false;
-            this.dGView.AllowUserToOrderColumns = true;
-            this.dGView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.NomeCep});
-            this.dGView.Location = new System.Drawing.Point(12, 183);
-            this.dGView.Name = "dGView";
-            this.dGView.ReadOnly = true;
-            this.dGView.Size = new System.Drawing.Size(562, 223);
-            this.dGView.TabIndex = 19;
-            this.dGView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGView_CellClick);
             // 
             // btnNovo
             // 
@@ -205,6 +133,11 @@
             this.btnEditar.ToolTipText = "Editar";
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
+            // 
             // btnPrimeiro
             // 
             this.btnPrimeiro.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -249,6 +182,23 @@
             this.btnUltimo.ToolTipText = "Ultimo";
             this.btnUltimo.Click += new System.EventHandler(this.btnUltimo_Click);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
+            // 
+            // lblBuscar
+            // 
+            this.lblBuscar.Name = "lblBuscar";
+            this.lblBuscar.Size = new System.Drawing.Size(42, 36);
+            this.lblBuscar.Text = "Buscar";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(140, 39);
+            // 
             // btnBuscar
             // 
             this.btnBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -259,6 +209,56 @@
             this.btnBuscar.Text = "toolStripButton1";
             this.btnBuscar.ToolTipText = "Pesquisar";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // TxtCep
+            // 
+            this.TxtCep.Enabled = false;
+            this.TxtCep.Location = new System.Drawing.Point(48, 138);
+            this.TxtCep.Name = "TxtCep";
+            this.TxtCep.Size = new System.Drawing.Size(526, 20);
+            this.TxtCep.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 141);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "CEP :";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Enabled = false;
+            this.txtCodigo.Location = new System.Drawing.Point(50, 108);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(86, 20);
+            this.txtCodigo.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Código:";
+            // 
+            // dGView
+            // 
+            this.dGView.AllowUserToAddRows = false;
+            this.dGView.AllowUserToDeleteRows = false;
+            this.dGView.AllowUserToOrderColumns = true;
+            this.dGView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.NomeCep});
+            this.dGView.Location = new System.Drawing.Point(12, 183);
+            this.dGView.Name = "dGView";
+            this.dGView.ReadOnly = true;
+            this.dGView.Size = new System.Drawing.Size(562, 223);
+            this.dGView.TabIndex = 19;
+            this.dGView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGView_CellClick);
             // 
             // ID
             // 
@@ -286,6 +286,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dGView);
             this.Name = "FrmCep";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCep";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

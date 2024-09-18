@@ -69,7 +69,6 @@ namespace Veterinaria.view
             txtTipoAnimal.Text = listaTipoAnimal[posicao].nometipoanimal.ToString();
         }
 
-
         private void dGView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             posicao = e.RowIndex;
@@ -154,6 +153,12 @@ namespace Veterinaria.view
             DesativarBotoes();
 
             DesativarCampos();
+
+            if (listaTipoAnimal.Count > 0)
+            {
+                AtualizarCampos();
+                dGView.Rows[posicao].Selected = true;
+            }
         }
 
         private void btnApagar_Click(object sender, EventArgs e)

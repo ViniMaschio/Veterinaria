@@ -44,6 +44,12 @@ namespace Veterinaria.view
                 row.Cells[1].Value = Int64.Parse(listTelefone[i].numerotelefone).ToString(@"(00) 00000-0000");
                 dGViews.Rows.Add(row);
             }
+            if (listTelefone.Count > 0)
+            {
+                posicao = 0;
+                AtualizarCampos();
+                dGViews.Rows[posicao].Selected = true;
+            }
         }
 
         public void CarregarTabelaTodos()
@@ -145,6 +151,12 @@ namespace Veterinaria.view
             DesativarBotoes();
 
             DesativarCampos();
+
+            if (listTelefone.Count > 0)
+            {
+                AtualizarCampos();
+                dGViews.Rows[posicao].Selected = true;
+            }
         }
 
         private void btnApagar_Click(object sender, EventArgs e)

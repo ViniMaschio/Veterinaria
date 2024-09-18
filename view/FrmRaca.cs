@@ -27,6 +27,7 @@ namespace Veterinaria.view
             txtCodigo.Text = lista_raca[posicao].codraca.ToString();
             txtRaca.Text = lista_raca[posicao].nomeraca.ToString();
         }
+
         List<Raca> carregaListaRacaFiltro()
         {
 
@@ -41,10 +42,11 @@ namespace Veterinaria.view
 
             lista_raca = (List<Raca>)cr.Buscar_Todos();
 
+            limparCampos();
             CarregarDataGrid();
             
 
-        } //arrumar
+        } 
 
         public void CarregarTabelaFiltro()
         {
@@ -52,6 +54,7 @@ namespace Veterinaria.view
 
             lista_raca = (List<Raca>)cr.DadosRacaFiltro(txtBuscar.Text);
 
+            limparCampos();
             CarregarDataGrid();
         }
 
@@ -75,7 +78,6 @@ namespace Veterinaria.view
                 dataGridView1.Rows[posicao].Selected = true;
             }
         }
-
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -162,6 +164,12 @@ namespace Veterinaria.view
             limparCampos();
             desativaBotoes();
             desativaCampos();
+
+            if (lista_raca.Count > 0)
+            {
+                atualizaCampos();
+                dataGridView1.Rows[posicao].Selected = true;
+            }
         }
 
         private void btnApagar_Click(object sender, EventArgs e)
@@ -237,7 +245,7 @@ namespace Veterinaria.view
         {
             CarregarTabelaFiltro();
 
-        }// arrumar
+        }
 
         private void FrmRaca_Load(object sender, EventArgs e)
         {

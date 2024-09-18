@@ -46,6 +46,14 @@ namespace Veterinaria.view
                 row.Cells[1].Value = lisCidAnimal[i].nomecidanimal;
                 row.Cells[2].Value = lisCidAnimal[i].descricao;
                 dGViews.Rows.Add(row);
+
+            }
+
+            if (lisCidAnimal.Count > 0)
+            {
+                posicao = 0;
+                AtualizarCampos();
+                dGViews.Rows[posicao].Selected = true;
             }
         }
 
@@ -152,6 +160,11 @@ namespace Veterinaria.view
             DesativarBotoes();
 
             DesativarCampos();
+            if (lisCidAnimal.Count > 0)
+            {
+                AtualizarCampos();
+                dGViews.Rows[posicao].Selected = true;
+            }
         }
 
         private void btnApagar_Click(object sender, EventArgs e)
@@ -162,8 +175,7 @@ namespace Veterinaria.view
                 c_CidAnimal.Apaga_Dados(Convert.ToInt32(txtCodigo.Text));
 
                 CarregarTabelaTodos();
-                posicao = 0;
-                AtualizarCampos();
+                
             }
         }
 

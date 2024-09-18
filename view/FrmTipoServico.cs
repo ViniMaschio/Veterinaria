@@ -37,6 +37,7 @@ namespace Veterinaria.view
             }
 
         }
+
         Boolean novo = true;
         int posicao;
         List<M_TipoServico> listTipoServico = new List<M_TipoServico>();
@@ -62,6 +63,13 @@ namespace Veterinaria.view
                 row.Cells[1].Value = listTipoServico[i].nometiposervico;
                 row.Cells[2].Value = listTipoServico[i].valortiposervico;
                 dGViews.Rows.Add(row);
+            }
+
+            if (listTipoServico.Count > 0)
+            {
+                posicao = 0;
+                AtualizarCampos();
+                dGViews.Rows[posicao].Selected = true;
             }
         }
 
@@ -168,6 +176,12 @@ namespace Veterinaria.view
             DesativarBotoes();
 
             DesativarCampos();
+
+            if (listTipoServico.Count > 0)
+            {
+                AtualizarCampos();
+                dGViews.Rows[posicao].Selected = true;
+            }
         }
 
         private void btnApagar_Click(object sender, EventArgs e)
