@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Veterinaria.model
 {
-    internal class Raca
+    internal class M_Raca
     {
         public int codraca {  get; set; }
         public String nomeraca { get; set; }
 
-        public Raca()
+        public M_Raca()
         {
             
         }

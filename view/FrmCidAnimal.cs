@@ -181,11 +181,13 @@ namespace Veterinaria.view
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            if (txtCodigo.Text != "")
+            {
+                AtivarBotoes();
+                AtivarCampos();
 
-            AtivarBotoes();
-            AtivarCampos();
-
-            novo = false;
+                novo = false;
+            }
         }
 
         private void btnPrimeiro_Click(object sender, EventArgs e)

@@ -11,13 +11,12 @@ namespace Veterinaria.view
     {
         Boolean novo = true;
         int posicao;
-        List<Raca> lista_raca = new List<Raca>();
+        List<M_Raca> lista_raca = new List<M_Raca>();
 
         public FrmRaca()
         {
             InitializeComponent();
 
-            //Carregar o Datagrid de Raças.
             CarregaTabelaTodos();
 
         }
@@ -28,19 +27,11 @@ namespace Veterinaria.view
             txtRaca.Text = lista_raca[posicao].nomeraca.ToString();
         }
 
-        List<Raca> carregaListaRacaFiltro()
-        {
-
-            C_Raca cr = new C_Raca();
-
-            return cr.DadosRacaFiltro(txtBuscar.Text);
-        }
-
         public void CarregaTabelaTodos()
         {
             C_Raca cr = new C_Raca();
 
-            lista_raca = (List<Raca>)cr.Buscar_Todos();
+            lista_raca = (List<M_Raca>)cr.Buscar_Todos();
 
             limparCampos();
             CarregarDataGrid();
@@ -52,7 +43,7 @@ namespace Veterinaria.view
         {
             C_Raca cr = new C_Raca();
 
-            lista_raca = (List<Raca>)cr.DadosRacaFiltro(txtBuscar.Text);
+            lista_raca = (List<M_Raca>)cr.Buscar_Filtro(txtBuscar.Text);
 
             limparCampos();
             CarregarDataGrid();
@@ -125,7 +116,7 @@ namespace Veterinaria.view
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Raca raca = new Raca();
+            M_Raca raca = new M_Raca();
 
             raca.nomeraca = txtRaca.Text;
 
@@ -187,10 +178,13 @@ namespace Veterinaria.view
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            ativarCampos();
-            AtivaBotoes();
-            novo = false;
+            if (txtCodigo.Text != "")
+            {
+                AtivaBotoes();
+                ativarCampos();
 
+                novo = false;
+            }
         }
 
         private void btnPrimeiro_Click(object sender, EventArgs e)
@@ -247,9 +241,5 @@ namespace Veterinaria.view
 
         }
 
-        private void FrmRaca_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

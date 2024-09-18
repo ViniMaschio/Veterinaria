@@ -87,10 +87,12 @@ namespace Veterinaria.view
             btnSalvar.Enabled = true;
             btnCancelar.Enabled = true;
         }
+
         private void AtivarCampos()
         {
             TxtCep.Enabled = true;
         }
+
         private void DesativarCampos()
         {
             TxtCep.Enabled = false;
@@ -174,10 +176,13 @@ namespace Veterinaria.view
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            AtivarBotoes();
-            AtivarCampos();
+            if (txtCodigo.Text != "")
+            {
+                AtivarBotoes();
+                AtivarCampos();
 
-            novo = false;
+                novo = false;
+            }
         }
 
         private void btnPrimeiro_Click(object sender, EventArgs e)

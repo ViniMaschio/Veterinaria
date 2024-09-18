@@ -83,7 +83,7 @@
     <Compile Include="model\M_Marca.cs" />
     <Compile Include="model\M_Pais.cs" />
     <Compile Include="model\M_TipoServico.cs" />
-    <Compile Include="model\Raca.cs" />
+    <Compile Include="model\M_Raca.cs" />
     <Compile Include="model\M_Rua.cs" />
     <Compile Include="model\M_Sexo.cs" />
     <Compile Include="model\M_Telefone.cs" />

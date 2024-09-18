@@ -13,7 +13,7 @@ namespace Veterinaria.model
         public int codanimal { get; set; }
         public string nomeanimal { get; set; }
         public M_Sexo sexo { get; set; }
-        public Raca raca { get; set; }
+        public M_Raca raca { get; set; }
         public M_TipoAnimal tipoanimal { get; set; }  
         public Cliente cliente { get; set; }
     }
