@@ -278,7 +278,7 @@
             this.Controls.Add(this.DataGridBairro);
             this.Name = "FrmBairro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmBairro";
+            this.Text = "Cadastro Bairro";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridBairro)).EndInit();

@@ -278,7 +278,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmRaca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmRaca";
+            this.Text = "Cadastro Raca";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

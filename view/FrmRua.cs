@@ -237,5 +237,16 @@ namespace Veterinaria.view
         {
             CarregarTabelaFiltro();
         }
+
+        private void btnNovo_Click_1(object sender, EventArgs e)
+        {
+            LimparCampos();
+
+            AtivarBotoes();
+
+            AtivarCampos();
+
+            novo = true;
+        }
     }
 }

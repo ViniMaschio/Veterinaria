@@ -48,12 +48,13 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dGView = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomePais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBoxPais = new System.Windows.Forms.PictureBox();
             this.BntNovaFoto = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomePais = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bandeira = new System.Windows.Forms.DataGridViewImageColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPais)).BeginInit();
@@ -248,27 +249,14 @@
             this.dGView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.NomePais});
+            this.NomePais,
+            this.Bandeira});
             this.dGView.Location = new System.Drawing.Point(12, 125);
             this.dGView.Name = "dGView";
             this.dGView.ReadOnly = true;
             this.dGView.Size = new System.Drawing.Size(562, 223);
             this.dGView.TabIndex = 6;
             this.dGView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGView_CellClick);
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 50;
-            // 
-            // NomePais
-            // 
-            this.NomePais.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NomePais.HeaderText = "Nome Pais";
-            this.NomePais.Name = "NomePais";
-            this.NomePais.ReadOnly = true;
             // 
             // pictureBoxPais
             // 
@@ -303,6 +291,29 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 50;
+            // 
+            // NomePais
+            // 
+            this.NomePais.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NomePais.HeaderText = "Nome Pais";
+            this.NomePais.Name = "NomePais";
+            this.NomePais.ReadOnly = true;
+            // 
+            // Bandeira
+            // 
+            this.Bandeira.HeaderText = "Bandeira";
+            this.Bandeira.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Bandeira.Name = "Bandeira";
+            this.Bandeira.ReadOnly = true;
+            this.Bandeira.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Bandeira.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // FrmPais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,7 +330,7 @@
             this.Controls.Add(this.dGView);
             this.Name = "FrmPais";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmPais";
+            this.Text = "Cadastro Pais";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGView)).EndInit();
@@ -351,11 +362,12 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dGView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomePais;
         private System.Windows.Forms.PictureBox pictureBoxPais;
         private System.Windows.Forms.Button BntNovaFoto;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomePais;
+        private System.Windows.Forms.DataGridViewImageColumn Bandeira;
     }
 }

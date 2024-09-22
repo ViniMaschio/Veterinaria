@@ -308,7 +308,7 @@
             this.Controls.Add(this.dGViews);
             this.Name = "FrmTipoServico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmTipoServico";
+            this.Text = "Cadastro Tipo Servico";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGViews)).EndInit();

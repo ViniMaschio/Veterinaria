@@ -61,7 +61,7 @@ namespace Veterinaria.view
                 row.CreateCells(dGViews);
                 row.Cells[0].Value = listTipoServico[i].codtiposervico;
                 row.Cells[1].Value = listTipoServico[i].nometiposervico;
-                row.Cells[2].Value = listTipoServico[i].valortiposervico;
+                row.Cells[2].Value = listTipoServico[i].valortiposervico.ToString("C");
                 dGViews.Rows.Add(row);
             }
 

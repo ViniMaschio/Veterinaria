@@ -278,7 +278,7 @@
             this.Controls.Add(this.dGViews);
             this.Name = "FrmTipoFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmTipoFuncionario";
+            this.Text = "Cadastro Tipo Funcionario";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGViews)).EndInit();

@@ -8,8 +8,7 @@ namespace Veterinaria.conection
     {
         //Declaração de Atribututos
         SqlConnection conn;
-        String strConnection = @"Server=localhost\SQLEXPRESS;Database=Veterinaria_Unifunec;
-                                Trusted_Connection=True";
+        String strConnection = @"Server=localhost\SQLEXPRESS;Database=Veterinaria_Unifunec;Trusted_Connection=True";
 
         //Método para conexao no banco de dados
         public SqlConnection ConectarBanco()

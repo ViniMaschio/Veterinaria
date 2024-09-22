@@ -27,10 +27,10 @@ create table tipoanimal(
 -- TEM QUE FAZER O CONTROLE E MODEL E VIEW
 -- bairro ={ codbairro, nomebairro} FEITO
 
-create table bairro{
+create table bairro(
     codbairro integer identity primary key,
     nomebairro varchar(80) not null unique
-};
+);
 
 -- TEM QUE FAZER O CONTROLE E MODEL E VIEW
 -- rua = {codrua, nomerua} feito

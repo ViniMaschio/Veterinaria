@@ -54,7 +54,7 @@ namespace Veterinaria.view
                 DataGridViewRow row = new DataGridViewRow();
                 row.CreateCells(dGView);
                 row.Cells[0].Value = listaCep[i].codcep;
-                row.Cells[1].Value = listaCep[i].numerocep;
+                row.Cells[1].Value = Int64.Parse(listaCep[i].numerocep).ToString(@"00000-000");
                 dGView.Rows.Add(row);
             }
             

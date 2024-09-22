@@ -43,13 +43,13 @@
             this.lblBuscar = new System.Windows.Forms.ToolStripLabel();
             this.txtBuscar = new System.Windows.Forms.ToolStripTextBox();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
-            this.TxtCep = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dGView = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeCep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TxtCep = new System.Windows.Forms.MaskedTextBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGView)).BeginInit();
             this.SuspendLayout();
@@ -210,14 +210,6 @@
             this.btnBuscar.ToolTipText = "Pesquisar";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // TxtCep
-            // 
-            this.TxtCep.Enabled = false;
-            this.TxtCep.Location = new System.Drawing.Point(48, 138);
-            this.TxtCep.Name = "TxtCep";
-            this.TxtCep.Size = new System.Drawing.Size(526, 20);
-            this.TxtCep.TabIndex = 23;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -274,20 +266,31 @@
             this.NomeCep.Name = "NomeCep";
             this.NomeCep.ReadOnly = true;
             // 
+            // TxtCep
+            // 
+            this.TxtCep.Enabled = false;
+            this.TxtCep.Location = new System.Drawing.Point(49, 141);
+            this.TxtCep.Mask = "00000-000";
+            this.TxtCep.Name = "TxtCep";
+            this.TxtCep.Size = new System.Drawing.Size(67, 20);
+            this.TxtCep.TabIndex = 25;
+            this.TxtCep.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtCep.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
+            // 
             // FrmCep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 450);
-            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.TxtCep);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dGView);
             this.Name = "FrmCep";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmCep";
+            this.Text = "Cadastro CEP";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGView)).EndInit();
@@ -313,12 +316,12 @@
         private System.Windows.Forms.ToolStripLabel lblBuscar;
         private System.Windows.Forms.ToolStripTextBox txtBuscar;
         private System.Windows.Forms.ToolStripButton btnBuscar;
-        private System.Windows.Forms.TextBox TxtCep;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dGView;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomeCep;
+        private System.Windows.Forms.MaskedTextBox TxtCep;
     }
 }

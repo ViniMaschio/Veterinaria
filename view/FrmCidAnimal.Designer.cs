@@ -309,7 +309,7 @@
             this.Controls.Add(this.dGViews);
             this.Name = "FrmCidAnimal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmCidAnimal";
+            this.Text = "Cadastro Cid Animal";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGViews)).EndInit();

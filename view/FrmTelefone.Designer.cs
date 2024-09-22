@@ -47,9 +47,9 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dGViews = new System.Windows.Forms.DataGridView();
-            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumeroTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGViews)).BeginInit();
             this.SuspendLayout();
@@ -243,16 +243,6 @@
             this.dGViews.TabIndex = 6;
             this.dGViews.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGViews_CellClick);
             // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Enabled = false;
-            this.txtTelefone.Location = new System.Drawing.Point(74, 79);
-            this.txtTelefone.Mask = "(00) 00000-0000";
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(91, 20);
-            this.txtTelefone.TabIndex = 12;
-            this.txtTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
-            // 
             // ID
             // 
             this.ID.HeaderText = "ID";
@@ -267,6 +257,16 @@
             this.NumeroTelefone.Name = "NumeroTelefone";
             this.NumeroTelefone.ReadOnly = true;
             // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Enabled = false;
+            this.txtTelefone.Location = new System.Drawing.Point(74, 79);
+            this.txtTelefone.Mask = "(00) 00000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(91, 20);
+            this.txtTelefone.TabIndex = 12;
+            this.txtTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
+            // 
             // FrmTelefone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,7 +280,7 @@
             this.Controls.Add(this.dGViews);
             this.Name = "FrmTelefone";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmTelefone";
+            this.Text = "Cadastro Telefone";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGViews)).EndInit();

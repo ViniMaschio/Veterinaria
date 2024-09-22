@@ -176,7 +176,7 @@ namespace Veterinaria.control
                     listTipoServico.Add(aux);
                 }
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Erro: " + ex.Message, "Buscar Todos");
             }

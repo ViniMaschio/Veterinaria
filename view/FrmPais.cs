@@ -46,13 +46,16 @@ namespace Veterinaria.view
         public void CarrregarDataGrid()
         {
             dGView.Rows.Clear();
+            MemoryStream ms;
 
             for (int i = 0; i < listaPais.Count; i++)
             {
+                ms = new MemoryStream(listaPais[i].bandeira);
                 DataGridViewRow row = new DataGridViewRow();
                 row.CreateCells(dGView);
                 row.Cells[0].Value = listaPais[i].codpais;
                 row.Cells[1].Value = listaPais[i].nomepais;
+                row.Cells[2].Value = Image.FromStream(ms);
                 dGView.Rows.Add(row);
             }
 
