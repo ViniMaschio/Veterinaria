@@ -9,7 +9,7 @@ namespace Veterinaria.model
     /*--TelefoneLoja = {codlojafk, codtelefonefk} OK  */
     internal class Telefoneloja
     {
-        public Loja loja {  get; set; }
+        public M_Loja loja {  get; set; }
         public M_Telefone telefone { get; set; }
     }
 }

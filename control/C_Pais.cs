@@ -134,8 +134,8 @@ namespace Veterinaria.control
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    aux.codpais = Int32.Parse(reader["codrua"].ToString());
-                    aux.nomepais = reader["nomerua"].ToString();
+                    aux.codpais = Int32.Parse(reader["codpais"].ToString());
+                    aux.nomepais = reader["nomepais"].ToString();
                     aux.bandeira = (byte[])reader["bandeira"];
                 }
             }

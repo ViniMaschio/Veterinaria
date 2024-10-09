@@ -97,7 +97,7 @@ namespace Veterinaria.control
             return aux;
         }
 
-        String sqlTodos = "select * from rua";
+        String sqlTodos = "select * from estado";
         public object Buscar_Todos()
         {
 

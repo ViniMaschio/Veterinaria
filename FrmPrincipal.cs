@@ -91,5 +91,11 @@ namespace Veterinaria
             FrmCidAnimal frmCidAnimal = new FrmCidAnimal();
             frmCidAnimal.ShowDialog();
         }
+
+        private void lojaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmLoja frmLoja = new FrmLoja();
+            frmLoja.ShowDialog();
+        }
     }
 }
