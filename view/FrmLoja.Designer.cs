@@ -48,16 +48,6 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dGView = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeLoja = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rua = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCnpj = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -74,6 +64,16 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.cBoxBairro = new System.Windows.Forms.ComboBox();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeLoja = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGView)).BeginInit();
             this.SuspendLayout();
@@ -241,7 +241,7 @@
             this.txtNomeLoja.Location = new System.Drawing.Point(209, 108);
             this.txtNomeLoja.Name = "txtNomeLoja";
             this.txtNomeLoja.Size = new System.Drawing.Size(403, 20);
-            this.txtNomeLoja.TabIndex = 23;
+            this.txtNomeLoja.TabIndex = 1;
             // 
             // label2
             // 
@@ -258,7 +258,7 @@
             this.txtCodigo.Location = new System.Drawing.Point(50, 108);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(66, 20);
-            this.txtCodigo.TabIndex = 21;
+            this.txtCodigo.TabIndex = 0;
             // 
             // label1
             // 
@@ -293,6 +293,162 @@
             this.dGView.TabIndex = 19;
             this.dGView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGView_CellClick);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(679, 115);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "CNPJ:";
+            // 
+            // txtCnpj
+            // 
+            this.txtCnpj.Enabled = false;
+            this.txtCnpj.Location = new System.Drawing.Point(722, 108);
+            this.txtCnpj.Mask = "00.000.000/0000-00";
+            this.txtCnpj.Name = "txtCnpj";
+            this.txtCnpj.Size = new System.Drawing.Size(125, 20);
+            this.txtCnpj.TabIndex = 2;
+            this.txtCnpj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 166);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Rua:";
+            // 
+            // cBoxRua
+            // 
+            this.cBoxRua.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cBoxRua.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cBoxRua.Enabled = false;
+            this.cBoxRua.FormattingEnabled = true;
+            this.cBoxRua.Location = new System.Drawing.Point(51, 158);
+            this.cBoxRua.Name = "cBoxRua";
+            this.cBoxRua.Size = new System.Drawing.Size(204, 21);
+            this.cBoxRua.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(592, 166);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Numero:";
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Enabled = false;
+            this.txtNumero.Location = new System.Drawing.Point(645, 159);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(100, 20);
+            this.txtNumero.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(781, 166);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(29, 13);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "Cep:";
+            // 
+            // cBoxCep
+            // 
+            this.cBoxCep.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cBoxCep.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cBoxCep.Enabled = false;
+            this.cBoxCep.FormattingEnabled = true;
+            this.cBoxCep.Location = new System.Drawing.Point(825, 158);
+            this.cBoxCep.Name = "cBoxCep";
+            this.cBoxCep.Size = new System.Drawing.Size(110, 21);
+            this.cBoxCep.TabIndex = 6;
+            // 
+            // cBoxCidade
+            // 
+            this.cBoxCidade.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cBoxCidade.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cBoxCidade.Enabled = false;
+            this.cBoxCidade.FormattingEnabled = true;
+            this.cBoxCidade.Location = new System.Drawing.Point(64, 201);
+            this.cBoxCidade.Name = "cBoxCidade";
+            this.cBoxCidade.Size = new System.Drawing.Size(204, 21);
+            this.cBoxCidade.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(15, 209);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(43, 13);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Cidade:";
+            // 
+            // cBoxEstado
+            // 
+            this.cBoxEstado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cBoxEstado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cBoxEstado.Enabled = false;
+            this.cBoxEstado.FormattingEnabled = true;
+            this.cBoxEstado.Location = new System.Drawing.Point(363, 201);
+            this.cBoxEstado.Name = "cBoxEstado";
+            this.cBoxEstado.Size = new System.Drawing.Size(197, 21);
+            this.cBoxEstado.TabIndex = 8;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(314, 209);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 13);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "Estado:";
+            // 
+            // cBoxPais
+            // 
+            this.cBoxPais.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cBoxPais.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cBoxPais.Enabled = false;
+            this.cBoxPais.FormattingEnabled = true;
+            this.cBoxPais.Location = new System.Drawing.Point(658, 201);
+            this.cBoxPais.Name = "cBoxPais";
+            this.cBoxPais.Size = new System.Drawing.Size(221, 21);
+            this.cBoxPais.TabIndex = 9;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(609, 209);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(30, 13);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "Pais:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(287, 166);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 13);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "Bairro:";
+            // 
+            // cBoxBairro
+            // 
+            this.cBoxBairro.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cBoxBairro.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cBoxBairro.Enabled = false;
+            this.cBoxBairro.FormattingEnabled = true;
+            this.cBoxBairro.Location = new System.Drawing.Point(330, 158);
+            this.cBoxBairro.Name = "cBoxBairro";
+            this.cBoxBairro.Size = new System.Drawing.Size(230, 21);
+            this.cBoxBairro.TabIndex = 4;
+            // 
             // ID
             // 
             this.ID.HeaderText = "ID";
@@ -312,6 +468,7 @@
             this.CNPJ.HeaderText = "CNPJ";
             this.CNPJ.Name = "CNPJ";
             this.CNPJ.ReadOnly = true;
+            this.CNPJ.Width = 120;
             // 
             // Rua
             // 
@@ -338,6 +495,7 @@
             this.Cep.HeaderText = "Cep";
             this.Cep.Name = "Cep";
             this.Cep.ReadOnly = true;
+            this.Cep.Width = 90;
             // 
             // Cidade
             // 
@@ -358,151 +516,7 @@
             this.Pais.HeaderText = "Pais";
             this.Pais.Name = "Pais";
             this.Pais.ReadOnly = true;
-            this.Pais.Width = 150;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(679, 115);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "CNPJ:";
-            // 
-            // txtCnpj
-            // 
-            this.txtCnpj.Enabled = false;
-            this.txtCnpj.Location = new System.Drawing.Point(722, 108);
-            this.txtCnpj.Mask = "00.000.000/0000-00";
-            this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(125, 20);
-            this.txtCnpj.TabIndex = 27;
-            this.txtCnpj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 166);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 13);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Rua:";
-            // 
-            // cBoxRua
-            // 
-            this.cBoxRua.Enabled = false;
-            this.cBoxRua.FormattingEnabled = true;
-            this.cBoxRua.Location = new System.Drawing.Point(51, 158);
-            this.cBoxRua.Name = "cBoxRua";
-            this.cBoxRua.Size = new System.Drawing.Size(204, 21);
-            this.cBoxRua.TabIndex = 29;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(592, 166);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "Numero:";
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.Enabled = false;
-            this.txtNumero.Location = new System.Drawing.Point(645, 159);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(100, 20);
-            this.txtNumero.TabIndex = 31;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(781, 166);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 13);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "Cep:";
-            // 
-            // cBoxCep
-            // 
-            this.cBoxCep.Enabled = false;
-            this.cBoxCep.FormattingEnabled = true;
-            this.cBoxCep.Location = new System.Drawing.Point(825, 158);
-            this.cBoxCep.Name = "cBoxCep";
-            this.cBoxCep.Size = new System.Drawing.Size(110, 21);
-            this.cBoxCep.TabIndex = 33;
-            // 
-            // cBoxCidade
-            // 
-            this.cBoxCidade.Enabled = false;
-            this.cBoxCidade.FormattingEnabled = true;
-            this.cBoxCidade.Location = new System.Drawing.Point(64, 201);
-            this.cBoxCidade.Name = "cBoxCidade";
-            this.cBoxCidade.Size = new System.Drawing.Size(204, 21);
-            this.cBoxCidade.TabIndex = 35;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 209);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 13);
-            this.label7.TabIndex = 34;
-            this.label7.Text = "Cidade:";
-            // 
-            // cBoxEstado
-            // 
-            this.cBoxEstado.Enabled = false;
-            this.cBoxEstado.FormattingEnabled = true;
-            this.cBoxEstado.Location = new System.Drawing.Point(363, 201);
-            this.cBoxEstado.Name = "cBoxEstado";
-            this.cBoxEstado.Size = new System.Drawing.Size(197, 21);
-            this.cBoxEstado.TabIndex = 37;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(314, 209);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 13);
-            this.label8.TabIndex = 36;
-            this.label8.Text = "Estado:";
-            // 
-            // cBoxPais
-            // 
-            this.cBoxPais.Enabled = false;
-            this.cBoxPais.FormattingEnabled = true;
-            this.cBoxPais.Location = new System.Drawing.Point(658, 201);
-            this.cBoxPais.Name = "cBoxPais";
-            this.cBoxPais.Size = new System.Drawing.Size(221, 21);
-            this.cBoxPais.TabIndex = 39;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(609, 209);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 13);
-            this.label9.TabIndex = 38;
-            this.label9.Text = "Pais:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(287, 166);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 13);
-            this.label10.TabIndex = 40;
-            this.label10.Text = "Bairro:";
-            // 
-            // cBoxBairro
-            // 
-            this.cBoxBairro.Enabled = false;
-            this.cBoxBairro.FormattingEnabled = true;
-            this.cBoxBairro.Location = new System.Drawing.Point(330, 158);
-            this.cBoxBairro.Name = "cBoxBairro";
-            this.cBoxBairro.Size = new System.Drawing.Size(230, 21);
-            this.cBoxBairro.TabIndex = 41;
+            this.Pais.Width = 140;
             // 
             // FrmLoja
             // 

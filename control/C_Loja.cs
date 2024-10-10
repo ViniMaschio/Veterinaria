@@ -16,7 +16,7 @@ namespace Veterinaria.control
         SqlConnection conn;
         SqlCommand cmd;
 
-        String sqlApaga = "delete from loja where codloja = @pcodloja";
+        private readonly String sqlApaga = "delete from loja where codloja = @pcodloja";
         public void Apaga_Dados(int aux)
         {
             Conexao conexao = new Conexao();
@@ -43,7 +43,7 @@ namespace Veterinaria.control
             }
         }
 
-        String sqlAtualiza = "update loja set nomeloja = @nomeloja, codbairrofk = @pcodbairro, codruafk = @pcodrua, codcepfk = @pcodcep, codcidadefk = @pcodcidade ," +
+        private readonly String sqlAtualiza = "update loja set nomeloja = @nomeloja, codbairrofk = @pcodbairro, codruafk = @pcodrua, codcepfk = @pcodcep, codcidadefk = @pcodcidade ," +
             " codestadofk = @pcodestado, codpaisfk = @pcodpais, numeroloja = @pnumeroloja, cnpj = @pcnpj  where codloja = @pcodloja";
         public void Atualizar_Dados(object aux)
         {
@@ -84,7 +84,7 @@ namespace Veterinaria.control
             }
         }
 
-        String sqlFiltro = "select * from loja where nomeloja like @pnomeloja";
+        private readonly String sqlFiltro = "select * from loja where nomeloja like @pnomeloja";
         public Object Buscar_Filtro(string dados)
         {
             List<M_Loja> listLoja = new List<M_Loja>();
@@ -112,17 +112,19 @@ namespace Veterinaria.control
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    M_Loja aux = new M_Loja();
-                    aux.codloja = Int32.Parse(reader["codloja"].ToString());
-                    aux.nomeloja = reader["nomeloja"].ToString();
-                    aux.bairro = (M_Bairro)c_bairro.Buscar_Id(Int32.Parse(reader["codbairrofk"].ToString()));
-                    aux.rua = (M_Rua)c_rua.Buscar_Id(Int32.Parse(reader["codruafk"].ToString()));
-                    aux.cep = (M_Cep)c_cep.Buscar_Id(Int32.Parse(reader["codcepfk"].ToString()));
-                    aux.cidade = (M_Cidade)c_Cidade.Buscar_Id(Int32.Parse(reader["codcidadefk"].ToString()));
-                    aux.estado = (M_Estado)c_Estado.Buscar_Id(Int32.Parse(reader["codestadofk"].ToString()));
-                    aux.pais = (M_Pais)c_Pais.Buscar_Id(Int32.Parse(reader["codpaisfk"].ToString()));
-                    aux.numeroloja = reader["numeroloja"].ToString();
-                    aux.cnpj = reader["cnpj"].ToString();
+                    M_Loja aux = new M_Loja
+                    {
+                        codloja = Int32.Parse(reader["codloja"].ToString()),
+                        nomeloja = reader["nomeloja"].ToString(),
+                        bairro = (M_Bairro)c_bairro.Buscar_Id(Int32.Parse(reader["codbairrofk"].ToString())),
+                        rua = (M_Rua)c_rua.Buscar_Id(Int32.Parse(reader["codruafk"].ToString())),
+                        cep = (M_Cep)c_cep.Buscar_Id(Int32.Parse(reader["codcepfk"].ToString())),
+                        cidade = (M_Cidade)c_Cidade.Buscar_Id(Int32.Parse(reader["codcidadefk"].ToString())),
+                        estado = (M_Estado)c_Estado.Buscar_Id(Int32.Parse(reader["codestadofk"].ToString())),
+                        pais = (M_Pais)c_Pais.Buscar_Id(Int32.Parse(reader["codpaisfk"].ToString())),
+                        numeroloja = reader["numeroloja"].ToString(),
+                        cnpj = reader["cnpj"].ToString()
+                    };
 
                     listLoja.Add(aux);
                 }
@@ -136,7 +138,7 @@ namespace Veterinaria.control
             return listLoja;
         }
 
-        String sqlBuscaId = "select * from loja where codloja = @pcodloja";
+        private readonly String sqlBuscaId = "select * from loja where codloja = @pcodloja";
         public object Buscar_Id(int valor)
         {
             M_Loja aux = new M_Loja();
@@ -187,7 +189,7 @@ namespace Veterinaria.control
 
         }
 
-        String sqlTodos = "select * from loja";
+        private readonly String sqlTodos = "select * from loja";
         public Object Buscar_Todos()
         {
             List<M_Loja> listLoja = new List<M_Loja>();
@@ -211,17 +213,19 @@ namespace Veterinaria.control
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    M_Loja aux = new M_Loja();
-                    aux.codloja = Int32.Parse(reader["codloja"].ToString());
-                    aux.nomeloja = reader["nomeloja"].ToString();
-                    aux.bairro =(M_Bairro)c_bairro.Buscar_Id( Int32.Parse(reader["codbairrofk"].ToString()) );
-                    aux.rua = (M_Rua)c_rua.Buscar_Id( Int32.Parse(reader["codruafk"].ToString()) );
-                    aux.cep = (M_Cep)c_cep.Buscar_Id( Int32.Parse(reader["codcepfk"].ToString()) );
-                    aux.cidade = (M_Cidade)c_Cidade.Buscar_Id( Int32.Parse(reader["codcidadefk"].ToString()) );
-                    aux.estado =(M_Estado)c_Estado.Buscar_Id( Int32.Parse(reader["codestadofk"].ToString()) );
-                    aux.pais =(M_Pais)c_Pais.Buscar_Id( Int32.Parse(reader["codpaisfk"].ToString()) );
-                    aux.numeroloja = reader["numeroloja"].ToString();
-                    aux.cnpj = reader["cnpj"].ToString();
+                    M_Loja aux = new M_Loja
+                    {
+                        codloja = Int32.Parse(reader["codloja"].ToString()),
+                        nomeloja = reader["nomeloja"].ToString(),
+                        bairro = (M_Bairro)c_bairro.Buscar_Id(Int32.Parse(reader["codbairrofk"].ToString())),
+                        rua = (M_Rua)c_rua.Buscar_Id(Int32.Parse(reader["codruafk"].ToString())),
+                        cep = (M_Cep)c_cep.Buscar_Id(Int32.Parse(reader["codcepfk"].ToString())),
+                        cidade = (M_Cidade)c_Cidade.Buscar_Id(Int32.Parse(reader["codcidadefk"].ToString())),
+                        estado = (M_Estado)c_Estado.Buscar_Id(Int32.Parse(reader["codestadofk"].ToString())),
+                        pais = (M_Pais)c_Pais.Buscar_Id(Int32.Parse(reader["codpaisfk"].ToString())),
+                        numeroloja = reader["numeroloja"].ToString(),
+                        cnpj = reader["cnpj"].ToString()
+                    };
 
                     listLoja.Add(aux);
                 }
@@ -238,7 +242,7 @@ namespace Veterinaria.control
             return listLoja;
         }
 
-        String sqlInsere = "insert into loja(nomeloja,codbairrofk,codruafk,codcepfk,codcidadefk,codestadofk,codpaisfk,numeroloja,cnpj) values" +
+        private readonly String sqlInsere = "insert into loja(nomeloja,codbairrofk,codruafk,codcepfk,codcidadefk,codestadofk,codpaisfk,numeroloja,cnpj) values" +
             " (@pnomeloja,@pcodbairrofk,@pcodruafk,@pcodcepfk,@pcodcidadefk,@pcodestadofk,@pcodpaisfk,@pnumeroloja,@pcnpj)";
         public void Insere_Dados(object aux)
         {
