@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Veterinaria.control;
 using Veterinaria.model;
@@ -42,10 +37,9 @@ namespace Veterinaria.view
 
         public void CarregarComboBox()
         {
+            CarregarCidade();
 
             CarregarCep();
-
-            CarregarCidade();
 
             CarregarEstado();
 
@@ -77,7 +71,7 @@ namespace Veterinaria.view
             cBoxBairro.ValueMember = "codbairro";
         }
 
-        public void CarregarRua() 
+        public void CarregarRua()
         {
             C_Rua c_Rua = new C_Rua();
             List<M_Rua> listRua = new List<M_Rua>();
@@ -246,7 +240,7 @@ namespace Veterinaria.view
             cBoxRua.SelectedValue = listLoja[posicao].rua.codrua;
             cBoxBairro.SelectedValue = listLoja[posicao].bairro.codbairro;
         }
-        
+
         public void AtivarBotoes()
         {
             btnNovo.Enabled = false;
@@ -332,7 +326,7 @@ namespace Veterinaria.view
             m_Loja.pais = m_Pais;
             m_Loja.rua = m_Rua;
             m_Loja.bairro = m_Bairro;
-            
+
 
             C_Loja c_Loja = new C_Loja();
 

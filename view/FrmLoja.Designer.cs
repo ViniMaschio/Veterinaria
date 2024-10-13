@@ -48,6 +48,16 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dGView = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeLoja = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCnpj = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -64,16 +74,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.cBoxBairro = new System.Windows.Forms.ComboBox();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeLoja = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rua = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGView)).BeginInit();
             this.SuspendLayout();
@@ -293,6 +293,75 @@
             this.dGView.TabIndex = 19;
             this.dGView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGView_CellClick);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 50;
+            // 
+            // NomeLoja
+            // 
+            this.NomeLoja.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NomeLoja.HeaderText = "Loja";
+            this.NomeLoja.Name = "NomeLoja";
+            this.NomeLoja.ReadOnly = true;
+            // 
+            // CNPJ
+            // 
+            this.CNPJ.HeaderText = "CNPJ";
+            this.CNPJ.Name = "CNPJ";
+            this.CNPJ.ReadOnly = true;
+            this.CNPJ.Width = 120;
+            // 
+            // Rua
+            // 
+            this.Rua.HeaderText = "Rua";
+            this.Rua.Name = "Rua";
+            this.Rua.ReadOnly = true;
+            this.Rua.Width = 150;
+            // 
+            // Numero
+            // 
+            this.Numero.HeaderText = "Numero";
+            this.Numero.Name = "Numero";
+            this.Numero.ReadOnly = true;
+            this.Numero.Width = 80;
+            // 
+            // Bairro
+            // 
+            this.Bairro.HeaderText = "Bairro";
+            this.Bairro.Name = "Bairro";
+            this.Bairro.ReadOnly = true;
+            // 
+            // Cep
+            // 
+            this.Cep.HeaderText = "Cep";
+            this.Cep.Name = "Cep";
+            this.Cep.ReadOnly = true;
+            this.Cep.Width = 90;
+            // 
+            // Cidade
+            // 
+            this.Cidade.HeaderText = "Cidade";
+            this.Cidade.Name = "Cidade";
+            this.Cidade.ReadOnly = true;
+            this.Cidade.Width = 150;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Width = 150;
+            // 
+            // Pais
+            // 
+            this.Pais.HeaderText = "Pais";
+            this.Pais.Name = "Pais";
+            this.Pais.ReadOnly = true;
+            this.Pais.Width = 140;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -449,75 +518,6 @@
             this.cBoxBairro.Size = new System.Drawing.Size(230, 21);
             this.cBoxBairro.TabIndex = 4;
             // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 50;
-            // 
-            // NomeLoja
-            // 
-            this.NomeLoja.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NomeLoja.HeaderText = "Loja";
-            this.NomeLoja.Name = "NomeLoja";
-            this.NomeLoja.ReadOnly = true;
-            // 
-            // CNPJ
-            // 
-            this.CNPJ.HeaderText = "CNPJ";
-            this.CNPJ.Name = "CNPJ";
-            this.CNPJ.ReadOnly = true;
-            this.CNPJ.Width = 120;
-            // 
-            // Rua
-            // 
-            this.Rua.HeaderText = "Rua";
-            this.Rua.Name = "Rua";
-            this.Rua.ReadOnly = true;
-            this.Rua.Width = 150;
-            // 
-            // Numero
-            // 
-            this.Numero.HeaderText = "Numero";
-            this.Numero.Name = "Numero";
-            this.Numero.ReadOnly = true;
-            this.Numero.Width = 80;
-            // 
-            // Bairro
-            // 
-            this.Bairro.HeaderText = "Bairro";
-            this.Bairro.Name = "Bairro";
-            this.Bairro.ReadOnly = true;
-            // 
-            // Cep
-            // 
-            this.Cep.HeaderText = "Cep";
-            this.Cep.Name = "Cep";
-            this.Cep.ReadOnly = true;
-            this.Cep.Width = 90;
-            // 
-            // Cidade
-            // 
-            this.Cidade.HeaderText = "Cidade";
-            this.Cidade.Name = "Cidade";
-            this.Cidade.ReadOnly = true;
-            this.Cidade.Width = 150;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Width = 150;
-            // 
-            // Pais
-            // 
-            this.Pais.HeaderText = "Pais";
-            this.Pais.Name = "Pais";
-            this.Pais.ReadOnly = true;
-            this.Pais.Width = 140;
-            // 
             // FrmLoja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -545,6 +545,8 @@
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dGView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FrmLoja";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLoja";
