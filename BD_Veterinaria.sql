@@ -10,6 +10,9 @@ create table sexo(
     nomesexo varchar(15) not null unique
 );
 
+insert into sexo(nomesexo) values('MASCULINO');
+insert into sexo(nomesexo) values('FEMININO');
+
 -- FOI FEITO O CONTROLE E MODEL E VIEW
 -- raca = {codraca, nomeraca} FEITO
 create table raca(
@@ -69,7 +72,7 @@ create table pais(
     bandeira varbinary(max) not null
 );
 -- cliente = {codcliente, nomecliente, cpf, codbairrofk, codruafk, 
---codcepfk, codcidadefk, codestadofk, codpaisfk, numerocasa, fotocliente} ok
+--codcepfk, codcidadefk, codestadofk, codpaisfk, numerocasa, fotocliente} feito
 create table cliente(
     codcliente integer identity primary key,
     nomecliente varchar(80) not null,
@@ -97,7 +100,7 @@ create table clientetelefone(
     primary key(codtelefonefk, codclientefk) 
 );
 -- Animal = {codanimal, nomeanimal, codsexofk, codracafk, codtipoanimalfk, 
---codclientefk} OK
+--codclientefk} -- feito
 create table animal(
     codanimal integer identity primary key,
     nomeanimal varchar(80) not null,

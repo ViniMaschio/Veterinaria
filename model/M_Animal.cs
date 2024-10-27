@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Veterinaria.model
 {
-    /* -- Animal = {codanimal, nomeanimal, codsexofk, codracafk, 
-     * codtipoanimalfk, codclientefk} OK */
-    internal class Animal
+    
+    internal class M_Animal
     {
         public int codanimal { get; set; }
         public string nomeanimal { get; set; }

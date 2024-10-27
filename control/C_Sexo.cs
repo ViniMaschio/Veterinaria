@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 using Veterinaria.conection;
 using Veterinaria.model;
 
@@ -11,8 +13,7 @@ namespace Veterinaria.control
 
         SqlConnection conn;
         SqlCommand cmd;
-        DataTable dt_Sexo;
-        SqlDataAdapter da_Sexo;
+        
 
         public void Apaga_Dados(int aux)
         {
@@ -59,22 +60,43 @@ namespace Veterinaria.control
         String sqlTodos = "select * from sexo";
         public Object Buscar_Todos()
         {
+            List<M_Sexo> listaCliente = new List<M_Sexo>();
+
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
             cmd = new SqlCommand(sqlTodos, conn);
 
+            SqlDataReader reader;
             conn.Open();
 
-            da_Sexo = new SqlDataAdapter(cmd);
+            try
+            {
 
-            dt_Sexo = new DataTable();
-            da_Sexo.Fill(dt_Sexo);
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    M_Sexo aux = new M_Sexo
+                    {
+                        codsexo = Int32.Parse(reader["codsexo"].ToString()),
+                        nomesexo = reader["nomesexo"].ToString(),
+                        
+                    };
 
-            conn.Close();
+                    listaCliente.Add(aux);
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
 
-            return dt_Sexo;
+            return listaCliente;
 
-        } // tem que arrumar para list de sexo
+        }
 
         public void Insere_Dados(object aux)
         {

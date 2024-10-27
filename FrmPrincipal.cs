@@ -103,5 +103,11 @@ namespace Veterinaria
             FrmCliente frmCliente = new FrmCliente();
             frmCliente.ShowDialog();
         }
+
+        private void animalToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmAnimal frmAnimal = new FrmAnimal();
+            frmAnimal.ShowDialog();
+        }
     }
 }
