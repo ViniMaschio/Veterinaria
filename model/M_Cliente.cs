@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Veterinaria.model
 {
-    /*
-     cliente = {codcliente, nomecliente, cpf, codbairrofk, codruafk, 
-     codcepfk, codcidadefk, codestadofk, codpaisfk, numerocasa, fotocliente}
-    */
-    internal class Cliente
+    
+    internal class M_Cliente
     {
         public int codcliente {  get; set; }
         public String nomecliente { get; set; }
@@ -21,12 +18,12 @@ namespace Veterinaria.model
         public M_Cidade cidade { get; set; }
         public M_Estado estado { get; set; }
         public M_Pais pais { get; set; }
-        public String numeroca {  get; set; }   
+        public String numerocasa {  get; set; }   
         public Byte[] fotocliente { get; set; }
 
-        public Cliente() { }
+        public M_Cliente() { }
 
-        public Cliente(int codcliente, string nomecliente, string cpf, M_Bairro bairro, M_Rua rua, M_Cep cep, M_Cidade cidade, M_Estado estado, M_Pais pais, string numeroca, byte[] fotocliente)
+        public M_Cliente(int codcliente, string nomecliente, string cpf, M_Bairro bairro, M_Rua rua, M_Cep cep, M_Cidade cidade, M_Estado estado, M_Pais pais, string numeroca, byte[] fotocliente)
         {
             this.codcliente = codcliente;
             this.nomecliente = nomecliente;
@@ -37,7 +34,7 @@ namespace Veterinaria.model
             this.cidade = cidade;
             this.estado = estado;
             this.pais = pais;
-            this.numeroca = numeroca;
+            this.numerocasa = numeroca;
             this.fotocliente = fotocliente;
         }
     }

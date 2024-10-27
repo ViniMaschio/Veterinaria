@@ -15,6 +15,6 @@ namespace Veterinaria.model
         public M_Sexo sexo { get; set; }
         public M_Raca raca { get; set; }
         public M_TipoAnimal tipoanimal { get; set; }  
-        public Cliente cliente { get; set; }
+        public M_Cliente cliente { get; set; }
     }
 }

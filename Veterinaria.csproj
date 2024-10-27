@@ -51,6 +51,7 @@
     <Compile Include="control\C_Cep.cs" />
     <Compile Include="control\C_Cidade.cs" />
     <Compile Include="control\C_CidAnimal.cs" />
+    <Compile Include="control\C_Cliente.cs" />
     <Compile Include="control\C_Estado.cs" />
     <Compile Include="control\C_Loja.cs" />
     <Compile Include="control\C_Marca.cs" />
@@ -74,7 +75,7 @@
     <Compile Include="model\M_Bairro.cs" />
     <Compile Include="model\M_Cep.cs" />
     <Compile Include="model\M_Cidade.cs" />
-    <Compile Include="model\Cliente.cs" />
+    <Compile Include="model\M_Cliente.cs" />
     <Compile Include="model\Clientetelefone.cs" />
     <Compile Include="model\M_CidAnimal.cs" />
     <Compile Include="model\M_Estado.cs" />
@@ -111,6 +112,12 @@
     </Compile>
     <Compile Include="view\FrmCidAnimal.Designer.cs">
       <DependentUpon>FrmCidAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmCliente.Designer.cs">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="view\FrmLoja.cs">
       <SubType>Form</SubType>
@@ -193,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\FrmCidAnimal.resx">
       <DependentUpon>FrmCidAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmCliente.resx">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\FrmLoja.resx">
       <DependentUpon>FrmLoja.cs</DependentUpon>

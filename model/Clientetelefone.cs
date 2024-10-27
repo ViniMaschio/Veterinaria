@@ -10,7 +10,7 @@ namespace Veterinaria.model
     internal class Clientetelefone
     {
         public M_Telefone telefone {  get; set; }
-        public Cliente cliente { get; set; }
+        public M_Cliente cliente { get; set; }
 
     }
 }
