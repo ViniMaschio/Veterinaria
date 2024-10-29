@@ -18,8 +18,9 @@ namespace Veterinaria.view
         public FrmCliente()
         {
             InitializeComponent();
-            CarregarTabelaTodos();
             CarregarComboBox();
+            CarregarTabelaTodos();
+            
         }
 
         Boolean novo = true;

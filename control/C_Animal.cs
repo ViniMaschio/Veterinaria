@@ -14,16 +14,16 @@ namespace Veterinaria.control
     internal class C_Animal : I_Metodos_Comuns
     {
 
-        SqlConnection conn;
-        SqlCommand cmd;
+        private SqlConnection conn;
+        private SqlCommand cmd;
 
-        C_Sexo c_Sexo = new C_Sexo();
-        C_Raca c_Raca = new C_Raca();
-        C_Cliente c_Cliente = new C_Cliente();
-        C_TipoAnimal c_TipoAnimal = new C_TipoAnimal();
+        private C_Sexo c_Sexo = new C_Sexo();
+        private C_Raca c_Raca = new C_Raca();
+        private C_Cliente c_Cliente = new C_Cliente();
+        private C_TipoAnimal c_TipoAnimal = new C_TipoAnimal();
 
 
-        private readonly String sqlApaga = "delete from aniamal where codanimal = @pcodanimal";
+        private readonly String sqlApaga = "delete from animal where codanimal = @pcodanimal";
         public void Apaga_Dados(int aux)
         {
             Conexao conexao = new Conexao();

@@ -10,7 +10,7 @@ namespace Veterinaria.model
     internal class Funcionariotelefone
     {
         public M_Telefone telefone {  get; set; }
-        public Funcionario funcionario { get; set; }
+        public M_Funcionario funcionario { get; set; }
 
     }
 }

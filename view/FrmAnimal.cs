@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Veterinaria.control;
 using Veterinaria.model;
@@ -29,7 +24,7 @@ namespace Veterinaria.view
         {
             txtCodigo.Text = "";
             txtAnimal.Text = "";
-            
+
             cBoxTipoAnimal.SelectedItem = null;
             cBoxCliente.SelectedItem = null;
             cBoxSexo.SelectedItem = null;
@@ -142,7 +137,7 @@ namespace Veterinaria.view
                 row.Cells[3].Value = listAnimal[i].raca.nomeraca;
                 row.Cells[4].Value = listAnimal[i].tipoanimal.nometipoanimal;
                 row.Cells[5].Value = listAnimal[i].cliente.nomecliente;
-                
+
 
                 dGView.Rows.Add(row);
             }
@@ -184,7 +179,7 @@ namespace Veterinaria.view
             cBoxTipoAnimal.SelectedValue = listAnimal[posicao].tipoanimal.codtipoanimal;
             cBoxCliente.SelectedValue = listAnimal[posicao].cliente.codcliente;
             cBoxSexo.SelectedValue = listAnimal[posicao].sexo.codsexo;
-           
+
         }
 
         public void AtivarBotoes()

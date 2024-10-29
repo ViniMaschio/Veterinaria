@@ -33,6 +33,7 @@
             this.racaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoAnimalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cidAnimalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.animalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.endereçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ruaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bairroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +52,7 @@
             this.lojaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.animalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionarioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,23 +87,30 @@
             // racaToolStripMenuItem1
             // 
             this.racaToolStripMenuItem1.Name = "racaToolStripMenuItem1";
-            this.racaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.racaToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
             this.racaToolStripMenuItem1.Text = "Raca";
             this.racaToolStripMenuItem1.Click += new System.EventHandler(this.racaToolStripMenuItem1_Click);
             // 
             // tipoAnimalToolStripMenuItem1
             // 
             this.tipoAnimalToolStripMenuItem1.Name = "tipoAnimalToolStripMenuItem1";
-            this.tipoAnimalToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.tipoAnimalToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
             this.tipoAnimalToolStripMenuItem1.Text = "Tipo Animal";
             this.tipoAnimalToolStripMenuItem1.Click += new System.EventHandler(this.tipoAnimalToolStripMenuItem1_Click);
             // 
             // cidAnimalToolStripMenuItem
             // 
             this.cidAnimalToolStripMenuItem.Name = "cidAnimalToolStripMenuItem";
-            this.cidAnimalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cidAnimalToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.cidAnimalToolStripMenuItem.Text = "Cid Animal";
             this.cidAnimalToolStripMenuItem.Click += new System.EventHandler(this.cidAnimalToolStripMenuItem_Click);
+            // 
+            // animalToolStripMenuItem1
+            // 
+            this.animalToolStripMenuItem1.Name = "animalToolStripMenuItem1";
+            this.animalToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
+            this.animalToolStripMenuItem1.Text = "Animal";
+            this.animalToolStripMenuItem1.Click += new System.EventHandler(this.animalToolStripMenuItem1_Click);
             // 
             // endereçoToolStripMenuItem
             // 
@@ -162,7 +170,8 @@
             // funcionarioToolStripMenuItem
             // 
             this.funcionarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tipoFuncionarioToolStripMenuItem});
+            this.tipoFuncionarioToolStripMenuItem,
+            this.funcionarioToolStripMenuItem1});
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
             this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.funcionarioToolStripMenuItem.Text = "Funcionario";
@@ -170,7 +179,7 @@
             // tipoFuncionarioToolStripMenuItem
             // 
             this.tipoFuncionarioToolStripMenuItem.Name = "tipoFuncionarioToolStripMenuItem";
-            this.tipoFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.tipoFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tipoFuncionarioToolStripMenuItem.Text = "Tipo Funcionario";
             this.tipoFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.tipoFuncionarioToolStripMenuItem_Click);
             // 
@@ -242,12 +251,12 @@
             this.clienteToolStripMenuItem1.Text = "Cliente";
             this.clienteToolStripMenuItem1.Click += new System.EventHandler(this.clienteToolStripMenuItem1_Click);
             // 
-            // animalToolStripMenuItem1
+            // funcionarioToolStripMenuItem1
             // 
-            this.animalToolStripMenuItem1.Name = "animalToolStripMenuItem1";
-            this.animalToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.animalToolStripMenuItem1.Text = "Animal";
-            this.animalToolStripMenuItem1.Click += new System.EventHandler(this.animalToolStripMenuItem1_Click);
+            this.funcionarioToolStripMenuItem1.Name = "funcionarioToolStripMenuItem1";
+            this.funcionarioToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.funcionarioToolStripMenuItem1.Text = "Funcionario";
+            this.funcionarioToolStripMenuItem1.Click += new System.EventHandler(this.funcionarioToolStripMenuItem1_Click);
             // 
             // FrmPrincipal
             // 
@@ -292,6 +301,7 @@
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem animalToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem1;
     }
 }
 

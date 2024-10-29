@@ -110,7 +110,7 @@ create table animal(
     codclientefk integer references cliente(codcliente) on delete cascade on update cascade 
 );
 -- Loja = {codloja, nomeloja, codbairrofk, codruafk, codcepfk, 
---codcidadefk, codestadofk, codpaisfk, numeroloja, cnpj  } OK
+--codcidadefk, codestadofk, codpaisfk, numeroloja, cnpj  } feito
 create table loja(
     codloja integer identity primary key,
     nomeloja varchar(80) not null,
@@ -138,7 +138,7 @@ create table tipofuncionario(
     nometipofuncionario varchar(80) not null unique
 );
 -- Funcionario = {codfuncionario, nomefuncionario, codtipofuncionariofk, 
---codlojafk } OK
+--codlojafk } -- feito
 create table funcionario(
     codfuncionario integer identity primary key,
     nomefuncionario varchar(80) not null,
