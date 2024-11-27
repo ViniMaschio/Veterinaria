@@ -66,6 +66,7 @@
     <Compile Include="control\C_TipoFuncionario.cs" />
     <Compile Include="control\C_TipoProduto.cs" />
     <Compile Include="control\C_TipoServico.cs" />
+    <Compile Include="control\C_Venda.cs" />
     <Compile Include="control\I_Metodos_Comuns.cs" />
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
@@ -91,6 +92,8 @@
     <Compile Include="model\M_Rua.cs" />
     <Compile Include="model\M_Sexo.cs" />
     <Compile Include="model\M_Telefone.cs" />
+    <Compile Include="model\M_Venda.cs" />
+    <Compile Include="model\M_VendasProdutos.cs" />
     <Compile Include="model\Telefoneloja.cs" />
     <Compile Include="model\M_TipoAnimal.cs" />
     <Compile Include="model\M_Tipofuncionario.cs" />
