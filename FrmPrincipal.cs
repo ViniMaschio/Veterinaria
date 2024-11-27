@@ -115,5 +115,11 @@ namespace Veterinaria
             FrmFuncionario frmFuncionario = new FrmFuncionario();
             frmFuncionario.ShowDialog();
         }
+
+        private void produtoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmProduto frmProduto = new FrmProduto();
+            frmProduto.ShowDialog();
+        }
     }
 }

@@ -93,12 +93,14 @@ create table telefone(
     codtelefone integer identity primary key,
     numerotelefone varchar(20) not null unique
 );
+
 -- ClienteTelefone = {codtelefonefk, codclientefk} OK
 create table clientetelefone(
     codtelefonefk integer references telefone(codtelefone) on delete cascade on update cascade,
     codclientefk integer references cliente(codcliente) on delete cascade on update cascade,
     primary key(codtelefonefk, codclientefk) 
 );
+
 -- Animal = {codanimal, nomeanimal, codsexofk, codracafk, codtipoanimalfk, 
 --codclientefk} -- feito
 create table animal(
@@ -109,6 +111,7 @@ create table animal(
     codtipoanimalfk integer references tipoanimal(codtipoanimal) on delete cascade on update cascade,
     codclientefk integer references cliente(codcliente) on delete cascade on update cascade 
 );
+
 -- Loja = {codloja, nomeloja, codbairrofk, codruafk, codcepfk, 
 --codcidadefk, codestadofk, codpaisfk, numeroloja, cnpj  } feito
 create table loja(
