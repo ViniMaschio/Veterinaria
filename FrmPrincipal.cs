@@ -121,5 +121,11 @@ namespace Veterinaria
             FrmProduto frmProduto = new FrmProduto();
             frmProduto.ShowDialog();
         }
+
+        private void vendaProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmVenda FrmVenda = new FrmVenda();
+            FrmVenda.ShowDialog();
+        }
     }
 }

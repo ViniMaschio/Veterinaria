@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Veterinaria.conection;
 using Veterinaria.model;
@@ -68,7 +65,7 @@ namespace Veterinaria.control
             cmd.Parameters.AddWithValue("@pcodtipoanimal", m_Animal.tipoanimal.codtipoanimal);
             cmd.Parameters.AddWithValue("@pcodcliente", m_Animal.cliente.codcliente);
             cmd.Parameters.AddWithValue("@pcodanimal", m_Animal.codanimal);
-           
+
 
             conn.Open();
 
@@ -97,7 +94,7 @@ namespace Veterinaria.control
 
             cmd = new SqlCommand(sqlFiltro, conn);
 
-            
+
             cmd.Parameters.AddWithValue("@pnomeanimal", dados + "%");
 
             SqlDataReader reader;
@@ -232,7 +229,7 @@ namespace Veterinaria.control
             cmd.Parameters.AddWithValue("@pcodracafk", m_loja.raca.codraca);
             cmd.Parameters.AddWithValue("@pcodtipoanimalfk", m_loja.tipoanimal.codtipoanimal);
             cmd.Parameters.AddWithValue("@pcodclientefk", m_loja.cliente.codcliente);
-            
+
 
             cmd.CommandType = CommandType.Text;
             conn.Open();

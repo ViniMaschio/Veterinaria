@@ -151,7 +151,7 @@ namespace Veterinaria.view
 
         public void AtivarCampos()
         {
-            TxtCodigo.Enabled = true;
+            
             TxtProduto.Enabled = true;
             TxtQuantidade.Enabled = true;
             TxtValor.Enabled = true;
@@ -171,7 +171,7 @@ namespace Veterinaria.view
 
         public void DesativarCampos()
         {
-            TxtCodigo.Enabled = false;
+            
             TxtProduto.Enabled = false;
             TxtQuantidade.Enabled = false;
             TxtValor.Enabled = false;

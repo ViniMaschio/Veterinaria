@@ -209,7 +209,7 @@ namespace Veterinaria.view
                     AtualizarCampos();
                     dGView.Rows[posicao].Selected = true;
                 }
-            }
+        }
 
         private void btnProximo_Click(object sender, EventArgs e)
         {

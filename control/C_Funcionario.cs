@@ -13,16 +13,13 @@ namespace Veterinaria.control
         private SqlConnection conn;
         private SqlCommand cmd;
 
-        private C_TipoFuncionario c_TipoFuncionario = new C_TipoFuncionario();
-        private C_Loja c_Loja = new C_Loja();
-
-        private readonly String sqlApaga = "delete from funcionario where codfuncionario = @pcodfuncionario";
+        private readonly String sqlApagaFuncionario = "delete from funcionario where codfuncionario = @pcodfuncionario";
         public void Apaga_Dados(int aux)
         {
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
 
-            cmd = new SqlCommand(sqlApaga, conn);
+            cmd = new SqlCommand(sqlApagaFuncionario, conn);
             cmd.Parameters.AddWithValue("@pcodfuncionario", aux);
 
             cmd.CommandType = CommandType.Text;
@@ -82,7 +79,8 @@ namespace Veterinaria.control
         public Object Buscar_Filtro(string dados)
         {
             List<M_Funcionario> listFuncionario = new List<M_Funcionario>();
-
+            C_TipoFuncionario c_TipoFuncionario = new C_TipoFuncionario();
+            C_Loja c_Loja = new C_Loja();
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
 
@@ -124,7 +122,8 @@ namespace Veterinaria.control
         public object Buscar_Id(int valor)
         {
             M_Funcionario aux = new M_Funcionario();
-
+            C_TipoFuncionario c_TipoFuncionario = new C_TipoFuncionario();
+            C_Loja c_Loja = new C_Loja();
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();
 
@@ -163,6 +162,8 @@ namespace Veterinaria.control
         public Object Buscar_Todos()
         {
             List<M_Funcionario> listFuncionario = new List<M_Funcionario>();
+            C_TipoFuncionario c_TipoFuncionario = new C_TipoFuncionario();
+            C_Loja c_Loja = new C_Loja();
 
             Conexao conexao = new Conexao();
             conn = conexao.ConectarBanco();

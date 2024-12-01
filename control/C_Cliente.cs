@@ -13,15 +13,15 @@ namespace Veterinaria.control
 {
     internal class C_Cliente : I_Metodos_Comuns
     {
-        SqlConnection conn;
-        SqlCommand cmd;
+        private SqlConnection conn;
+        private SqlCommand cmd;
 
-        C_Cep c_cep = new C_Cep();
-        C_Bairro c_bairro = new C_Bairro();
-        C_Rua c_rua = new C_Rua();
-        C_Cidade c_Cidade = new C_Cidade();
-        C_Estado c_Estado = new C_Estado();
-        C_Pais c_Pais = new C_Pais();
+        private C_Cep c_cep = new C_Cep();
+        private C_Bairro c_bairro = new C_Bairro();
+        private C_Rua c_rua = new C_Rua();
+        private C_Cidade c_Cidade = new C_Cidade();
+        private C_Estado c_Estado = new C_Estado();
+        private C_Pais c_Pais = new C_Pais();
 
         private readonly String sqlApaga = "delete from cliente where codcliente = @pcodcliente";
         public void Apaga_Dados(int aux)
