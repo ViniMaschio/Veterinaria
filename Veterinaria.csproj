@@ -55,6 +55,7 @@
     <Compile Include="control\C_Cliente.cs" />
     <Compile Include="control\C_Estado.cs" />
     <Compile Include="control\C_Funcionario.cs" />
+    <Compile Include="control\C_ItensVendaServico.cs" />
     <Compile Include="control\C_Loja.cs" />
     <Compile Include="control\C_Marca.cs" />
     <Compile Include="control\C_Pais.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="control\C_TipoProduto.cs" />
     <Compile Include="control\C_TipoServico.cs" />
     <Compile Include="control\C_Venda.cs" />
+    <Compile Include="control\C_VendaServico.cs" />
     <Compile Include="control\C_VendasProdutos.cs" />
     <Compile Include="control\I_Metodos_Comuns.cs" />
     <Compile Include="FrmPrincipal.cs">
@@ -86,6 +88,7 @@
     <Compile Include="model\M_Estado.cs" />
     <Compile Include="model\M_Funcionario.cs" />
     <Compile Include="model\Funcionariotelefone.cs" />
+    <Compile Include="model\M_ItensVendaServico.cs" />
     <Compile Include="model\M_Loja.cs" />
     <Compile Include="model\M_Marca.cs" />
     <Compile Include="model\M_Pais.cs" />
@@ -96,6 +99,7 @@
     <Compile Include="model\M_Sexo.cs" />
     <Compile Include="model\M_Telefone.cs" />
     <Compile Include="model\M_Venda.cs" />
+    <Compile Include="model\M_VendaServico.cs" />
     <Compile Include="model\M_VendasProdutos.cs" />
     <Compile Include="model\Telefoneloja.cs" />
     <Compile Include="model\M_TipoAnimal.cs" />
@@ -133,11 +137,23 @@
     <Compile Include="view\FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\FrmFazerVendaServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmFazerVendaServico.Designer.cs">
+      <DependentUpon>FrmFazerVendaServico.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\FrmFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\FrmFuncionario.Designer.cs">
       <DependentUpon>FrmFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmItensVendaServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmItensVendaServico.Designer.cs">
+      <DependentUpon>FrmItensVendaServico.cs</DependentUpon>
     </Compile>
     <Compile Include="view\FrmLoja.cs">
       <SubType>Form</SubType>
@@ -217,6 +233,12 @@
     <Compile Include="view\FrmFazerVenda.Designer.cs">
       <DependentUpon>FrmFazerVenda.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\FrmVendaServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmVendaServico.Designer.cs">
+      <DependentUpon>FrmVendaServico.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\FrmVendasProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,8 +276,14 @@
     <EmbeddedResource Include="view\FrmFazerVenda.resx">
       <DependentUpon>FrmFazerVenda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmFazerVendaServico.resx">
+      <DependentUpon>FrmFazerVendaServico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\FrmFuncionario.resx">
       <DependentUpon>FrmFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmItensVendaServico.resx">
+      <DependentUpon>FrmItensVendaServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\FrmLoja.resx">
       <DependentUpon>FrmLoja.cs</DependentUpon>
@@ -292,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\FrmVenda.resx">
       <DependentUpon>FrmVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmVendaServico.resx">
+      <DependentUpon>FrmVendaServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\FrmVendasProdutos.resx">
       <DependentUpon>FrmVendasProdutos.cs</DependentUpon>

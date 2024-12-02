@@ -82,6 +82,7 @@ namespace Veterinaria.view
 
                 C_Venda c_Venda = new C_Venda();
                 c_Venda.Apaga_Dados(valorCelula);
+                CarregarTabelaTodos();
             }
             else
             {

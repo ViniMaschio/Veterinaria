@@ -17,6 +17,7 @@ namespace Veterinaria.view
         public FrmFazerVenda(int id)
         {
             InitializeComponent();
+
             txtCodigo.Text = id.ToString();
             CarregarComboBox();
             this.idVenda = id;
@@ -26,12 +27,12 @@ namespace Veterinaria.view
             }
         }
 
-        private int idVenda ;
+        private readonly int idVenda ;
         private C_Venda c_Venda = new C_Venda();
 
         private void CarregarVenda()
         {
-            M_Venda venda = new M_Venda();
+            M_Venda venda;
 
             venda = (M_Venda)c_Venda.Buscar_Id(this.idVenda);
 
@@ -40,13 +41,13 @@ namespace Veterinaria.view
             cBoxFuncionario.SelectedValue = venda.funcionario.codfuncionario;
             DataVenda.Value = venda.datavenda;
 
-            List<M_VendasProdutos> vendasProdutos = new List<M_VendasProdutos>();
+            List<M_VendasProdutos> vendasProdutos;
             C_VendasProdutos c_VendasProdutos = new C_VendasProdutos();
             vendasProdutos = (List<M_VendasProdutos>)c_VendasProdutos.Buscar_Id(this.idVenda);
 
             foreach (M_VendasProdutos vendasProduto in vendasProdutos)
             {
-                dataGridProdutosVenda.Rows.Add(
+                DataGridProdutosVenda.Rows.Add(
                     vendasProduto.produto.codproduto,
                     vendasProduto.produto.nomeproduto,
                     vendasProduto.quantv,
@@ -67,7 +68,7 @@ namespace Veterinaria.view
         private void CarregarLoja()
         {
             C_Loja c_Loja = new C_Loja();
-            List<M_Loja> lojas = new List<M_Loja>();
+            List<M_Loja> lojas; ;
             lojas = (List<M_Loja>)c_Loja.Buscar_Todos();
 
             cBoxLoja.DataSource = lojas;
@@ -78,7 +79,7 @@ namespace Veterinaria.view
         private void CarregarCliente()
         {
             C_Cliente c_Cliente = new C_Cliente();
-            List<M_Cliente> clientes = new List<M_Cliente>();
+            List<M_Cliente> clientes ;
             clientes = (List<M_Cliente>)c_Cliente.Buscar_Todos();
 
             cBoxCliente.DataSource = clientes;
@@ -89,7 +90,7 @@ namespace Veterinaria.view
         private void CarregarFuncionario()
         {
             C_Funcionario c_Funcionario = new C_Funcionario();
-            List<M_Funcionario> funcionarios = new List<M_Funcionario>();
+            List<M_Funcionario> funcionarios;
             funcionarios = (List<M_Funcionario>)c_Funcionario.Buscar_Todos();
 
             cBoxFuncionario.DataSource = funcionarios;
@@ -100,7 +101,7 @@ namespace Veterinaria.view
         private void CarregarProduto()
         {
             C_Produto c_Produto = new C_Produto();
-            List<M_Produto> produtos = new List<M_Produto>();
+            List<M_Produto> produtos ;
             produtos = (List<M_Produto>)c_Produto.Buscar_Todos();
 
             cBoxProduto.DataSource = produtos;
@@ -108,13 +109,13 @@ namespace Veterinaria.view
             cBoxProduto.ValueMember = "codproduto";
         }
 
-        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        private void DataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             
             int colunaEditavel = 2; 
             if (e.ColumnIndex == colunaEditavel)
             {
-                DataGridViewRow linha = dataGridProdutosVenda.Rows[e.RowIndex];
+                DataGridViewRow linha = DataGridProdutosVenda.Rows[e.RowIndex];
 
                 double valorEditado = double.Parse( linha.Cells[e.ColumnIndex].Value.ToString());
                 double valorUnitario = double.Parse(linha.Cells[3].Value.ToString());
@@ -131,12 +132,12 @@ namespace Veterinaria.view
             int codproduto = (int)cBoxProduto.SelectedValue;
             if (codproduto > 0)
             {
-                M_Produto produto = new M_Produto();
+                M_Produto produto;
                 C_Produto c_Produto = new C_Produto();
                 produto = (M_Produto)c_Produto.Buscar_Id(codproduto);
 
                 bool produtoExiste = false;
-                foreach (DataGridViewRow row in dataGridProdutosVenda.Rows)
+                foreach (DataGridViewRow row in DataGridProdutosVenda.Rows)
                 {
                     if ((int)row.Cells[0].Value == codproduto)
                     {
@@ -155,7 +156,7 @@ namespace Veterinaria.view
                 
                 if (!produtoExiste)
                 {
-                    dataGridProdutosVenda.Rows.Add(
+                    DataGridProdutosVenda.Rows.Add(
                         produto.codproduto,
                         produto.nomeproduto,
                         1, 
@@ -167,7 +168,7 @@ namespace Veterinaria.view
             }
         }
 
-        private void dataGridView1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        private void DataGridView1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             if (e.Control is TextBox textBox)
             {
@@ -175,6 +176,7 @@ namespace Veterinaria.view
                 textBox.KeyPress += ApenasNumeros_KeyPress;
             }
         }
+
         private void ApenasNumeros_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
@@ -185,21 +187,21 @@ namespace Veterinaria.view
 
             if (e.KeyChar == '.')
             {
-                TextBox textBox = sender as TextBox;
-                if (textBox != null && textBox.Text.Contains("."))
+                if (sender is TextBox textBox && textBox.Text.Contains("."))
                 {
                     e.Handled = true;
                 }
             }
         }
 
-        private void dataGridView1_Click(object sender, EventArgs e)
+        private void DataGridView1_Click(object sender, EventArgs e)
         {
-            if (dataGridProdutosVenda.IsCurrentCellInEditMode)
+            if (DataGridProdutosVenda.IsCurrentCellInEditMode)
             {
-                dataGridProdutosVenda.EndEdit();
+                DataGridProdutosVenda.EndEdit();
             }
         }
+
         private void AdicionarBotaoExcluir()
         {
             DataGridViewButtonColumn btnExcluir = new DataGridViewButtonColumn
@@ -210,15 +212,15 @@ namespace Veterinaria.view
                 UseColumnTextForButtonValue = true 
             };
 
-            dataGridProdutosVenda.Columns.Add(btnExcluir);
+            DataGridProdutosVenda.Columns.Add(btnExcluir);
         }
 
-        private void dataGridProdutosVenda_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridProdutosVenda_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.RowIndex < dataGridProdutosVenda.Rows.Count &&
-      e.ColumnIndex >= 0 && e.ColumnIndex < dataGridProdutosVenda.Columns.Count)
+            if (e.RowIndex >= 0 && e.RowIndex < DataGridProdutosVenda.Rows.Count &&
+      e.ColumnIndex >= 0 && e.ColumnIndex < DataGridProdutosVenda.Columns.Count)
             {
-                if (dataGridProdutosVenda.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+                if (DataGridProdutosVenda.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
                 {
                     DialogResult resultado = MessageBox.Show(
                         "Deseja Remover este item?",
@@ -230,7 +232,7 @@ namespace Veterinaria.view
                     if (resultado == DialogResult.Yes)
                     {
                         
-                        dataGridProdutosVenda.Rows.RemoveAt(e.RowIndex);
+                        DataGridProdutosVenda.Rows.RemoveAt(e.RowIndex);
                     }
                 }
             }
@@ -245,7 +247,7 @@ namespace Veterinaria.view
         {
             float total = 0;
 
-            foreach (DataGridViewRow row in dataGridProdutosVenda.Rows)
+            foreach (DataGridViewRow row in DataGridProdutosVenda.Rows)
             {
                 if (!row.IsNewRow)
                 {
@@ -259,15 +261,15 @@ namespace Veterinaria.view
             txtValorTotal.Text = total.ToString("F2");
         }
 
-        private void dataGridProdutosVenda_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        private void DataGridProdutosVenda_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             AtualizarValorTotal();
         }
 
         private void bntSalvar_Click(object sender, EventArgs e)
         {
-            if (dataGridProdutosVenda.Rows.Count == 0 ||
-        (dataGridProdutosVenda.Rows.Count == 1 && dataGridProdutosVenda.Rows[0].IsNewRow))
+            if (DataGridProdutosVenda.Rows.Count == 0 ||
+        (DataGridProdutosVenda.Rows.Count == 1 && DataGridProdutosVenda.Rows[0].IsNewRow))
             {
                 MessageBox.Show("Venda Precisa de itens!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -316,7 +318,7 @@ namespace Veterinaria.view
         {
             List<M_VendasProdutos> listVendasProdutos = new List<M_VendasProdutos>();
 
-            foreach (DataGridViewRow row in dataGridProdutosVenda.Rows)
+            foreach (DataGridViewRow row in DataGridProdutosVenda.Rows)
             {
 
                 //if (row.IsNewRow)

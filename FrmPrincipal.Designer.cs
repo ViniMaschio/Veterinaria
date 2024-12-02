@@ -56,6 +56,7 @@
             this.clienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.vendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vendaProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vendaServicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -273,7 +274,8 @@
             // vendaToolStripMenuItem
             // 
             this.vendaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.vendaProdutoToolStripMenuItem});
+            this.vendaProdutoToolStripMenuItem,
+            this.vendaServicoToolStripMenuItem});
             this.vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
             this.vendaToolStripMenuItem.Size = new System.Drawing.Size(56, 21);
             this.vendaToolStripMenuItem.Text = "Venda";
@@ -284,6 +286,13 @@
             this.vendaProdutoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.vendaProdutoToolStripMenuItem.Text = "Venda Produto";
             this.vendaProdutoToolStripMenuItem.Click += new System.EventHandler(this.vendaProdutoToolStripMenuItem_Click);
+            // 
+            // vendaServicoToolStripMenuItem
+            // 
+            this.vendaServicoToolStripMenuItem.Name = "vendaServicoToolStripMenuItem";
+            this.vendaServicoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vendaServicoToolStripMenuItem.Text = "Venda Servico";
+            this.vendaServicoToolStripMenuItem.Click += new System.EventHandler(this.vendaServicoToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -332,6 +341,7 @@
         private System.Windows.Forms.ToolStripMenuItem produtoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem vendaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vendaProdutoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vendaServicoToolStripMenuItem;
     }
 }
 

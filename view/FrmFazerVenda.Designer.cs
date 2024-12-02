@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,7 +44,7 @@
             this.cBoxLoja = new System.Windows.Forms.ComboBox();
             this.cBoxFuncionario = new System.Windows.Forms.ComboBox();
             this.DataVenda = new System.Windows.Forms.DateTimePicker();
-            this.dataGridProdutosVenda = new System.Windows.Forms.DataGridView();
+            this.DataGridProdutosVenda = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,7 +59,7 @@
             this.bntSalvar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtValorTotal = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridProdutosVenda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridProdutosVenda)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -148,7 +148,7 @@
             // cBoxLoja
             // 
             this.cBoxLoja.FormattingEnabled = true;
-            this.cBoxLoja.Location = new System.Drawing.Point(537, 102);
+            this.cBoxLoja.Location = new System.Drawing.Point(526, 107);
             this.cBoxLoja.Name = "cBoxLoja";
             this.cBoxLoja.Size = new System.Drawing.Size(393, 21);
             this.cBoxLoja.TabIndex = 9;
@@ -164,36 +164,36 @@
             // DataVenda
             // 
             this.DataVenda.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DataVenda.Location = new System.Drawing.Point(819, 21);
+            this.DataVenda.Location = new System.Drawing.Point(819, 24);
             this.DataVenda.Name = "DataVenda";
             this.DataVenda.Size = new System.Drawing.Size(111, 20);
             this.DataVenda.TabIndex = 11;
             // 
-            // dataGridProdutosVenda
+            // DataGridProdutosVenda
             // 
-            this.dataGridProdutosVenda.AllowUserToAddRows = false;
-            this.dataGridProdutosVenda.AllowUserToDeleteRows = false;
-            this.dataGridProdutosVenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridProdutosVenda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DataGridProdutosVenda.AllowUserToAddRows = false;
+            this.DataGridProdutosVenda.AllowUserToDeleteRows = false;
+            this.DataGridProdutosVenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridProdutosVenda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.NomeProduto,
             this.Quantidade,
             this.ValorUnitario,
             this.ValorTotal});
-            this.dataGridProdutosVenda.Location = new System.Drawing.Point(12, 294);
-            this.dataGridProdutosVenda.Name = "dataGridProdutosVenda";
-            this.dataGridProdutosVenda.Size = new System.Drawing.Size(853, 254);
-            this.dataGridProdutosVenda.TabIndex = 12;
-            this.dataGridProdutosVenda.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProdutosVenda_CellClick);
-            this.dataGridProdutosVenda.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
-            this.dataGridProdutosVenda.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProdutosVenda_CellValueChanged);
-            this.dataGridProdutosVenda.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView1_EditingControlShowing);
-            this.dataGridProdutosVenda.Click += new System.EventHandler(this.dataGridView1_Click);
+            this.DataGridProdutosVenda.Location = new System.Drawing.Point(12, 294);
+            this.DataGridProdutosVenda.Name = "DataGridProdutosVenda";
+            this.DataGridProdutosVenda.Size = new System.Drawing.Size(853, 254);
+            this.DataGridProdutosVenda.TabIndex = 12;
+            this.DataGridProdutosVenda.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridProdutosVenda_CellClick);
+            this.DataGridProdutosVenda.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellEndEdit);
+            this.DataGridProdutosVenda.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridProdutosVenda_CellValueChanged);
+            this.DataGridProdutosVenda.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.DataGridView1_EditingControlShowing);
+            this.DataGridProdutosVenda.Click += new System.EventHandler(this.DataGridView1_Click);
             // 
             // ID
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ID.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ID.DefaultCellStyle = dataGridViewCellStyle9;
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             // 
@@ -206,24 +206,24 @@
             // 
             // Quantidade
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Format = "N2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.Quantidade.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.Format = "N2";
+            dataGridViewCellStyle10.NullValue = null;
+            this.Quantidade.DefaultCellStyle = dataGridViewCellStyle10;
             this.Quantidade.HeaderText = "Quantidade";
             this.Quantidade.Name = "Quantidade";
             // 
             // ValorUnitario
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ValorUnitario.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ValorUnitario.DefaultCellStyle = dataGridViewCellStyle11;
             this.ValorUnitario.HeaderText = "Valor Unit.";
             this.ValorUnitario.Name = "ValorUnitario";
             // 
             // ValorTotal
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ValorTotal.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ValorTotal.DefaultCellStyle = dataGridViewCellStyle12;
             this.ValorTotal.HeaderText = "Valor Total";
             this.ValorTotal.Name = "ValorTotal";
             // 
@@ -330,14 +330,14 @@
             this.Controls.Add(this.bntCancelar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridProdutosVenda);
+            this.Controls.Add(this.DataGridProdutosVenda);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
             this.Name = "FrmFazerVenda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmVendaNova";
             this.Load += new System.EventHandler(this.FrmFazerVenda_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridProdutosVenda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridProdutosVenda)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -361,7 +361,7 @@
         private System.Windows.Forms.ComboBox cBoxLoja;
         private System.Windows.Forms.ComboBox cBoxFuncionario;
         private System.Windows.Forms.DateTimePicker DataVenda;
-        private System.Windows.Forms.DataGridView dataGridProdutosVenda;
+        private System.Windows.Forms.DataGridView DataGridProdutosVenda;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cBoxProduto;
         private System.Windows.Forms.Button BntAdicionarProduto;

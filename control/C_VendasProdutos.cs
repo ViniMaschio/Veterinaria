@@ -52,16 +52,13 @@ namespace Veterinaria.control
             }
         }
 
-        private readonly String sqlAtualiza = "update vendasprodutos set  codprodutofk = @pcodproduto, quantv = @pquantv, valorv = @pvalorv where codvendafk = @pcodvendafk";
         public void Atualizar_Dados(object aux)
         {
-            List<M_VendasProdutos> listVendasProdutos = new List<M_VendasProdutos>();
+            List<M_VendasProdutos> listVendasProdutos;
             listVendasProdutos = (List<M_VendasProdutos>)aux;
 
 
             Apaga_Dados(listVendasProdutos[0].venda.codvenda);
-            
-
             Insere_Dados(listVendasProdutos);
         }
 
@@ -119,7 +116,7 @@ namespace Veterinaria.control
         private readonly String sqlInsere = "insert into vendasprodutos (codvendafk, codprodutofk, quantv, valorv) values (@pcodvendafk, @pcodprodutofk, @pquantv, @pvalorv)";
         public void Insere_Dados(object aux)
         {
-            List<M_VendasProdutos> m_VendasProdutos = new List<M_VendasProdutos>();
+            List<M_VendasProdutos> m_VendasProdutos;
             m_VendasProdutos = (List<M_VendasProdutos>)aux;
 
             Conexao conexao = new Conexao();
