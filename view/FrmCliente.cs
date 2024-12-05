@@ -465,12 +465,9 @@ namespace Veterinaria.view
         private void bntNovaFoto_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Imagens|*.bmp;*.jpg;*.jpeg;*.png;*.gif";
-            //openFileDialog1.Title = "Selecione uma imagem";
 
-            // Verifica se o usuário selecionou um arquivo
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                // Carrega a imagem selecionada no PictureBox
+            {  
                 picFotoCliente.Image = Image.FromFile(openFileDialog1.FileName);
                 NovaFotoCliente = ImageParaByte();
             }
