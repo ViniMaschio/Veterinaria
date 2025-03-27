@@ -43,3 +43,6 @@ O banco de dados chama-se `Veterinaria_Unifunec` e contém diversas tabelas norm
 1. Clone este repositório:
    ```bash
    git clone https://github.com/ViniMaschio/Veterinaria
+2. Abra o projeto no Visual Studio
+3. Configure a string de conexão com o SQL Server
+4. Execute a aplicação
