@@ -1,37 +1,45 @@
-# 🐶 Sistema de Clínica Veterinária
+# 🐾 Sistema de Clínica Veterinária
 
-Aplicação desktop desenvolvida em **C# com .NET e Windows Forms** para gerenciamento de atendimentos em clínicas veterinárias.
+Este projeto foi desenvolvido em dupla como parte da disciplina **Desenvolvimento de Aplicativos Desktop II** no curso de Análise e Desenvolvimento de Sistemas.
 
-## 🔧 Tecnologias Utilizadas
+O objetivo do sistema é gerenciar os processos administrativos de uma clínica veterinária, incluindo o cadastro de animais, donos, funcionários, produtos, serviços e vendas. A aplicação foi construída com **C# utilizando .NET (Windows Forms)** e **SQL Server** como banco de dados.
 
-- C#
-- .NET Framework
-- Windows Forms
-- SQL Server
+## 🧑‍💻 Equipe
 
-## 📌 Funcionalidades
+- Gabriel Maschio  
+- Vinícius Maschio
 
-- Cadastro de animais e seus donos
-- Registro de consultas
-- Listagem de históricos por animal
-- Interface simples e direta
+## 🛠️ Tecnologias Utilizadas
 
-## 📂 Estrutura
+- C#  
+- .NET Framework  
+- Windows Forms  
+- SQL Server  
+- ADO.NET
 
-- Tela de Login
-- Módulo de Clientes (donos)
-- Módulo de Animais
-- Módulo de Consultas
+## 📦 Funcionalidades
 
-## 🚀 Como Executar
+- Cadastro de animais, donos, raças, tipos de animal e sexo
+- Cadastro de endereço completo (rua, bairro, cidade, estado, país, CEP)
+- Registro de funcionários, tipos de funcionários e suas lojas
+- Gerenciamento de produtos, marcas, imagens e categorias
+- Realização de vendas de produtos e serviços
+- Relacionamento completo entre tabelas com integridade referencial
+- Interface intuitiva para manipulação dos dados via Windows Forms
 
-1. Clone o repositório:  
-   `git clone https://github.com/ViniMaschio/Veterinaria`
-2. Abra o projeto no Visual Studio
-3. Configure a string de conexão com o SQL Server
-4. Execute a aplicação
+## 🧱 Estrutura do Banco de Dados
 
-## 📄 Licença
+O banco de dados chama-se `Veterinaria_Unifunec` e contém diversas tabelas normalizadas com integridade entre entidades. Algumas entidades de destaque:
 
-Este projeto foi desenvolvido como parte de estudos em programação desktop com .NET.  
-Desenvolvido por Gabriel Maschio 🐾
+- `cliente`, `animal`, `funcionario`, `loja`, `produto`, `vendas`, `vendaservico`
+- Tabelas auxiliares como `sexo`, `raca`, `bairro`, `estado`, `pais`, `cidanimal`, etc.
+- Relacionamentos com *foreign keys* e controle de deleção/cascata
+- Verificações de integridade com `CHECK`, `UNIQUE` e `NOT NULL`
+
+> 💡 O script completo do banco de dados está documentado no projeto e pode ser utilizado para recriar a base no SQL Server.
+
+## 💻 Como Executar
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/ViniMaschio/Veterinaria
